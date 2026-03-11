@@ -1,19 +1,21 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Outfit } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import Navigation from "@/components/soy-nina/navigation"
 import Footer from "@/components/soy-nina/footer"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const outfit = Outfit({ 
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "Soy Niña - Empoderando niñas y adolescentes en Costa Rica",
   description:
     "ONG costarricense dedicada al desarrollo integral de niñas, adolescentes y familias en situación de vulnerabilidad social mediante programas socioeducativos.",
-  generator: "v0.app",
   icons: {
     icon: [
       {
@@ -40,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`font-sans antialiased`}>
+      <body className={`${outfit.variable} font-sans antialiased`}>
         <Navigation />
         {children}
         <Footer />

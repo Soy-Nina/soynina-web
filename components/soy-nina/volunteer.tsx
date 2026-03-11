@@ -1,112 +1,80 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Heart, Clock, Users, Award } from "lucide-react"
-
-const benefits = [
-  {
-    icon: Heart,
-    title: "Impacto Real",
-    description: "Transforma vidas y contribuye al desarrollo de tu comunidad",
-  },
-  {
-    icon: Users,
-    title: "Comunidad",
-    description: "Forma parte de una red de personas comprometidas con el cambio social",
-  },
-  {
-    icon: Award,
-    title: "Desarrollo Personal",
-    description: "Adquiere nuevas habilidades y experiencia en trabajo social",
-  },
-  {
-    icon: Clock,
-    title: "Flexibilidad",
-    description: "Elige el programa y horario que mejor se adapte a tu disponibilidad",
-  },
-]
-
 const roles = [
-  "Facilitadora de talleres",
-  "Tutora académica",
-  "Apoyo en eventos",
-  "Gestión administrativa",
-  "Comunicación y redes sociales",
-  "Profesional especializada (psicología, trabajo social, etc.)",
+  { emoji: "💜", title: "Clubes Semanales", desc: "Facilita talleres educativos y de empoderamiento" },
+  { emoji: "📚", title: "Tutorías Académicas", desc: "Enseña diferentes asignaturas de forma virtual" },
+  { emoji: "👨‍👩‍👧‍👦", title: "Club Familias", desc: "Facilita sesiones virtuales con familias" },
+  { emoji: "📱", title: "Comunicación", desc: "Crea contenido para redes sociales" },
+  { emoji: "🍎", title: "Banco de Alimentos", desc: "Gestiona y distribuye alimentos mensualmente" },
+  { emoji: "💝", title: "Donantes", desc: "Recluta donantes y da seguimiento a campañas" },
 ]
 
 export default function Volunteer() {
   return (
-    <section id="voluntariado" className="w-full py-20 bg-[#140b3f] text-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-black mb-4">
-            Únete como <span className="bg-gradient-to-r from-[#fe35fe] to-[#ff5fff] text-transparent bg-clip-text">Voluntaria</span>
-          </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Tu tiempo y talento pueden hacer la diferencia. Forma parte del cambio que quieres ver en el mundo
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <div>
-            <h3 className="text-2xl font-bold mb-6">¿Por qué ser voluntaria?</h3>
-            <div className="grid sm:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-                <Card
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm border-white/20 rounded-3xl hover:scale-105 transition-transform"
-                >
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-[#fe35fe] rounded-full flex items-center justify-center mb-3 shadow-lg">
-                      <benefit.icon size={24} className="text-white" />
-                    </div>
-                    <CardTitle className="text-white text-lg">{benefit.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 text-sm">{benefit.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
+    <section id="voluntariado" className="w-full py-24 bg-[#f8f4ff]">
+      <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left: Image */}
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-2xl shadow-xl">
+              <img
+                src="/young-girls-in-educational-workshop-in-costa-rica.jpg"
+                alt="Voluntaria en taller educativo"
+                className="w-full aspect-[4/3] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#140b3f]/50 to-transparent" />
+              {/* Badge */}
+              <div className="absolute bottom-6 left-6 right-6">
+                <div className="bg-white/95 backdrop-blur-sm rounded-xl px-5 py-4">
+                  <p className="text-xs font-bold text-[#4526c9] uppercase tracking-widest mb-1">Voluntarias dicen:</p>
+                  <p className="text-[#140b3f] font-medium text-sm italic">
+                    "Encontré una comunidad de mujeres que creen en educación con equidad."
+                  </p>
+                  <p className="text-gray-500 text-xs mt-1">— Katherine, Voluntaria de Donantes</p>
+                </div>
+              </div>
             </div>
           </div>
 
+          {/* Right: Content */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">Áreas de voluntariado</h3>
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 rounded-3xl">
-              <CardContent className="p-6">
-                <p className="text-gray-300 mb-6">
-                  Tenemos diversas oportunidades para que puedas aportar según tus habilidades e intereses:
-                </p>
-                <ul className="space-y-3">
-                  {roles.map((role, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <span className="text-[#00c49a] mt-1">✓</span>
-                      <span className="text-white">{role}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-8 p-4 bg-white/5 rounded-2xl">
-                  <h4 className="font-semibold mb-2 text-[#e0ff4f]">Requisitos:</h4>
-                  <ul className="space-y-2 text-sm text-gray-300">
-                    <li>• Mayor de 18 años</li>
-                    <li>• Compromiso mínimo de 3 meses</li>
-                    <li>• Disponibilidad de al menos 4 horas semanales</li>
-                    <li>• Completar proceso de inducción</li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+            <span className="text-[#4526c9] text-sm font-bold tracking-[0.2em] uppercase">Voluntariado</span>
+            <h2 className="text-5xl md:text-6xl font-black text-[#140b3f] leading-tight mt-3 mb-6">
+              Sé parte<br />del cambio.
+            </h2>
 
-        <div className="text-center">
-          <a 
-            href="/voluntariado" 
-            className="inline-block bg-gradient-to-r from-[#fe35fe] to-[#ff5fff] text-white text-lg px-10 py-4 rounded-full font-bold hover:shadow-xl transition-all hover:scale-105 shadow-lg"
-          >
-            Ver oportunidades de voluntariado
-          </a>
-          <p className="text-gray-400 mt-4">Conoce los requisitos y roles disponibles</p>
+            <p className="text-gray-600 leading-relaxed mb-8">
+              Las voluntarias son el corazón de Soy Niña. Si creés en el poder de la educación para transformar
+              vidas, tenemos un lugar para vos — desde facilitar clubes hasta crear contenido digital.
+            </p>
+
+            {/* Roles grid */}
+            <div className="grid grid-cols-2 gap-3 mb-10">
+              {roles.map((role, i) => (
+                <div
+                  key={i}
+                  className="bg-white rounded-xl p-4 border border-gray-100 hover:border-[#4526c9]/30 hover:shadow-md transition-all"
+                >
+                  <div className="text-2xl mb-2">{role.emoji}</div>
+                  <div className="font-bold text-[#140b3f] text-sm mb-1">{role.title}</div>
+                  <div className="text-xs text-gray-500">{role.desc}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Requirements summary */}
+            <div className="bg-white border border-gray-100 rounded-xl p-5 mb-8 text-sm text-gray-600 space-y-1">
+              <p className="font-bold text-[#140b3f] mb-2">Requisitos básicos:</p>
+              <p>✓ Mayor de 18 años · mín. 2–4 hrs/semana</p>
+              <p>✓ Compromiso con protección de la niñez</p>
+              <p>✓ Completar proceso de inducción (formulario → referencias → acuerdo)</p>
+            </div>
+
+            <a
+              href="/voluntariado"
+              className="inline-flex items-center justify-center bg-[#4526c9] hover:bg-[#3619b8] text-white font-bold px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
+            >
+              Ver oportunidades de voluntariado →
+            </a>
+          </div>
         </div>
       </div>
     </section>

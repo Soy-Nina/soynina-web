@@ -1,4 +1,5 @@
 import Link from "next/link"
+import PageHero from "@/components/soy-nina/page-hero"
 
 const blogPosts = [
   {
@@ -67,19 +68,11 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen">
       <main>
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-[#140b3f] via-[#4526c9] to-[#fe35fe]">
-          <div className="container mx-auto px-8">
-            <div className="text-center text-white">
-              <h1 className="text-4xl md:text-6xl font-black mb-6">
-                Blog Soy Niña
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto">
-                Historias, noticias y artículos sobre el empoderamiento de niñas y adolescentes
-              </p>
-            </div>
-          </div>
-        </section>
+        <PageHero
+          title="Blog Soy Niña"
+          subtitle="Historias, noticias y artículos sobre el empoderamiento de niñas y adolescentes"
+          image="/students-celebrating-academic-success.jpg"
+        />
 
         {/* Blog Posts Grid */}
         <section className="py-20 bg-white">

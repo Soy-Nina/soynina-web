@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
+import PageHero from "@/components/soy-nina/page-hero"
 
 export default function FAQPage() {
   const [openItems, setOpenItems] = useState<number[]>([])
@@ -115,13 +116,11 @@ export default function FAQPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-[#140b3f] to-[#4526c9] text-white py-20">
-        <div className="container mx-auto px-8">
-          <h1 className="text-5xl md:text-6xl font-black mb-4">Preguntas Frecuentes</h1>
-          <p className="text-xl text-gray-200">Resuelve tus dudas sobre Soy Niña</p>
-        </div>
-      </section>
+      <PageHero
+        title="Preguntas Frecuentes"
+        subtitle="Resuelve tus dudas sobre Soy Niña"
+        image="/community-families-learning-together.jpg"
+      />
 
       {/* FAQs */}
       <section className="py-20 bg-gray-50">
@@ -149,9 +148,8 @@ export default function FAQPage() {
                           <h3 className="text-lg font-bold text-[#140b3f] pr-4">{item.q}</h3>
                           <ChevronDown
                             size={24}
-                            className={`text-[#4526c9] flex-shrink-0 transition-transform ${
-                              openItems.includes(idx) ? "rotate-180" : ""
-                            }`}
+                            className={`text-[#4526c9] flex-shrink-0 transition-transform ${openItems.includes(idx) ? "rotate-180" : ""
+                              }`}
                           />
                         </button>
                         {openItems.includes(idx) && (

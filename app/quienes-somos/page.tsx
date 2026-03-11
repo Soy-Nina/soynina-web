@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react"
+import PageHero from "@/components/soy-nina/page-hero"
 
 export const metadata = {
   title: "¿Quiénes Somos? | Soy Niña",
@@ -29,7 +29,7 @@ export default function QuienesSomosPage() {
   ]
 
   const corporateAllies = [
-    "UNFPA", "UNICEF", "Cummins", "World Hug Group", 
+    "UNFPA", "UNICEF", "Cummins", "World Hug Group",
     "Ministerio de Cultura y Juventud", "KMA", "OTSÍ", "P&G",
     "Nutri Snacks", "Blackbaud", "BAC Credomatic", "Coopeservidores",
     "FIFCO", "Voces Vitales Costa Rica", "Novohogar", "VMware"
@@ -44,13 +44,11 @@ export default function QuienesSomosPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-[#140b3f] to-[#4526c9] text-white py-20">
-        <div className="container mx-auto px-8">
-          <h1 className="text-5xl md:text-6xl font-black mb-4">¿Quiénes Somos?</h1>
-          <p className="text-xl text-gray-200">Conoce el equipo que impulsa el cambio en Soy Niña</p>
-        </div>
-      </section>
+      <PageHero
+        title="¿Quiénes Somos?"
+        subtitle="Conoce el equipo que impulsa el cambio en Soy Niña"
+        image="/diverse-group-of-girls-learning-together-in-costa-.jpg"
+      />
 
       {/* Historia */}
       <section className="py-20 bg-gray-50">

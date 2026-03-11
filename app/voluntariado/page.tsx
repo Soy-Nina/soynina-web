@@ -1,4 +1,5 @@
-import { Heart, Users, Globe, BookOpen } from "lucide-react"
+import PageHero from "@/components/soy-nina/page-hero"
+import { Heart, Globe, BookOpen } from "lucide-react"
 
 export const metadata = {
   title: "Voluntariado | Soy Niña",
@@ -65,13 +66,11 @@ export default function VoluntariadoPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-[#140b3f] to-[#4526c9] text-white py-20">
-        <div className="container mx-auto px-8">
-          <h1 className="text-5xl md:text-6xl font-black mb-4">Voluntariado</h1>
-          <p className="text-xl text-gray-200">Sé parte del cambio que queremos ver</p>
-        </div>
-      </section>
+      <PageHero
+        title="Voluntariado"
+        subtitle="Sé parte del cambio que queremos ver"
+        image="/young-girls-in-educational-workshop-in-costa-rica.jpg"
+      />
 
       {/* Intro */}
       <section className="py-20 bg-gray-50">
