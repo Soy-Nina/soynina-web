@@ -25,6 +25,8 @@ export default function Navigation() {
     { href: "/programas", label: "Programas" },
     { href: "/voluntariado", label: "Voluntariado" },
     { href: "/blog", label: "Blog" },
+    { href: "/eventos", label: "Eventos" },
+    { href: "/informes", label: "Informes" },
     { href: "/#contacto", label: "Contacto" },
   ]
 
@@ -44,8 +46,8 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={`text-sm font-semibold transition-colors ${pathname === item.href
-                    ? "text-[#e0ff4f]"
-                    : "text-white/80 hover:text-white"
+                  ? "text-[#e0ff4f]"
+                  : "text-white/80 hover:text-white"
                   }`}
               >
                 {item.label}

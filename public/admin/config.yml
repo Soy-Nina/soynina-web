@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: Soy-Nina/soynina-web
+  branch: main
+
+media_folder: "public/reports"
+public_folder: "/reports"
+
+locale: "es"
+
+collections:
+  - name: "reports"
+    label: "Informes Mensuales"
+    label_singular: "Informe"
+    folder: "content/reports"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string", hint: "Ej: Informe Marzo 2026" }
+      - { label: "Mes", name: "month", widget: "number", value_type: "int", min: 1, max: 12, hint: "Número del mes (1 = Enero, 12 = Diciembre)" }
+      - { label: "Año", name: "year", widget: "number", value_type: "int", min: 2020, max: 2099 }
+      - { label: "Descripción", name: "description", widget: "text", hint: "Breve resumen del contenido del informe" }
+      - { label: "Archivo PDF", name: "pdf", widget: "file", media_folder: "/public/reports", public_folder: "/reports", hint: "Sube el archivo PDF del informe" }
