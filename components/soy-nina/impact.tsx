@@ -1,7 +1,12 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import CostaRicaMap from "./costa-rica-map"
+import dynamic from "next/dynamic"
+
+const CostaRicaMap = dynamic(() => import("./costa-rica-map"), {
+  ssr: false,
+  loading: () => <div className="w-full rounded-2xl bg-gray-100 animate-pulse" style={{ height: "450px" }} />
+})
 
 /* ─── Data ─── */
 const stats = [

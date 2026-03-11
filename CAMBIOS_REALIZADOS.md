@@ -267,4 +267,17 @@ app/
 
 ---
 
-¡Tu sitio está completamente reestructurado y listo con toda la información del PDF! 🎉
+---
+
+## 🏗️ Compilación para Producción (11/03/2026)
+
+### ✅ Logros:
+1. **Generación de Build Exitosa:** El sitio se ha compilado correctamente para producción usando `next build`.
+2. **Corrección de Error de Build:** 
+   - Se solucionó el error `ReferenceError: window is not defined` provocado por la librería `Leaflet` durante la compilación estática.
+   - Implementación de `next/dynamic` con `ssr: false` para el componente `CostaRicaMap`, asegurando que solo se cargue en el cliente.
+3. **Optimización de Rutas:** Todas las rutas del sitio (19 en total) han sido pre-renderizadas estáticamente por Next.js para un rendimiento óptimo en producción.
+
+---
+
+¡Tu sitio está completamente reestructurado, optimizado y listo para ser desplegado a producción! 🎉
