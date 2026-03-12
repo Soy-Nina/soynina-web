@@ -148,7 +148,7 @@ export default function QuienesSomosPage() {
             <a href="/voluntariado" className="inline-block bg-white text-[#4526c9] px-8 py-4 rounded-full font-bold hover:bg-[#e0ff4f] transition">
               Volunteering
             </a>
-            <a href="/#contacto" className="inline-block bg-[#e0ff4f] text-[#140b3f] px-8 py-4 rounded-full font-bold hover:bg-white transition">
+            <a href="/contacto" className="inline-block bg-[#e0ff4f] text-[#140b3f] px-8 py-4 rounded-full font-bold hover:bg-white transition">
               Contáctanos
             </a>
           </div>

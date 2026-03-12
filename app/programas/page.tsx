@@ -250,7 +250,7 @@ export default function ProgramasPage() {
         <div className="container mx-auto px-8 text-center">
           <h2 className="text-4xl font-black mb-6">¿Quieres ser parte de un programa?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">Todos nuestros programas son completamente gratuitos para las beneficiarias.</p>
-          <a href="/#contacto" className="inline-block bg-white text-[#4526c9] px-8 py-4 rounded-full font-bold hover:bg-[#e0ff4f] transition">
+          <a href="/contacto" className="inline-block bg-white text-[#4526c9] px-8 py-4 rounded-full font-bold hover:bg-[#e0ff4f] transition">
             Solicitar Información
           </a>
         </div>

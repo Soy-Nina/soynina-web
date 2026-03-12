@@ -27,7 +27,7 @@ export default function Navigation() {
     { href: "/blog", label: "Blog" },
     { href: "/eventos", label: "Eventos" },
     { href: "/informes", label: "Informes" },
-    { href: "/#contacto", label: "Contacto" },
+    { href: "/contacto", label: "Contacto" },
   ]
 
   return (

@@ -46,7 +46,7 @@ export default function EventosPage() {
                             Sé Voluntaria
                         </a>
                         <a
-                            href="/#contacto"
+                            href="/contacto"
                             className="inline-block bg-transparent border-2 border-white/50 hover:border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all"
                         >
                             Contactar

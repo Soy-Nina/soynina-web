@@ -86,7 +86,7 @@ export default function Donate() {
               <div className="border-t border-white/10 pt-6">
                 <p className="text-sm text-white/60 mb-3">¿Eres una empresa? Hablemos sobre responsabilidad social empresarial y alianzas estratégicas.</p>
                 <a
-                  href="/#contacto"
+                  href="/contacto"
                   className="text-[#00c49a] font-bold text-sm hover:text-[#1ad9b0] transition-colors"
                 >
                   Contactar área corporativa →

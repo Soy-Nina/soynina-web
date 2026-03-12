@@ -73,7 +73,7 @@ export default function Footer() {
               <li><a href="/#donar" className="text-gray-400 hover:text-[#e0ff4f] transition-colors">Hacer una donación</a></li>
               <li><a href="/voluntariado" className="text-gray-400 hover:text-[#e0ff4f] transition-colors">Ser voluntaria</a></li>
               <li><a href="/sostenibilidad" className="text-gray-400 hover:text-[#e0ff4f] transition-colors">Alianzas corporativas</a></li>
-              <li><a href="/#contacto" className="text-gray-400 hover:text-[#e0ff4f] transition-colors">Contacto</a></li>
+              <li><a href="/contacto" className="text-gray-400 hover:text-[#e0ff4f] transition-colors">Contacto</a></li>
             </ul>
           </div>
 

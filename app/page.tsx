@@ -4,6 +4,7 @@ import Impact from "@/components/soy-nina/impact"
 import UpcomingEvents from "@/components/soy-nina/upcoming-events"
 import Donate from "@/components/soy-nina/donate"
 import Volunteer from "@/components/soy-nina/volunteer"
+import Newsletter from "@/components/soy-nina/newsletter"
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
         <UpcomingEvents />
         <Donate />
         <Volunteer />
+        <Newsletter />
       </main>
     </div>
   )

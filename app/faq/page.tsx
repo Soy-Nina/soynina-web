@@ -172,7 +172,7 @@ export default function FAQPage() {
         <div className="container mx-auto px-8 text-center">
           <h2 className="text-4xl font-black mb-6">¿No encontraste tu respuesta?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">Estamos aquí para ayudarte. Contáctanos directamente.</p>
-          <a href="/#contacto" className="inline-block bg-white text-[#4526c9] px-8 py-4 rounded-full font-bold hover:bg-[#e0ff4f] transition">
+          <a href="/contacto" className="inline-block bg-white text-[#4526c9] px-8 py-4 rounded-full font-bold hover:bg-[#e0ff4f] transition">
             Contactar
           </a>
         </div>
