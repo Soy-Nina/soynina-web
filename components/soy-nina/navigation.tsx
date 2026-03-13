@@ -69,37 +69,50 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-white"
+            className={`lg:hidden p-2.5 rounded-xl border transition-all duration-300 ${isOpen
+                ? "bg-white/10 border-white/40 text-white"
+                : "bg-transparent border-white/10 text-white/90"
+              }`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Overlay */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-white/20 bg-[#140b3f]">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block py-3 text-white/80 hover:text-white font-medium transition-colors text-sm"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <div className="py-3">
-              <LocaleSwitcher />
+          <div className="lg:hidden mt-2 p-6 bg-[#140b3f]/95 backdrop-blur-2xl rounded-3xl border border-white/10 shadow-2xl animate-in slide-in-from-top-4 fade-in duration-300 flex flex-col gap-8">
+            <div className="flex flex-col gap-1">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`block py-4 text-lg font-semibold transition-all border-b border-white/5 last:border-0 ${pathname.includes(item.href)
+                      ? "text-[#e0ff4f] translate-x-1"
+                      : "text-white/80 hover:text-white"
+                    }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
-            <a
-              href={isHomePage ? "#donar" : "/#donar"}
-              onClick={() => setIsOpen(false)}
-              className="block mt-4 bg-[#e0ff4f] text-[#140b3f] font-bold text-center px-6 py-3 rounded-full text-sm"
-            >
-              {t("donarAhora")}
-            </a>
+
+            <div className="flex flex-col gap-6 pt-2 border-t border-white/10">
+              <div className="flex items-center justify-between bg-white/5 p-4 rounded-2xl">
+                <span className="text-white/60 text-xs font-bold uppercase tracking-widest">{t("changeLanguage")}</span>
+                <LocaleSwitcher />
+              </div>
+
+              <a
+                href={isHomePage ? "#donar" : "/#donar"}
+                onClick={() => setIsOpen(false)}
+                className="block bg-[#e0ff4f] hover:bg-[#d4f53d] text-[#140b3f] font-black text-center px-6 py-4 rounded-2xl text-lg shadow-xl shadow-[#e0ff4f]/20 active:scale-[0.98] transition-all"
+              >
+                {t("donarAhora")}
+              </a>
+            </div>
           </div>
         )}
       </div>
