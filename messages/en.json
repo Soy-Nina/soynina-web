@@ -187,7 +187,8 @@
     "madeWith": "Made with ♥ in Costa Rica"
   },
   "Map": {
-    "activeCommunities": "Active communities"
+    "activeCommunities": "Active communities",
+    "twoFingerScroll": "Use two fingers to move the map"
   },
   "LocaleSwitcher": {
     "es": "ES",

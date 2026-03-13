@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import "leaflet/dist/leaflet.css"
 import L from "leaflet"
 import { useTranslations } from "next-intl"
@@ -18,6 +18,7 @@ const CR_ZOOM = 10
 
 export default function CostaRicaMap() {
     const t = useTranslations("Map")
+    const [showGestureHint, setShowGestureHint] = useState(false)
     const mapContainerRef = useRef<HTMLDivElement>(null)
     const mapInstanceRef = useRef<L.Map | null>(null)
 
@@ -37,11 +38,44 @@ export default function CostaRicaMap() {
             zoom: CR_ZOOM,
             zoomControl: false,
             scrollWheelZoom: true,
+            dragging: true,
             attributionControl: false,
             maxBounds: L.latLngBounds([7.5, -87], [12, -81]),
             minZoom: 8,
             maxZoom: 15,
         })
+
+        // On mobile: require two fingers to interact with the map.
+        // Single-finger touch passes through to the page scroll.
+        const container = mapContainerRef.current
+        let gestureHintTimeout: ReturnType<typeof setTimeout> | null = null
+
+        const showHint = () => {
+            setShowGestureHint(true)
+            if (gestureHintTimeout) clearTimeout(gestureHintTimeout)
+            gestureHintTimeout = setTimeout(() => setShowGestureHint(false), 1500)
+        }
+
+        const onTouchStart = (e: TouchEvent) => {
+            if (e.touches.length === 1) {
+                // Single finger — disable map drag so page scrolls
+                map.dragging.disable()
+                map.scrollWheelZoom.disable()
+                showHint()
+            } else {
+                // Two fingers — enable map interaction
+                map.dragging.enable()
+                map.scrollWheelZoom.enable()
+            }
+        }
+
+        const onTouchEnd = () => {
+            // Re-enable dragging after touch ends (for non-touch / mouse)
+            map.dragging.enable()
+        }
+
+        container.addEventListener("touchstart", onTouchStart, { passive: true })
+        container.addEventListener("touchend", onTouchEnd, { passive: true })
 
         // CARTO Voyager Light basemap
         L.tileLayer(
@@ -91,6 +125,9 @@ export default function CostaRicaMap() {
         setTimeout(() => map.invalidateSize(), 100)
 
         return () => {
+            container.removeEventListener("touchstart", onTouchStart)
+            container.removeEventListener("touchend", onTouchEnd)
+            if (gestureHintTimeout) clearTimeout(gestureHintTimeout)
             if (mapInstanceRef.current) {
                 mapInstanceRef.current.remove()
                 mapInstanceRef.current = null
@@ -102,11 +139,23 @@ export default function CostaRicaMap() {
         <div className="relative w-full">
             <style>{customCSS}</style>
 
-            <div
-                ref={mapContainerRef}
-                className="w-full rounded-2xl overflow-hidden border border-[#e8e4f8]"
-                style={{ height: "450px" }}
-            />
+            <div className="relative w-full rounded-2xl overflow-hidden border border-[#e8e4f8]" style={{ height: "450px" }}>
+                <div
+                    ref={mapContainerRef}
+                    className="w-full h-full"
+                />
+
+                {/* Two-finger gesture hint overlay (mobile only) */}
+                <div
+                    className="gesture-hint-overlay"
+                    style={{ opacity: showGestureHint ? 1 : 0 }}
+                    aria-hidden="true"
+                >
+                    <span className="gesture-hint-text">
+                        {t("twoFingerScroll")}
+                    </span>
+                </div>
+            </div>
 
             {/* Legend */}
             <div className="flex items-center gap-2 mt-4 text-sm text-gray-500">
@@ -196,5 +245,27 @@ const customCSS = `
 .leaflet-control-zoom a:hover {
   background: #4526c9 !important;
   color: white !important;
+}
+.gesture-hint-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 500;
+  transition: opacity 0.3s ease;
+  background: rgba(0, 0, 0, 0.18);
+}
+.gesture-hint-text {
+  background: rgba(20, 11, 63, 0.82);
+  color: #fff;
+  font-size: 14px;
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 10px 20px;
+  border-radius: 24px;
+  backdrop-filter: blur(6px);
+  letter-spacing: 0.01em;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
 }
 `
