@@ -1,74 +1,81 @@
+import { setRequestLocale, getTranslations } from "next-intl/server"
 import PageHero from "@/components/soy-nina/page-hero"
 import { Heart, Globe, BookOpen } from "lucide-react"
+import { Link } from "@/src/i18n/navigation"
 
-export const metadata = {
-  title: "Voluntariado | Soy Niña",
-  description: "Únete como voluntario nacional, corporativo, internacional o en prácticas profesionales con Soy Niña."
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "VoluntariadoPage" })
+  return { title: t("metaTitle"), description: t("metaDescription") }
 }
 
-export default function VoluntariadoPage() {
+export default async function VoluntariadoPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
+  const t = await getTranslations({ locale, namespace: "VoluntariadoPage" })
+
   const nationalTeams = [
     {
-      name: "Clubes Semanales",
+      name: locale === "en" ? "Weekly Clubs" : "Clubes Semanales",
       icon: "💜",
-      description: "Facilita actividades educativas y de empoderamiento",
-      details: ["Presencial, todas las semanas", "Solo mujeres (protección)", "Requiere transporte", "Año completo"]
+      description: locale === "en" ? "Facilitate educational and empowerment activities" : "Facilita actividades educativas y de empoderamiento",
+      details: locale === "en" ? ["In-person, every week", "Women only (protection)", "Transportation required", "Full year"] : ["Presencial, todas las semanas", "Solo mujeres (protección)", "Requiere transporte", "Año completo"]
     },
     {
-      name: "Tutorías Académicas",
+      name: locale === "en" ? "Academic Tutoring" : "Tutorías Académicas",
       icon: "📚",
-      description: "Enseña diferentes asignaturas",
-      details: ["Virtual, flexibilidad de horarios", "Mínimo 4 horas/semana", "Creatividad y organización", "Prepara materiales y hoja de seguimiento"]
+      description: locale === "en" ? "Teach various subjects" : "Enseña diferentes asignaturas",
+      details: locale === "en" ? ["Virtual, flexible hours", "Minimum 4 hours/week", "Creativity and organization", "Prepare materials and tracking sheets"] : ["Virtual, flexibilidad de horarios", "Mínimo 4 horas/semana", "Creatividad y organización", "Prepara materiales y hoja de seguimiento"]
     },
     {
       name: "Club Familias",
       icon: "👨‍👩‍👧‍👦",
-      description: "Facilita sesiones con familias",
-      details: ["Virtual, último domingo de mes", "Estudiante/profesional en ciencias sociales", "Capacitación en Disciplina Positiva", "Promociona comunicación familiar"]
+      description: locale === "en" ? "Facilitate sessions with families" : "Facilita sesiones con familias",
+      details: locale === "en" ? ["Virtual, last Sunday of month", "Student/professional in social sciences", "Positive Discipline training", "Promote family communication"] : ["Virtual, último domingo de mes", "Estudiante/profesional en ciencias sociales", "Capacitación en Disciplina Positiva", "Promociona comunicación familiar"]
     },
     {
-      name: "Donantes Recurrentes",
+      name: locale === "en" ? "Recurring Donors" : "Donantes Recurrentes",
       icon: "💝",
-      description: "Recluta donantes mensuales",
-      details: ["Virtual, 3-4 horas/semana", "Campañas en redes sociales", "Organización y comunicación", "Seguimiento a donantes"]
+      description: locale === "en" ? "Recruit monthly donors" : "Recluta donantes mensuales",
+      details: locale === "en" ? ["Virtual, 3-4 hours/week", "Social media campaigns", "Organization and communication", "Donor follow-up"] : ["Virtual, 3-4 horas/semana", "Campañas en redes sociales", "Organización y comunicación", "Seguimiento a donantes"]
     },
     {
-      name: "Banco de Alimentos",
+      name: locale === "en" ? "Food Bank" : "Banco de Alimentos",
       icon: "🍎",
-      description: "Gestiona y distribuye alimentos",
-      details: ["Último sábado del mes, 8am-1pm", "Trabajo físico en equipo", "Clasificación y distribución", "Requiere capacidad física"]
+      description: locale === "en" ? "Manage and distribute food" : "Gestiona y distribuye alimentos",
+      details: locale === "en" ? ["Last Saturday of month, 8am-1pm", "Physical teamwork", "Sorting and distribution", "Physical capacity required"] : ["Último sábado del mes, 8am-1pm", "Trabajo físico en equipo", "Clasificación y distribución", "Requiere capacidad física"]
     },
     {
-      name: "Comunicación y Redes",
+      name: locale === "en" ? "Communications & Social Media" : "Comunicación y Redes",
       icon: "📱",
-      description: "Crea contenido para redes sociales",
-      details: ["Híbrido (virtual + presencial)", "Redacción, diseño, fotografía, video", "Storytelling inspirador", "Flexibilidad creativa"]
+      description: locale === "en" ? "Create social media content" : "Crea contenido para redes sociales",
+      details: locale === "en" ? ["Hybrid (virtual + in-person)", "Writing, design, photography, video", "Inspirational storytelling", "Creative flexibility"] : ["Híbrido (virtual + presencial)", "Redacción, diseño, fotografía, video", "Storytelling inspirador", "Flexibilidad creativa"]
     }
   ]
 
   const testimonials = [
     {
       name: "Eugenia",
-      role: "Voluntaria de Tutorías",
-      quote: "Cambió mi forma de ver la educación. Ver cómo las niñas avanzan académicamente es transformador."
+      role: locale === "en" ? "Tutoring Volunteer" : "Voluntaria de Tutorías",
+      quote: locale === "en" ? "It changed the way I see education. Watching the girls advance academically is transformative." : "Cambió mi forma de ver la educación. Ver cómo las niñas avanzan académicamente es transformador."
     },
     {
       name: "María",
-      role: "Voluntaria de Club Familias",
-      quote: "Me permitió poner en práctica mis conocimientos en educación de una forma tangible y significativa."
+      role: locale === "en" ? "Club Familias Volunteer" : "Voluntaria de Club Familias",
+      quote: locale === "en" ? "It allowed me to put my education knowledge into practice in a tangible and meaningful way." : "Me permitió poner en práctica mis conocimientos en educación de una forma tangible y significativa."
     },
     {
       name: "Katherine",
-      role: "Voluntaria de Donantes",
-      quote: "Encontré una comunidad de mujeres que creen en educación con equidad. Cambió mi perspectiva."
+      role: locale === "en" ? "Donor Volunteer" : "Voluntaria de Donantes",
+      quote: locale === "en" ? "I found a community of women who believe in education with equity. It changed my perspective." : "Encontré una comunidad de mujeres que creen en educación con equidad. Cambió mi perspectiva."
     }
   ]
 
   return (
     <div className="min-h-screen bg-white">
       <PageHero
-        title="Voluntariado"
-        subtitle="Sé parte del cambio que queremos ver"
+        title={t("heroTitle")}
+        subtitle={t("heroSubtitle")}
         image="/young-girls-in-educational-workshop-in-costa-rica.jpg"
       />
 
@@ -76,9 +83,9 @@ export default function VoluntariadoPage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-8 max-w-4xl">
           <div className="bg-white rounded-2xl p-8 border-l-4 border-[#4526c9]">
-            <h2 className="text-3xl font-black text-[#140b3f] mb-6">¿Por qué ser voluntario/a?</h2>
+            <h2 className="text-3xl font-black text-[#140b3f] mb-6">{t("whyTitle")}</h2>
             <p className="text-gray-700 text-lg leading-relaxed">
-              En Soy Niña, los voluntarios son el corazón del programa. Si creos en el poder de la educación para transformar vidas, tenemos un lugar para ti. Nuestros voluntarios aportan desde diferentes espacios: facilitando clubes, enseñando, apoyando familias, reclutando recursos, o compartiendo sus talentos en comunicación.
+              {t("whyDescription")}
             </p>
           </div>
         </div>
@@ -87,7 +94,7 @@ export default function VoluntariadoPage() {
       {/* Voluntariado Nacional */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-8">
-          <h2 className="text-4xl font-black text-[#140b3f] mb-12 text-center">Equipos de Voluntariado Nacional</h2>
+          <h2 className="text-4xl font-black text-[#140b3f] mb-12 text-center">{t("nationalTitle")}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {nationalTeams.map((team, idx) => (
               <div
@@ -114,7 +121,7 @@ export default function VoluntariadoPage() {
       {/* Testimonios */}
       <section className="py-20 bg-gradient-to-br from-[#4526c9]/5 to-[#fe35fe]/5">
         <div className="container mx-auto px-8">
-          <h2 className="text-4xl font-black text-[#140b3f] mb-12 text-center">Historias de Voluntarias</h2>
+          <h2 className="text-4xl font-black text-[#140b3f] mb-12 text-center">{t("testimoniesTitle")}</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {testimonials.map((testimony, idx) => (
               <div key={idx} className="bg-white rounded-xl p-8 border-l-4 border-[#4526c9] shadow-md hover:shadow-lg transition">
@@ -134,7 +141,7 @@ export default function VoluntariadoPage() {
         <div className="container mx-auto px-8 max-w-4xl">
           <div className="flex items-center gap-4 mb-8">
             <Heart size={40} className="text-[#fe35fe]" />
-            <h2 className="text-4xl font-black text-[#140b3f]">Voluntariado Corporativo</h2>
+            <h2 className="text-4xl font-black text-[#140b3f]">{t("corporateTitle")}</h2>
           </div>
           <div className="bg-gradient-to-br from-[#fe35fe]/10 to-transparent rounded-xl p-8 border border-[#fe35fe]/20">
             <p className="text-gray-700 text-lg mb-6">
@@ -154,7 +161,7 @@ export default function VoluntariadoPage() {
         <div className="container mx-auto px-8 max-w-4xl">
           <div className="flex items-center gap-4 mb-8">
             <Globe size={40} className="text-[#00c49a]" />
-            <h2 className="text-4xl font-black text-[#140b3f]">Voluntariado Internacional</h2>
+            <h2 className="text-4xl font-black text-[#140b3f]">{t("internationalTitle")}</h2>
           </div>
           <div className="bg-gradient-to-br from-[#00c49a]/10 to-transparent rounded-xl p-8 border border-[#00c49a]/20 mb-8">
             <p className="text-gray-700 text-lg mb-6">
@@ -174,7 +181,7 @@ export default function VoluntariadoPage() {
         <div className="container mx-auto px-8 max-w-4xl">
           <div className="flex items-center gap-4 mb-8">
             <BookOpen size={40} className="text-[#e0ff4f]" />
-            <h2 className="text-4xl font-black text-[#140b3f]">Internships & Professional Practices</h2>
+            <h2 className="text-4xl font-black text-[#140b3f]">{t("internshipsTitle")}</h2>
           </div>
           <div className="bg-gradient-to-br from-[#e0ff4f]/10 to-transparent rounded-xl p-8 border border-[#e0ff4f]/20">
             <p className="text-gray-700 text-lg mb-6">
@@ -224,7 +231,7 @@ export default function VoluntariadoPage() {
       {/* Requisitos */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-8 max-w-4xl">
-          <h2 className="text-4xl font-black text-[#140b3f] mb-8 text-center">Requisitos para Ser Voluntario/a</h2>
+          <h2 className="text-4xl font-black text-[#140b3f] mb-8 text-center">{t("requirementsTitle")}</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white rounded-lg p-6 border-2 border-[#4526c9]">
               <h3 className="text-xl font-bold text-[#140b3f] mb-4">General</h3>
@@ -250,11 +257,11 @@ export default function VoluntariadoPage() {
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-[#4526c9] to-[#fe35fe] text-white">
         <div className="container mx-auto px-8 text-center">
-          <h2 className="text-4xl font-black mb-6">¿Listo/a para ser parte del cambio?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">Contáctanos para saber más sobre las oportunidades de voluntariado disponibles.</p>
-          <a href="/contacto" className="inline-block bg-white text-[#4526c9] px-8 py-4 rounded-full font-bold hover:bg-[#e0ff4f] transition">
-            Postular Ahora
-          </a>
+          <h2 className="text-4xl font-black mb-6">{t("ctaTitle")}</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">{t("ctaDescription")}</p>
+          <Link href="/contacto" className="inline-block bg-white text-[#4526c9] px-8 py-4 rounded-full font-bold hover:bg-[#e0ff4f] transition">
+            {t("ctaButton")}
+          </Link>
         </div>
       </section>
     </div>

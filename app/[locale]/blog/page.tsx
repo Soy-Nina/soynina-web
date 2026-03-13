@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 import PageHero from "@/components/soy-nina/page-hero"
 
 const blogPosts = [
@@ -65,12 +66,14 @@ const blogPosts = [
 ]
 
 export default function BlogPage() {
+  const t = useTranslations("BlogPage")
+
   return (
     <div className="min-h-screen">
       <main>
         <PageHero
-          title="Blog Soy Niña"
-          subtitle="Historias, noticias y artículos sobre el empoderamiento de niñas y adolescentes"
+          title={t("heroTitle")}
+          subtitle={t("heroSubtitle")}
           image="/students-celebrating-academic-success.jpg"
         />
 
@@ -106,7 +109,7 @@ export default function BlogPage() {
                       {/* Meta */}
                       <div className="pt-4 border-t border-gray-200">
                         <p className="text-xs text-gray-500 mb-1">{post.date}</p>
-                        <p className="text-xs font-semibold text-[#4526c9]">Por {post.author}</p>
+                        <p className="text-xs font-semibold text-[#4526c9]">{t("by")} {post.author}</p>
                       </div>
                     </div>
                   </article>
@@ -120,15 +123,15 @@ export default function BlogPage() {
         <section className="py-20 bg-gradient-to-b from-purple-50 to-white">
           <div className="container mx-auto px-8 max-w-2xl text-center">
             <h2 className="text-3xl md:text-4xl font-black text-[#140b3f] mb-4">
-              Suscríbete a Nuestro Blog
+              {t("subscribeBlog")}
             </h2>
             <p className="text-gray-600 mb-8">
-              Recibe historias, noticias y actualizaciones sobre nuestros programas directamente en tu correo.
+              {t("subscribeDescription")}
             </p>
             <form className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
-                placeholder="Tu correo electrónico"
+                placeholder={t("emailPlaceholder")}
                 className="flex-grow px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-[#4526c9]"
                 required
               />
@@ -136,7 +139,7 @@ export default function BlogPage() {
                 type="submit"
                 className="px-8 py-3 bg-gradient-to-r from-[#e0ff4f] to-[#00c49a] hover:shadow-lg text-[#140b3f] font-black rounded-full transition-shadow"
               >
-                Suscribirse
+                {t("subscribeButton")}
               </button>
             </form>
           </div>

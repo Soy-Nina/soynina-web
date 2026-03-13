@@ -1,3 +1,5 @@
+import { Link } from "@/src/i18n/navigation"
+
 export default function About() {
   return (
     <section id="quienes-somos" className="w-full py-20 bg-gradient-to-b from-purple-50 to-white">
@@ -26,12 +28,12 @@ export default function About() {
               </p>
 
               <div className="pt-6">
-                <a 
+                <Link 
                   href="/quienes-somos" 
                   className="inline-block bg-gradient-to-r from-[#4526c9] to-[#6842d8] text-white px-8 py-4 rounded-full font-bold hover:shadow-xl transition-all hover:scale-105 shadow-lg"
                 >
                   Conocer más sobre nosotras
-                </a>
+                </Link>
               </div>
 
               <div className="pt-10 border-t border-gray-200 space-y-8">

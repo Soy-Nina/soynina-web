@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react"
 import "leaflet/dist/leaflet.css"
 import L from "leaflet"
+import { useTranslations } from "next-intl"
 
 const communities = [
     { name: "Guararí", lat: 10.0078, lng: -84.1286, description: "Heredia" },
@@ -16,6 +17,7 @@ const CR_CENTER: [number, number] = [9.95, -84.08]
 const CR_ZOOM = 10
 
 export default function CostaRicaMap() {
+    const t = useTranslations("Map")
     const mapContainerRef = useRef<HTMLDivElement>(null)
     const mapInstanceRef = useRef<L.Map | null>(null)
 
@@ -109,7 +111,7 @@ export default function CostaRicaMap() {
             {/* Legend */}
             <div className="flex items-center gap-2 mt-4 text-sm text-gray-500">
                 <span className="inline-block w-3 h-3 rounded-full bg-[#4526c9]" />
-                <span>Comunidades activas</span>
+                <span>{t("activeCommunities")}</span>
             </div>
         </div>
     )

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Mail, MessageSquare, Send, CheckCircle2, Loader2 } from "lucide-react"
+import { useTranslations } from "next-intl"
 import PageHero from "@/components/soy-nina/page-hero"
 
 // ──────────────────────────────────────────────────────────────────────
@@ -21,6 +22,7 @@ const FIELD_NAMES = {
 const CONTACT_EMAIL = "separte@soynina.org"
 
 export default function ContactoPage() {
+  const t = useTranslations("ContactoPage")
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
   const [formData, setFormData] = useState({
     firstName: "",
@@ -70,8 +72,8 @@ export default function ContactoPage() {
   return (
     <div className="min-h-screen bg-white">
       <PageHero
-        title="Contacto"
-        subtitle="¿Tenés preguntas? ¿Querés colaborar? Nos encantaría escucharte."
+        title={t("heroTitle")}
+        subtitle={t("heroSubtitle")}
         image="/community-workshop-with-families.jpg"
       />
 
@@ -88,23 +90,22 @@ export default function ContactoPage() {
             <div>
               <div className="inline-flex items-center gap-3 bg-[#4526c9]/10 text-[#4526c9] px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase mb-6">
                 <MessageSquare className="w-4 h-4" />
-                Escríbenos
+                {t("badge")}
               </div>
 
               <h2 className="text-5xl md:text-6xl font-black text-[#140b3f] leading-[1.1] mb-6">
-                Sigamos<br />
-                <span className="text-[#4526c9]">en contacto.</span>
+                {t("title1")}<br />
+                <span className="text-[#4526c9]">{t("titleHighlight")}</span>
               </h2>
 
               <p className="text-gray-600 text-lg leading-relaxed mb-10 max-w-md">
-                Completá el formulario y te responderemos a la brevedad. Si preferís
-                escribirnos directamente, usá el correo de abajo.
+                {t("description")}
               </p>
 
               {/* Email alternative */}
               <div className="bg-white rounded-3xl p-8 shadow-xl shadow-[#4526c9]/8 border border-white">
                 <h3 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4">
-                  También podés escribirnos por correo
+                  {t("emailAlt")}
                 </h3>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
@@ -127,9 +128,9 @@ export default function ContactoPage() {
                     <div className="w-20 h-20 bg-[#00c49a]/10 rounded-full flex items-center justify-center mb-6">
                       <CheckCircle2 className="w-10 h-10 text-[#00c49a]" />
                     </div>
-                    <h3 className="text-2xl font-black text-[#140b3f] mb-2">¡Mensaje recibido!</h3>
+                    <h3 className="text-2xl font-black text-[#140b3f] mb-2">{t("successTitle")}</h3>
                     <p className="text-gray-500 max-w-xs">
-                      Gracias por escribirnos. Te responderemos a la brevedad posible.
+                      {t("successMessage")}
                     </p>
                     <button
                       onClick={() => {
@@ -138,7 +139,7 @@ export default function ContactoPage() {
                       }}
                       className="mt-8 text-[#4526c9] font-bold text-sm hover:underline"
                     >
-                      Enviar otro mensaje
+                      {t("sendAnother")}
                     </button>
                   </div>
                 ) : (
@@ -147,7 +148,7 @@ export default function ContactoPage() {
                     {/* Name row */}
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="firstName" className={labelClass}>Nombre</label>
+                        <label htmlFor="firstName" className={labelClass}>{t("firstName")}</label>
                         <input
                           id="firstName"
                           required
@@ -159,7 +160,7 @@ export default function ContactoPage() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="lastName" className={labelClass}>Apellido</label>
+                        <label htmlFor="lastName" className={labelClass}>{t("lastName")}</label>
                         <input
                           id="lastName"
                           required
@@ -174,7 +175,7 @@ export default function ContactoPage() {
 
                     {/* Email */}
                     <div>
-                      <label htmlFor="contactEmail" className={labelClass}>Correo Electrónico</label>
+                      <label htmlFor="contactEmail" className={labelClass}>{t("email")}</label>
                       <input
                         id="contactEmail"
                         required
@@ -188,12 +189,12 @@ export default function ContactoPage() {
 
                     {/* Message */}
                     <div>
-                      <label htmlFor="message" className={labelClass}>Mensaje</label>
+                      <label htmlFor="message" className={labelClass}>{t("message")}</label>
                       <textarea
                         id="message"
                         required
                         rows={5}
-                        placeholder="¿En qué podemos ayudarte?"
+                        placeholder={t("messagePlaceholder")}
                         className={`${inputClass} resize-none`}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -220,7 +221,7 @@ export default function ContactoPage() {
                       {status === "submitting" ? (
                         <>
                           <Loader2 className="w-5 h-5 animate-spin" />
-                          Enviando...
+                          {t("sending")}
                         </>
                       ) : (
                         <>

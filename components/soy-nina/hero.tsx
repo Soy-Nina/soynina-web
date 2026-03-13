@@ -1,16 +1,12 @@
 "use client"
 
 import { useEffect, useState } from "react"
-
-const stats = [
-  { value: "600+", label: "Vidas impactadas" },
-  { value: "200+", label: "Niñas activas" },
-  { value: "28,000", label: "Horas de voluntariado" },
-  { value: "4", label: "Comunidades" },
-]
+import { useTranslations } from "next-intl"
+import { Link } from "@/src/i18n/navigation"
 
 export default function Hero() {
   const [scrolled, setScrolled] = useState(false)
+  const t = useTranslations("Hero")
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
@@ -18,16 +14,23 @@ export default function Hero() {
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
+  const stats = [
+    { value: "600+", label: t("stats.livesImpacted") },
+    { value: "200+", label: t("stats.activeGirls") },
+    { value: "28,000", label: t("stats.volunteerHours") },
+    { value: "4", label: t("stats.communities") },
+  ]
+
   return (
     <section id="inicio" className="relative w-full min-h-screen overflow-hidden">
       {/* Full-bleed background image */}
       <div className="absolute inset-0">
         <img
           src="/diverse-group-of-girls-learning-together-in-costa-.jpg"
-          alt="Niñas aprendiendo juntas en Costa Rica"
+          alt={t("imageAlt")}
           className="w-full h-full object-cover"
         />
-        {/* Dark gradient overlay — darker at bottom for stat ribbon, lighter at top for text */}
+        {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#140b3f]/75 via-[#140b3f]/50 to-[#140b3f]/90" />
       </div>
 
@@ -40,20 +43,19 @@ export default function Hero() {
               {/* Eyebrow */}
               <div className="mb-6">
                 <span className="inline-block text-[#e0ff4f] text-sm font-bold tracking-[0.2em] uppercase">
-                  Costa Rica · Desde 2015
+                  {t("eyebrow")}
                 </span>
               </div>
 
               {/* Headline */}
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-white leading-[1.05] mb-8">
-                Niñas que se conocen,{" "}
-                <span className="text-[#e0ff4f]">se cuidan</span>{" "}
-                y lideran.
+                {t("headline1")}{" "}
+                <span className="text-[#e0ff4f]">{t("headlineHighlight")}</span>{" "}
+                {t("headline2")}
               </h1>
 
               <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl mb-10">
-                Programas socioeducativos que transforman vidas en San José, Heredia y Alajuela —
-                construyendo futuros desde adentro hacia afuera.
+                {t("description")}
               </p>
 
               {/* CTAs */}
@@ -62,14 +64,14 @@ export default function Hero() {
                   href="#donar"
                   className="inline-flex items-center justify-center bg-[#e0ff4f] hover:bg-[#d4f53d] text-[#140b3f] font-bold text-base px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  Dona ahora
+                  {t("ctaDonate")}
                 </a>
-                <a
+                <Link
                   href="/voluntariado"
                   className="inline-flex items-center justify-center bg-transparent border-2 border-white/50 hover:border-white text-white font-bold text-base px-8 py-4 rounded-full transition-all hover:bg-white/10"
                 >
-                  Sé voluntaria
-                </a>
+                  {t("ctaVolunteer")}
+                </Link>
               </div>
             </div>
           </div>

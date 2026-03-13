@@ -2,15 +2,22 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Outfit } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages, setRequestLocale } from "next-intl/server"
+import { routing } from "@/src/i18n/routing"
 import Navigation from "@/components/soy-nina/navigation"
 import Footer from "@/components/soy-nina/footer"
-import "./globals.css"
+import "../globals.css"
 
 const outfit = Outfit({ 
   subsets: ["latin"],
   variable: "--font-outfit",
   display: "swap",
 })
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
 
 export const metadata: Metadata = {
   title: "Soy Niña - Empoderando niñas y adolescentes en Costa Rica",
@@ -22,17 +29,25 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode
+  params: Promise<{ locale: string }>
 }>) {
+  const { locale } = await params
+  setRequestLocale(locale)
+  const messages = await getMessages()
+
   return (
-    <html lang="es">
+    <html lang={locale}>
       <body className={`${outfit.variable} font-sans antialiased`}>
-        <Navigation />
-        {children}
-        <Footer />
+        <NextIntlClientProvider messages={messages}>
+          <Navigation />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
         <Analytics />
       </body>
     </html>

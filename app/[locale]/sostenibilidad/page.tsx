@@ -1,17 +1,24 @@
+import { setRequestLocale, getTranslations } from "next-intl/server"
 import { Mic, BookOpen, Users, Briefcase } from "lucide-react"
 import PageHero from "@/components/soy-nina/page-hero"
+import { Link } from "@/src/i18n/navigation"
 
-export const metadata = {
-  title: "Servicios de Sostenibilidad | Soy Niña",
-  description: "Servicios de formación: Charlas temáticas, Creciendo Juntas, Consultorías estratégicas y por componentes."
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "SostenibilidadPage" })
+  return { title: t("metaTitle"), description: t("metaDescription") }
 }
 
-export default function SostenibilidadPage() {
+export default async function SostenibilidadPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
+  const t = await getTranslations({ locale, namespace: "SostenibilidadPage" })
+
   return (
     <div className="min-h-screen bg-white">
       <PageHero
-        title="Servicios de Sostenibilidad"
-        subtitle="Formación, consultoría y acompañamiento especializado"
+        title={t("heroTitle")}
+        subtitle={t("heroSubtitle")}
         image="/community-workshop-with-families.jpg"
       />
 
@@ -268,11 +275,11 @@ export default function SostenibilidadPage() {
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-[#4526c9] to-[#fe35fe] text-white">
         <div className="container mx-auto px-8 text-center">
-          <h2 className="text-4xl font-black mb-6">¿Tu organización necesita apoyo?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">Conversemos sobre cómo podemos colaborar para fortalecer tus iniciativas de educación y bienestar.</p>
-          <a href="/contacto" className="inline-block bg-white text-[#4526c9] px-8 py-4 rounded-full font-bold hover:bg-[#e0ff4f] transition">
-            Solicitar Consultoría
-          </a>
+          <h2 className="text-4xl font-black mb-6">{t("ctaTitle")}</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">{t("ctaDescription")}</p>
+          <Link href="/contacto" className="inline-block bg-white text-[#4526c9] px-8 py-4 rounded-full font-bold hover:bg-[#e0ff4f] transition">
+            {t("ctaButton")}
+          </Link>
         </div>
       </section>
     </div>

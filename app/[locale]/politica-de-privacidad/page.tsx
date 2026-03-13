@@ -1,11 +1,14 @@
-
+import { setRequestLocale } from "next-intl/server"
 
 export const metadata = {
   title: "Política de Privacidad - Soy Niña",
   description: "Política de privacidad de Fundación Soy Niña",
 }
 
-export default function PoliticaPrivacidad() {
+export default async function PoliticaPrivacidad({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
+
   return (
     <div className="min-h-screen">
 

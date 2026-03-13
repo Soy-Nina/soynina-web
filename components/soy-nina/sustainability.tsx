@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Leaf, Building2, Users, Target } from "lucide-react"
+import { Link } from "@/src/i18n/navigation"
 
 const services = [
   {
@@ -90,12 +91,12 @@ export default function Sustainability() {
               <p className="text-lg mb-6">
                 Conoce nuestros servicios de formación y consultoría
               </p>
-              <a 
+              <Link 
                 href="/sostenibilidad" 
                 className="inline-block bg-gradient-to-r from-[#00c49a] to-[#1ad9b0] text-white text-lg px-8 py-4 rounded-full font-bold hover:shadow-xl transition-all hover:scale-105 shadow-lg"
               >
                 Ver servicios de sostenibilidad
-              </a>
+              </Link>
             </div>
           </div>
         </div>

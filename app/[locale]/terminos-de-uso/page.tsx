@@ -1,11 +1,14 @@
-
+import { setRequestLocale } from "next-intl/server"
 
 export const metadata = {
   title: "Términos de Uso - Soy Niña",
   description: "Términos y condiciones de uso del sitio web de Fundación Soy Niña",
 }
 
-export default function TerminosUso() {
+export default async function TerminosUso({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
+
   return (
     <div className="min-h-screen">
 

@@ -1,0 +1,321 @@
+{
+  "Metadata": {
+    "title": "Soy Niña - Empowering Girls and Adolescents in Costa Rica",
+    "description": "Costa Rican NGO dedicated to the holistic development of girls, adolescents, and families in situations of social vulnerability through socio-educational programs."
+  },
+  "Navigation": {
+    "quienesSomos": "About Us",
+    "programas": "Programs",
+    "voluntariado": "Volunteer",
+    "blog": "Blog",
+    "eventos": "Events",
+    "informes": "Reports",
+    "contacto": "Contact",
+    "donarAhora": "Donate Now"
+  },
+  "Hero": {
+    "eyebrow": "Costa Rica · Since 2015",
+    "headline1": "Girls who know themselves,",
+    "headlineHighlight": "care for each other",
+    "headline2": "and lead.",
+    "description": "Socio-educational programs transforming lives in San José, Heredia, and Alajuela — building futures from the inside out.",
+    "ctaDonate": "Donate now",
+    "ctaVolunteer": "Become a volunteer",
+    "stats": {
+      "livesImpacted": "Lives impacted",
+      "activeGirls": "Active girls",
+      "volunteerHours": "Volunteer hours",
+      "communities": "Communities"
+    },
+    "imageAlt": "Girls learning together in Costa Rica"
+  },
+  "Programs": {
+    "eyebrow": "Programs",
+    "title1": "What we",
+    "title2": "do.",
+    "description": "Four complementary programs that support girls, adolescents, and their families — from elementary school through early adulthood.",
+    "viewAll": "View all programs",
+    "program1": {
+      "title": "Club Niña",
+      "age": "Ages 6–12",
+      "description": "Develops socio-emotional skills, critical thinking, and self-care in elementary school girls.",
+      "activities": ["Self-esteem and leadership workshops", "Rights education", "Art and creative expression"]
+    },
+    "program2": {
+      "title": "Club Cole",
+      "age": "Ages 13–17",
+      "description": "Empowers adolescents by strengthening their autonomy, decision-making, and life planning.",
+      "activities": ["Comprehensive sex education", "Violence prevention", "Career guidance"]
+    },
+    "program3": {
+      "title": "Club Familias",
+      "age": "Families",
+      "description": "Holistic support to strengthen family bonds, parenting skills, and community development.",
+      "activities": ["Positive parenting workshops", "Family emotional management", "Community support networks"]
+    },
+    "program4": {
+      "title": "Tutoring",
+      "age": "Academic support",
+      "description": "Personalized educational reinforcement to improve academic performance and prevent dropout.",
+      "activities": ["Math and Spanish support", "Study techniques", "Individualized mentoring"]
+    }
+  },
+  "Impact": {
+    "eyebrow": "Impact",
+    "title1": "Every number",
+    "titleHighlight": "is a girl",
+    "title2": "who changed her future.",
+    "description": "Since 2018 we have worked in the most vulnerable communities of Costa Rica's Greater Metropolitan Area. These numbers represent real lives, strengthened families, and a more just future.",
+    "stats": {
+      "stat1": { "label": "Lives transformed", "detail": "Since 2018, more than 600 girls, adolescents, and their families have participated in our programs across 5 communities in the Greater Metropolitan Area." },
+      "stat2": { "label": "Active girls today", "detail": "Currently more than 200 girls and adolescents actively participate in our 4 weekly programs: Club Niña, Club Cole, Club Familias, and Tutoring." },
+      "stat3": { "label": "Volunteer hours", "detail": "Our network of more than 200 professional volunteers has contributed 28,000 hours of support in social work, psychology, education, and mentoring." },
+      "stat4": { "label": "School retention", "detail": "95% of program participants stay in the education system, compared to significantly lower national averages in at-risk areas." }
+    },
+    "areasEyebrow": "Areas of transformation",
+    "areasTitle": "Impact that multiplies.",
+    "area1": { "title": "Self-esteem and leadership", "description": "Girls develop self-confidence, learn to use their voice, and become agents of change in their communities.", "metricLabel": "report greater confidence" },
+    "area2": { "title": "Violence prevention", "description": "Education in rights, healthy boundaries, and support networks that protect girls and adolescents from risky situations.", "metricLabel": "protected communities" },
+    "area3": { "title": "Academic success", "description": "Personalized tutoring and mentoring that transform girls' relationship with education and open opportunities.", "metricLabel": "more likely to graduate" },
+    "presenceEyebrow": "Presence",
+    "presenceTitle": "5 communities, one commitment.",
+    "testimonials": {
+      "t1": { "quote": "I used to not like going to school. Now I know I can be whatever I want.", "author": "María, age 11", "role": "Club Niña participant" },
+      "t2": { "quote": "It changed the way I see education. Watching the girls progress is transformative.", "author": "Eugenia", "role": "Tutoring Volunteer" },
+      "t3": { "quote": "My daughter now stands up for her rights. That's priceless.", "author": "Carolina", "role": "Club Familias parent participant" }
+    },
+    "ctaTitle": "Want to be part of the change?",
+    "ctaDescription": "Join as a volunteer or donate so more girls can access our programs.",
+    "ctaDonate": "Donate now",
+    "ctaVolunteer": "Volunteer"
+  },
+  "Events": {
+    "eyebrow": "Events",
+    "title1": "Upcoming",
+    "title2": "events.",
+    "description": "Workshops, festivals, and sessions where our girls, families, and volunteers come together to grow.",
+    "viewAll": "View all events"
+  },
+  "Donate": {
+    "eyebrow": "Support Us",
+    "title1": "Your donation",
+    "titleHighlight": "transforms",
+    "title2": "lives.",
+    "description": "Every contribution, no matter the size, makes a difference. 85% of our funds go directly to programs — we publish annual financial reports.",
+    "levels": {
+      "l1": { "title": "Friend", "description": "Materials for one girl for a month" },
+      "l2": { "title": "Ally", "description": "Snacks for 10 girls for a week" },
+      "l3": { "title": "Protector", "description": "A complete workshop for 15 girls" },
+      "l4": { "title": "Sponsor", "description": "Full program support for one month" }
+    },
+    "taxDeductible": "Tax-deductible donations · Costa Rica",
+    "howToDonate": "How to donate",
+    "sinpeMobile": "SINPE Mobile",
+    "bankTransfer": "Bank transfer",
+    "bank": "Bank",
+    "holder": "Account holder",
+    "legalId": "Legal ID",
+    "creditCard": "Credit / debit card",
+    "donateWithCard": "Donate by card",
+    "corporateQuestion": "Are you a company? Let's talk about corporate social responsibility and strategic alliances.",
+    "contactCorporate": "Contact corporate area →"
+  },
+  "Volunteer": {
+    "eyebrow": "Volunteer",
+    "title1": "Be part",
+    "title2": "of the change.",
+    "description": "Volunteers are the heart of Soy Niña. If you believe in the power of education to transform lives, we have a place for you — from facilitating clubs to creating digital content.",
+    "roles": {
+      "r1": { "title": "Weekly Clubs", "desc": "Facilitate educational and empowerment workshops" },
+      "r2": { "title": "Academic Tutoring", "desc": "Teach various subjects online" },
+      "r3": { "title": "Club Familias", "desc": "Facilitate virtual sessions with families" },
+      "r4": { "title": "Communications", "desc": "Create social media content" },
+      "r5": { "title": "Food Bank", "desc": "Manage and distribute food monthly" },
+      "r6": { "title": "Donors", "desc": "Recruit donors and follow up on campaigns" }
+    },
+    "requirementsTitle": "Basic requirements:",
+    "requirement1": "18+ years old · min. 2–4 hrs/week",
+    "requirement2": "Commitment to child protection",
+    "requirement3": "Complete onboarding process (form → references → agreement)",
+    "cta": "View volunteer opportunities →",
+    "testimonialLabel": "Volunteers say:",
+    "testimonialQuote": "\"I found a community of women who believe in education with equity.\"",
+    "testimonialAuthor": "— Katherine, Donor Volunteer",
+    "volunteerImageAlt": "Volunteer in educational workshop"
+  },
+  "Newsletter": {
+    "eyebrow": "Our Newsletter",
+    "title1": "Stay informed about our",
+    "titleHighlight": "impact.",
+    "description": "Subscribe to receive impact stories, program updates, and exclusive opportunities to support the girls of Costa Rica.",
+    "benefits": ["Direct impact reports", "Empowerment stories", "Events and volunteering"],
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email address",
+    "firstNamePlaceholder": "Ana",
+    "lastNamePlaceholder": "García",
+    "emailPlaceholder": "ana@example.com",
+    "processing": "Processing...",
+    "subscribe": "Subscribe now",
+    "successTitle": "Welcome aboard!",
+    "successMessage": "Your subscription has been confirmed. You'll hear from us soon.",
+    "back": "Go back",
+    "error": "Something went wrong. Please try again.",
+    "privacy": "By subscribing, you accept our Privacy Policy. You can unsubscribe anytime from the footer of each email."
+  },
+  "Footer": {
+    "donateStrip": "85% of our funds go directly to programs. We publish annual reports.",
+    "donateNow": "Donate now",
+    "brandDescription": "Empowering girls and adolescents in Costa Rica since 2015.",
+    "organization": "Organization",
+    "quienesSomos": "About us",
+    "programas": "Programs",
+    "sostenibilidad": "Sustainability",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "supportUs": "Support Us",
+    "makeDonation": "Make a donation",
+    "beVolunteer": "Become a volunteer",
+    "corporateAlliances": "Corporate alliances",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy policy",
+    "termsOfUse": "Terms of use",
+    "legalId": "Legal ID: 3-101-123456",
+    "copyright": "© 2025 Fundación Soy Niña. All rights reserved.",
+    "madeWith": "Made with ♥ in Costa Rica"
+  },
+  "Map": {
+    "activeCommunities": "Active communities"
+  },
+  "LocaleSwitcher": {
+    "es": "ES",
+    "en": "EN"
+  },
+  "QuienesSomos": {
+    "metaTitle": "About Us | Soy Niña",
+    "metaDescription": "Meet our team, board of directors, corporate allies, and university partners at Soy Niña.",
+    "heroTitle": "About Us",
+    "heroSubtitle": "Meet the team driving change at Soy Niña",
+    "historyTitle": "Our History",
+    "historyP1": "In February 2018, the conviction was born to accompany girls and adolescents in contexts of psychosocial vulnerability. We started in Los Guido, Desamparados, working from the perspective of respectful education and human rights.",
+    "historyP2": "We expanded to Río Azul in 2019 and reached Pavas in 2021. In each community, we work in contexts marked by urban violence, early pregnancies, drug trafficking, and inequality. Our purpose is to provide safe spaces where girls can be supported in their holistic development.",
+    "historyP3": "Today, we continue growing. In 2025, we will expand to new communities, always faithful to our mission of educating with excellence, equity, and sisterhood.",
+    "teamTitle": "Our Professional Team",
+    "boardTitle": "Board of Directors",
+    "corporateTitle": "Corporate Allies",
+    "corporateSubtitle": "Companies committed to our mission",
+    "universityTitle": "University Partners",
+    "universitySubtitle": "Universities supporting our training and internships",
+    "ctaTitle": "Want to join the team?",
+    "ctaDescription": "Join our volunteer team or become a corporate ally.",
+    "ctaVolunteering": "Volunteering",
+    "ctaContact": "Contact Us"
+  },
+  "ProgramasPage": {
+    "metaTitle": "Our Programs | Soy Niña",
+    "metaDescription": "Discover Soy Niña's programs: Club Niña, Club Cole, Club Familias, and Academic Tutoring.",
+    "heroTitle": "Our Programs",
+    "heroSubtitle": "Spaces for transformation and holistic growth",
+    "methodologyTitle": "Work Methodology",
+    "methodologyP1": "We offer free, continuous programming during the school year with professional facilitators in Social Sciences and Education. Each club has 2-3 trained volunteers who accompany the facilitators.",
+    "methodologyP2": "We include special sessions in STEAM, health, environment, and leadership. Everything is done from the perspective of respectful education and human rights, prioritizing socio-emotional well-being.",
+    "ctaTitle": "Want to join a program?",
+    "ctaDescription": "All our programs are completely free for beneficiaries.",
+    "ctaButton": "Request Information"
+  },
+  "EventosPage": {
+    "metaTitle": "Events | Soy Niña",
+    "metaDescription": "Calendar of upcoming events, workshops, festivals, and sessions from Soy Niña in Costa Rica.",
+    "heroTitle": "Events",
+    "heroSubtitle": "Workshops, festivals, and sessions that transform communities",
+    "calendarTitle": "Our Calendar",
+    "calendarDescription": "Explore our upcoming events. From leadership workshops to community festivals, each activity is an opportunity to grow, learn, and connect. Select a month to see scheduled events.",
+    "ctaTitle": "Want to participate?",
+    "ctaDescription": "Join as a volunteer or bring your family to our activities. We look forward to seeing you!",
+    "ctaVolunteer": "Be a Volunteer",
+    "ctaContact": "Contact Us"
+  },
+  "ContactoPage": {
+    "metaTitle": "Contact | Soy Niña",
+    "metaDescription": "Contact us to collaborate, ask questions, or join Soy Niña.",
+    "heroTitle": "Contact",
+    "heroSubtitle": "Have questions? Want to collaborate? We'd love to hear from you.",
+    "badge": "Write to us",
+    "title1": "Let's stay",
+    "titleHighlight": "in touch.",
+    "description": "Fill out the form and we'll get back to you shortly. If you prefer to write directly, use the email below.",
+    "emailAlt": "You can also email us directly",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email address",
+    "message": "Message",
+    "firstNamePlaceholder": "Ana",
+    "lastNamePlaceholder": "García",
+    "emailPlaceholder": "ana@example.com",
+    "messagePlaceholder": "How can we help you?",
+    "sending": "Sending...",
+    "send": "Send message",
+    "successTitle": "Message received!",
+    "successMessage": "Thank you for writing to us. We'll respond as soon as possible.",
+    "sendAnother": "Send another message",
+    "error": "Something went wrong. Please try again.",
+    "privacy": "Your information is used only to respond to your inquiry, in accordance with our Privacy Policy."
+  },
+  "InformesPage": {
+    "metaTitle": "Monthly Reports | Soy Niña",
+    "metaDescription": "View and download Soy Niña's monthly activity, impact, and transparency reports.",
+    "heroTitle": "Monthly Reports",
+    "heroSubtitle": "Transparency and accountability of our activities and impact"
+  },
+  "Reports": {
+    "title": "Monthly Reports",
+    "description": "View and download our monthly activity, impact, and transparency reports.",
+    "noReports": "No reports available for {year}.",
+    "viewPdf": "View PDF",
+    "download": "Download",
+    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  },
+  "FAQPage": {
+    "heroTitle": "Frequently Asked Questions",
+    "heroSubtitle": "Find answers about Soy Niña",
+    "ctaTitle": "Didn't find your answer?",
+    "ctaDescription": "We're here to help. Contact us directly.",
+    "ctaButton": "Contact"
+  },
+  "VoluntariadoPage": {
+    "metaTitle": "Volunteering | Soy Niña",
+    "metaDescription": "Join as a national, corporate, or international volunteer, or do a professional internship with Soy Niña.",
+    "heroTitle": "Volunteering",
+    "heroSubtitle": "Be part of the change we want to see",
+    "whyTitle": "Why volunteer?",
+    "whyDescription": "At Soy Niña, volunteers are the heart of the program. If you believe in the power of education to transform lives, we have a place for you. Our volunteers contribute from different spaces: facilitating clubs, teaching, supporting families, recruiting resources, or sharing their talents in communications.",
+    "nationalTitle": "National Volunteer Teams",
+    "testimoniesTitle": "Volunteer Stories",
+    "corporateTitle": "Corporate Volunteering",
+    "internationalTitle": "International Volunteering",
+    "internshipsTitle": "Internships & Professional Practices",
+    "requirementsTitle": "Requirements to Volunteer",
+    "ctaTitle": "Ready to be part of the change?",
+    "ctaDescription": "Contact us to learn more about available volunteer opportunities.",
+    "ctaButton": "Apply Now"
+  },
+  "SostenibilidadPage": {
+    "metaTitle": "Sustainability Services | Soy Niña",
+    "metaDescription": "Training services: Thematic talks, Growing Together, Strategic and component-based consultancies.",
+    "heroTitle": "Sustainability Services",
+    "heroSubtitle": "Training, consulting, and specialized support",
+    "ctaTitle": "Does your organization need support?",
+    "ctaDescription": "Let's talk about how we can collaborate to strengthen your education and well-being initiatives.",
+    "ctaButton": "Request a Consultation"
+  },
+  "BlogPage": {
+    "heroTitle": "Soy Niña Blog",
+    "heroSubtitle": "Stories, news, and articles about empowering girls and adolescents",
+    "subscribeBlog": "Subscribe to Our Blog",
+    "subscribeDescription": "Receive stories, news, and updates about our programs directly in your inbox.",
+    "emailPlaceholder": "Your email address",
+    "subscribeButton": "Subscribe",
+    "by": "By"
+  }
+}

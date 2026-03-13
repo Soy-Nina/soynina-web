@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react"
 import { FileText, Download, Eye, Calendar } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export interface ReportData {
     title: string
@@ -11,11 +12,6 @@ export interface ReportData {
     pdf: string
     slug: string
 }
-
-const MONTH_NAMES = [
-    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
-]
 
 const GRADIENT_PAIRS = [
     "from-[#4526c9] to-[#6b3fdb]",
@@ -30,6 +26,9 @@ interface ReportsProps {
 }
 
 export default function Reports({ reports }: ReportsProps) {
+    const t = useTranslations("Reports")
+    const monthNames = t.raw("months") as string[]
+
     const availableYears = useMemo(() => {
         const years = [...new Set(reports.map((r) => r.year))].sort((a, b) => b - a)
         return years
@@ -49,10 +48,10 @@ export default function Reports({ reports }: ReportsProps) {
                 {/* Section Header */}
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-black text-[#140b3f] mb-4">
-                        Informes Mensuales
+                        {t("title")}
                     </h2>
                     <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                        Consulta y descarga nuestros informes mensuales de actividades, impacto y transparencia.
+                        {t("description")}
                     </p>
                 </div>
 
@@ -76,7 +75,7 @@ export default function Reports({ reports }: ReportsProps) {
                 {filteredReports.length === 0 ? (
                     <div className="bg-gray-50 rounded-2xl p-12 text-center">
                         <FileText size={48} className="mx-auto text-gray-300 mb-4" />
-                        <p className="text-gray-400 text-lg">No hay informes disponibles para {selectedYear}.</p>
+                        <p className="text-gray-400 text-lg">{t("noReports", { year: selectedYear })}</p>
                     </div>
                 ) : (
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -94,7 +93,7 @@ export default function Reports({ reports }: ReportsProps) {
                                         </div>
                                         <div>
                                             <p className="text-white/80 text-sm font-medium">
-                                                {MONTH_NAMES[report.month - 1]}
+                                                {monthNames[report.month - 1]}
                                             </p>
                                             <p className="text-white text-2xl font-black">{report.year}</p>
                                         </div>
@@ -113,7 +112,7 @@ export default function Reports({ reports }: ReportsProps) {
                                         <div className="flex items-center gap-4 text-xs text-gray-400 mb-5">
                                             <span className="flex items-center gap-1">
                                                 <Calendar size={12} />
-                                                {MONTH_NAMES[report.month - 1]} {report.year}
+                                                {monthNames[report.month - 1]} {report.year}
                                             </span>
                                             <span className="flex items-center gap-1">
                                                 <FileText size={12} />
@@ -130,7 +129,7 @@ export default function Reports({ reports }: ReportsProps) {
                                                 className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-[#4526c9] hover:bg-[#3a1fa8] text-white text-sm font-bold rounded-full transition-all hover:shadow-lg hover:shadow-[#4526c9]/20"
                                             >
                                                 <Eye size={16} />
-                                                Ver PDF
+                                                {t("viewPdf")}
                                             </a>
                                             <a
                                                 href={report.pdf}
@@ -138,7 +137,7 @@ export default function Reports({ reports }: ReportsProps) {
                                                 className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-[#e0ff4f] hover:bg-[#d4f53d] text-[#140b3f] text-sm font-bold rounded-full transition-all hover:shadow-lg"
                                             >
                                                 <Download size={16} />
-                                                Descargar
+                                                {t("download")}
                                             </a>
                                         </div>
                                     </div>

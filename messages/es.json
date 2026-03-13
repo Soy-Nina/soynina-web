@@ -1,0 +1,321 @@
+{
+  "Metadata": {
+    "title": "Soy Niña - Empoderando niñas y adolescentes en Costa Rica",
+    "description": "ONG costarricense dedicada al desarrollo integral de niñas, adolescentes y familias en situación de vulnerabilidad social mediante programas socioeducativos."
+  },
+  "Navigation": {
+    "quienesSomos": "¿Quiénes Somos?",
+    "programas": "Programas",
+    "voluntariado": "Voluntariado",
+    "blog": "Blog",
+    "eventos": "Eventos",
+    "informes": "Informes",
+    "contacto": "Contacto",
+    "donarAhora": "Donar Ahora"
+  },
+  "Hero": {
+    "eyebrow": "Costa Rica · Desde 2015",
+    "headline1": "Niñas que se conocen,",
+    "headlineHighlight": "se cuidan",
+    "headline2": "y lideran.",
+    "description": "Programas socioeducativos que transforman vidas en San José, Heredia y Alajuela — construyendo futuros desde adentro hacia afuera.",
+    "ctaDonate": "Dona ahora",
+    "ctaVolunteer": "Sé voluntaria",
+    "stats": {
+      "livesImpacted": "Vidas impactadas",
+      "activeGirls": "Niñas activas",
+      "volunteerHours": "Horas de voluntariado",
+      "communities": "Comunidades"
+    },
+    "imageAlt": "Niñas aprendiendo juntas en Costa Rica"
+  },
+  "Programs": {
+    "eyebrow": "Programas",
+    "title1": "Lo que",
+    "title2": "hacemos.",
+    "description": "Cuatro programas complementarios que acompañan a niñas, adolescentes y sus familias — desde la primaria hasta la vida adulta temprana.",
+    "viewAll": "Ver todos los programas",
+    "program1": {
+      "title": "Club Niña",
+      "age": "6–12 años",
+      "description": "Desarrolla habilidades socioemocionales, pensamiento crítico y autocuidado en niñas de primaria.",
+      "activities": ["Talleres de autoestima y liderazgo", "Educación en derechos", "Arte y expresión creativa"]
+    },
+    "program2": {
+      "title": "Club Cole",
+      "age": "13–17 años",
+      "description": "Empodera a adolescentes fortaleciendo su autonomía, toma de decisiones y proyecto de vida.",
+      "activities": ["Educación sexual integral", "Prevención de violencia", "Orientación vocacional"]
+    },
+    "program3": {
+      "title": "Club Familias",
+      "age": "Familias",
+      "description": "Acompañamiento integral para fortalecer vínculos, habilidades parentales y desarrollo comunitario.",
+      "activities": ["Talleres de crianza positiva", "Gestión emocional familiar", "Redes de apoyo comunitario"]
+    },
+    "program4": {
+      "title": "Tutorías",
+      "age": "Apoyo académico",
+      "description": "Refuerzo educativo personalizado para mejorar el rendimiento académico y prevenir la deserción.",
+      "activities": ["Apoyo en matemáticas y español", "Técnicas de estudio", "Acompañamiento individualizado"]
+    }
+  },
+  "Impact": {
+    "eyebrow": "Impacto",
+    "title1": "Cada número",
+    "titleHighlight": "es una niña",
+    "title2": "que cambió su futuro.",
+    "description": "Desde 2018 trabajamos en las comunidades más vulnerables del Gran Área Metropolitana de Costa Rica. Estos números representan vidas reales, familias fortalecidas y un futuro más justo.",
+    "stats": {
+      "stat1": { "label": "Vidas transformadas", "detail": "Desde 2018, más de 600 niñas, adolescentes y sus familias han pasado por nuestros programas en 5 comunidades del Gran Área Metropolitana." },
+      "stat2": { "label": "Niñas activas hoy", "detail": "Actualmente más de 200 niñas y adolescentes participan activamente en nuestros 4 programas semanales: Club Niña, Club Cole, Club Familias y Tutorías." },
+      "stat3": { "label": "Horas voluntarias", "detail": "Nuestra red de más de 200 voluntarias profesionales ha aportado 28,000 horas de apoyo en trabajo social, psicología, educación y mentoría." },
+      "stat4": { "label": "Retención escolar", "detail": "El 95% de las participantes del programa se mantienen en el sistema educativo, frente a un promedio nacional significativamente menor en zonas de riesgo." }
+    },
+    "areasEyebrow": "Áreas de transformación",
+    "areasTitle": "Impacto que se multiplica.",
+    "area1": { "title": "Autoestima y liderazgo", "description": "Las niñas desarrollan confianza en sí mismas, aprenden a usar su voz y se convierten en agentes de cambio en sus comunidades.", "metricLabel": "reporta mayor confianza" },
+    "area2": { "title": "Prevención de violencia", "description": "Educación en derechos, límites saludables y redes de apoyo que protegen a niñas y adolescentes de situaciones de riesgo.", "metricLabel": "comunidades protegidas" },
+    "area3": { "title": "Éxito académico", "description": "Tutorías personalizadas y acompañamiento que transforman la relación de las niñas con la educación y abren oportunidades.", "metricLabel": "más probabilidad de graduarse" },
+    "presenceEyebrow": "Presencia",
+    "presenceTitle": "5 comunidades, un mismo compromiso.",
+    "testimonials": {
+      "t1": { "quote": "Antes no me gustaba ir a la escuela. Ahora sé que puedo ser lo que yo quiera.", "author": "María, 11 años", "role": "Participante de Club Niña" },
+      "t2": { "quote": "Cambió mi forma de ver la educación. Ver cómo las niñas avanzan es transformador.", "author": "Eugenia", "role": "Voluntaria de Tutorías" },
+      "t3": { "quote": "Mi hija ahora defiende sus derechos. Eso no tiene precio.", "author": "Carolina", "role": "Madre participante de Club Familias" }
+    },
+    "ctaTitle": "¿Quieres ser parte del cambio?",
+    "ctaDescription": "Únete como voluntaria o dona para que más niñas tengan acceso a nuestros programas.",
+    "ctaDonate": "Dona ahora",
+    "ctaVolunteer": "Voluntariado"
+  },
+  "Events": {
+    "eyebrow": "Eventos",
+    "title1": "Próximos",
+    "title2": "eventos.",
+    "description": "Talleres, festivales y jornadas donde nuestras niñas, familias y voluntarias se encuentran para crecer juntas.",
+    "viewAll": "Ver todos los eventos"
+  },
+  "Donate": {
+    "eyebrow": "Apóyanos",
+    "title1": "Tu donación",
+    "titleHighlight": "transforma",
+    "title2": "vidas.",
+    "description": "Cada aporte, sin importar su tamaño, hace la diferencia. El 85% de nuestros fondos va directamente a programas — publicamos informes financieros anuales.",
+    "levels": {
+      "l1": { "title": "Amiga", "description": "Materiales para una niña durante un mes" },
+      "l2": { "title": "Aliada", "description": "Meriendas para 10 niñas por una semana" },
+      "l3": { "title": "Protectora", "description": "Un taller completo para 15 niñas" },
+      "l4": { "title": "Patrocinadora", "description": "Apoyo integral a un programa por un mes" }
+    },
+    "taxDeductible": "Donaciones deducibles de impuestos · Costa Rica",
+    "howToDonate": "Cómo donar",
+    "sinpeMobile": "SINPE Móvil",
+    "bankTransfer": "Transferencia bancaria",
+    "bank": "Banco",
+    "holder": "Titular",
+    "legalId": "Cédula",
+    "creditCard": "Tarjeta de crédito / débito",
+    "donateWithCard": "Donar con tarjeta",
+    "corporateQuestion": "¿Eres una empresa? Hablemos sobre responsabilidad social empresarial y alianzas estratégicas.",
+    "contactCorporate": "Contactar área corporativa →"
+  },
+  "Volunteer": {
+    "eyebrow": "Voluntariado",
+    "title1": "Sé parte",
+    "title2": "del cambio.",
+    "description": "Las voluntarias son el corazón de Soy Niña. Si creés en el poder de la educación para transformar vidas, tenemos un lugar para vos — desde facilitar clubes hasta crear contenido digital.",
+    "roles": {
+      "r1": { "title": "Clubes Semanales", "desc": "Facilita talleres educativos y de empoderamiento" },
+      "r2": { "title": "Tutorías Académicas", "desc": "Enseña diferentes asignaturas de forma virtual" },
+      "r3": { "title": "Club Familias", "desc": "Facilita sesiones virtuales con familias" },
+      "r4": { "title": "Comunicación", "desc": "Crea contenido para redes sociales" },
+      "r5": { "title": "Banco de Alimentos", "desc": "Gestiona y distribuye alimentos mensualmente" },
+      "r6": { "title": "Donantes", "desc": "Recluta donantes y da seguimiento a campañas" }
+    },
+    "requirementsTitle": "Requisitos básicos:",
+    "requirement1": "Mayor de 18 años · mín. 2–4 hrs/semana",
+    "requirement2": "Compromiso con protección de la niñez",
+    "requirement3": "Completar proceso de inducción (formulario → referencias → acuerdo)",
+    "cta": "Ver oportunidades de voluntariado →",
+    "testimonialLabel": "Voluntarias dicen:",
+    "testimonialQuote": "\"Encontré una comunidad de mujeres que creen en educación con equidad.\"",
+    "testimonialAuthor": "— Katherine, Voluntaria de Donantes",
+    "volunteerImageAlt": "Voluntaria en taller educativo"
+  },
+  "Newsletter": {
+    "eyebrow": "Nuestro Boletín",
+    "title1": "Enterate de nuestro",
+    "titleHighlight": "impacto.",
+    "description": "Suscribite para recibir historias de impacto, avances de nuestros programas y oportunidades exclusivas para apoyar a las niñas de Costa Rica.",
+    "benefits": ["Reportes de impacto directo", "Historias de empoderamiento", "Eventos y voluntariado"],
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo Electrónico",
+    "firstNamePlaceholder": "Ana",
+    "lastNamePlaceholder": "García",
+    "emailPlaceholder": "ana@ejemplo.com",
+    "processing": "Procesando...",
+    "subscribe": "Suscribirme ahora",
+    "successTitle": "¡Te damos la bienvenida!",
+    "successMessage": "Tu suscripción ha sido confirmada. Pronto recibirás noticias nuestras.",
+    "back": "Volver",
+    "error": "Hubo un problema. Por favor intenta de nuevo.",
+    "privacy": "Al suscribirte, aceptás nuestra Política de Privacidad. Podés darte de baja en cualquier momento desde el pie de cada correo."
+  },
+  "Footer": {
+    "donateStrip": "El 85% de nuestros fondos va directamente a programas. Publicamos informes anuales.",
+    "donateNow": "Donar ahora",
+    "brandDescription": "Empoderando a niñas y adolescentes en Costa Rica desde 2015.",
+    "organization": "Organización",
+    "quienesSomos": "¿Quiénes somos?",
+    "programas": "Programas",
+    "sostenibilidad": "Sostenibilidad",
+    "blog": "Blog",
+    "faq": "Preguntas frecuentes",
+    "supportUs": "Apóyanos",
+    "makeDonation": "Hacer una donación",
+    "beVolunteer": "Ser voluntaria",
+    "corporateAlliances": "Alianzas corporativas",
+    "contact": "Contacto",
+    "legal": "Legal",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfUse": "Términos de uso",
+    "legalId": "Cédula jurídica: 3-101-123456",
+    "copyright": "© 2025 Fundación Soy Niña. Todos los derechos reservados.",
+    "madeWith": "Hecho con ♥ en Costa Rica"
+  },
+  "Map": {
+    "activeCommunities": "Comunidades activas"
+  },
+  "LocaleSwitcher": {
+    "es": "ES",
+    "en": "EN"
+  },
+  "QuienesSomos": {
+    "metaTitle": "¿Quiénes Somos? | Soy Niña",
+    "metaDescription": "Conoce nuestro equipo, junta directiva, aliados corporativos y partners universitarios de Soy Niña.",
+    "heroTitle": "¿Quiénes Somos?",
+    "heroSubtitle": "Conoce el equipo que impulsa el cambio en Soy Niña",
+    "historyTitle": "Nuestra Historia",
+    "historyP1": "En febrero de 2018, nace la convicción de acompañar a niñas y adolescentes en contextos de vulnerabilidad psicosocial. Comenzamos en Los Guido, Desamparados, trabajando desde la perspectiva de la educación respetuosa y los derechos humanos.",
+    "historyP2": "Expandimos a Río Azul en 2019, y en 2021 llegamos a Pavas. En cada comunidad, trabajamos en contextos marcados por violencia urbana, embarazos tempranos, tráfico de drogas y desigualdad. Nuestro propósito es proporcionar espacios seguros donde las niñas puedan ser acompañadas en su desarrollo integral.",
+    "historyP3": "Hoy, seguimos creciendo. En 2025 expandiremos a nuevas comunidades, siempre fieles a nuestra misión de educar con excelencia, equidad y sororidad.",
+    "teamTitle": "Nuestro Equipo Profesional",
+    "boardTitle": "Junta Directiva",
+    "corporateTitle": "Aliados Corporativos",
+    "corporateSubtitle": "Empresas comprometidas con nuestra misión",
+    "universityTitle": "Partners Universitarios",
+    "universitySubtitle": "Universidades que apoyan nuestra formación y prácticas",
+    "ctaTitle": "¿Quieres ser parte del equipo?",
+    "ctaDescription": "Únete a nuestro equipo de voluntarios o aliados corporativos.",
+    "ctaVolunteering": "Volunteering",
+    "ctaContact": "Contáctanos"
+  },
+  "ProgramasPage": {
+    "metaTitle": "Nuestros Programas | Soy Niña",
+    "metaDescription": "Descubre los programas de Soy Niña: Club Niña, Club Cole, Club Familias y Tutorías Académicas.",
+    "heroTitle": "Nuestros Programas",
+    "heroSubtitle": "Espacios de transformación y crecimiento integral",
+    "methodologyTitle": "Metodología de Trabajo",
+    "methodologyP1": "Ofrecemos programación libre, continua durante el año lectivo con facilitadores profesionales en Ciencias Sociales y Educación. Cada club cuenta con 2-3 voluntarios capacitados que acompañan a las facilitadoras.",
+    "methodologyP2": "Incluimos sesiones especiales en STEAM, salud, ambiente y liderazgo. Todo se realiza desde la perspectiva de educación respetuosa y derechos humanos, priorizando el bienestar socioemocional.",
+    "ctaTitle": "¿Quieres ser parte de un programa?",
+    "ctaDescription": "Todos nuestros programas son completamente gratuitos para las beneficiarias.",
+    "ctaButton": "Solicitar Información"
+  },
+  "EventosPage": {
+    "metaTitle": "Eventos | Soy Niña",
+    "metaDescription": "Calendario de próximos eventos, talleres, festivales y jornadas de Soy Niña en Costa Rica.",
+    "heroTitle": "Eventos",
+    "heroSubtitle": "Talleres, festivales y jornadas que transforman comunidades",
+    "calendarTitle": "Nuestro Calendario",
+    "calendarDescription": "Explora nuestros próximos eventos. Desde talleres de liderazgo hasta festivales comunitarios, cada actividad es una oportunidad para crecer, aprender y conectar. Selecciona un mes para ver los eventos programados.",
+    "ctaTitle": "¿Quieres participar?",
+    "ctaDescription": "Únete como voluntaria o trae a tu familia a nuestras actividades. ¡Te esperamos!",
+    "ctaVolunteer": "Sé Voluntaria",
+    "ctaContact": "Contactar"
+  },
+  "ContactoPage": {
+    "metaTitle": "Contacto | Soy Niña",
+    "metaDescription": "Contáctanos para colaborar, preguntar o unirte a Soy Niña.",
+    "heroTitle": "Contacto",
+    "heroSubtitle": "¿Tenés preguntas? ¿Querés colaborar? Nos encantaría escucharte.",
+    "badge": "Escríbenos",
+    "title1": "Sigamos",
+    "titleHighlight": "en contacto.",
+    "description": "Completá el formulario y te responderemos a la brevedad. Si preferís escribirnos directamente, usá el correo de abajo.",
+    "emailAlt": "También podés escribirnos por correo",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo Electrónico",
+    "message": "Mensaje",
+    "firstNamePlaceholder": "Ana",
+    "lastNamePlaceholder": "García",
+    "emailPlaceholder": "ana@ejemplo.com",
+    "messagePlaceholder": "¿En qué podemos ayudarte?",
+    "sending": "Enviando...",
+    "send": "Enviar mensaje",
+    "successTitle": "¡Mensaje recibido!",
+    "successMessage": "Gracias por escribirnos. Te responderemos a la brevedad posible.",
+    "sendAnother": "Enviar otro mensaje",
+    "error": "Hubo un problema. Por favor intentá de nuevo.",
+    "privacy": "Tu información se usa únicamente para responder tu consulta, de acuerdo con nuestra Política de Privacidad."
+  },
+  "InformesPage": {
+    "metaTitle": "Informes Mensuales | Soy Niña",
+    "metaDescription": "Consulta y descarga los informes mensuales de actividades, impacto y transparencia de Soy Niña.",
+    "heroTitle": "Informes Mensuales",
+    "heroSubtitle": "Transparencia y rendición de cuentas de nuestras actividades e impacto"
+  },
+  "Reports": {
+    "title": "Informes Mensuales",
+    "description": "Consulta y descarga nuestros informes mensuales de actividades, impacto y transparencia.",
+    "noReports": "No hay informes disponibles para {year}.",
+    "viewPdf": "Ver PDF",
+    "download": "Descargar",
+    "months": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+  },
+  "FAQPage": {
+    "heroTitle": "Preguntas Frecuentes",
+    "heroSubtitle": "Resuelve tus dudas sobre Soy Niña",
+    "ctaTitle": "¿No encontraste tu respuesta?",
+    "ctaDescription": "Estamos aquí para ayudarte. Contáctanos directamente.",
+    "ctaButton": "Contactar"
+  },
+  "VoluntariadoPage": {
+    "metaTitle": "Voluntariado | Soy Niña",
+    "metaDescription": "Únete como voluntario nacional, corporativo, internacional o en prácticas profesionales con Soy Niña.",
+    "heroTitle": "Voluntariado",
+    "heroSubtitle": "Sé parte del cambio que queremos ver",
+    "whyTitle": "¿Por qué ser voluntario/a?",
+    "whyDescription": "En Soy Niña, los voluntarios son el corazón del programa. Si creos en el poder de la educación para transformar vidas, tenemos un lugar para ti. Nuestros voluntarios aportan desde diferentes espacios: facilitando clubes, enseñando, apoyando familias, reclutando recursos, o compartiendo sus talentos en comunicación.",
+    "nationalTitle": "Equipos de Voluntariado Nacional",
+    "testimoniesTitle": "Historias de Voluntarias",
+    "corporateTitle": "Voluntariado Corporativo",
+    "internationalTitle": "Voluntariado Internacional",
+    "internshipsTitle": "Internships & Professional Practices",
+    "requirementsTitle": "Requisitos para Ser Voluntario/a",
+    "ctaTitle": "¿Listo/a para ser parte del cambio?",
+    "ctaDescription": "Contáctanos para saber más sobre las oportunidades de voluntariado disponibles.",
+    "ctaButton": "Postular Ahora"
+  },
+  "SostenibilidadPage": {
+    "metaTitle": "Servicios de Sostenibilidad | Soy Niña",
+    "metaDescription": "Servicios de formación: Charlas temáticas, Creciendo Juntas, Consultorías estratégicas y por componentes.",
+    "heroTitle": "Servicios de Sostenibilidad",
+    "heroSubtitle": "Formación, consultoría y acompañamiento especializado",
+    "ctaTitle": "¿Tu organización necesita apoyo?",
+    "ctaDescription": "Conversemos sobre cómo podemos colaborar para fortalecer tus iniciativas de educación y bienestar.",
+    "ctaButton": "Solicitar Consultoría"
+  },
+  "BlogPage": {
+    "heroTitle": "Blog Soy Niña",
+    "heroSubtitle": "Historias, noticias y artículos sobre el empoderamiento de niñas y adolescentes",
+    "subscribeBlog": "Suscríbete a Nuestro Blog",
+    "subscribeDescription": "Recibe historias, noticias y actualizaciones sobre nuestros programas directamente en tu correo.",
+    "emailPlaceholder": "Tu correo electrónico",
+    "subscribeButton": "Suscribirse",
+    "by": "Por"
+  }
+}

@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, MapPin } from "lucide-react"
+import { Link } from "@/src/i18n/navigation"
 
 const newsItems = [
   {
@@ -83,12 +84,12 @@ export default function News() {
         </div>
 
         <div className="text-center">
-          <a 
+          <Link 
             href="/blog" 
             className="inline-block border-2 border-[#140b3f] text-[#140b3f] hover:bg-[#140b3f] hover:text-white bg-transparent rounded-full px-8 py-4 font-bold transition-all hover:scale-105 shadow-lg"
           >
             Ver todas las noticias en el Blog
-          </a>
+          </Link>
         </div>
       </div>
     </section>
