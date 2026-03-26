@@ -1,18 +1,11 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import { useTranslations } from "next-intl"
 import { Link } from "@/src/i18n/navigation"
 
 export default function Hero() {
-  const [scrolled, setScrolled] = useState(false)
   const t = useTranslations("Hero")
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10)
-    window.addEventListener("scroll", onScroll)
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
 
   const stats = [
     { value: "600+", label: t("stats.livesImpacted") },
@@ -26,12 +19,13 @@ export default function Hero() {
       {/* Full-bleed background image */}
       <div className="absolute inset-0">
         <img
-          src="/diverse-group-of-girls-learning-together-in-costa-.jpg"
+          src="/hero-marcha-2025.jpg"
           alt={t("imageAlt")}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
         {/* Dark gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#140b3f]/75 via-[#140b3f]/50 to-[#140b3f]/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#140b3f]/85 via-[#140b3f]/55 to-[#140b3f]/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#140b3f]/70 via-transparent to-[#140b3f]/30" />
       </div>
 
       {/* Content */}

@@ -6,7 +6,7 @@ export default function Programs() {
 
   const programs = [
     {
-      image: "/girls-participating-in-stem-activities.jpg",
+      image: "/club-nina-programa.jpg",
       title: t("program1.title"),
       age: t("program1.age"),
       description: t("program1.description"),
@@ -14,7 +14,7 @@ export default function Programs() {
       accent: "#4526c9",
     },
     {
-      image: "/girls-doing-art-activities.jpg",
+      image: "/club-cole-programa.jpg",
       title: t("program2.title"),
       age: t("program2.age"),
       description: t("program2.description"),
@@ -22,7 +22,7 @@ export default function Programs() {
       accent: "#00c49a",
     },
     {
-      image: "/community-workshop-with-families.jpg",
+      image: "/club-familias-programa.jpg",
       title: t("program3.title"),
       age: t("program3.age"),
       description: t("program3.description"),
@@ -30,7 +30,7 @@ export default function Programs() {
       accent: "#fe35fe",
     },
     {
-      image: "/community-families-learning-together.jpg",
+      image: "/tutorias-programa.jpg",
       title: t("program4.title"),
       age: t("program4.age"),
       description: t("program4.description"),
