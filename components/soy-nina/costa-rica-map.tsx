@@ -139,7 +139,7 @@ export default function CostaRicaMap() {
         <div className="relative w-full">
             <style>{customCSS}</style>
 
-            <div className="relative w-full rounded-2xl overflow-hidden border border-[#e8e4f8]" style={{ height: "450px" }}>
+            <div className="relative z-0 w-full rounded-2xl overflow-hidden border border-[#e8e4f8]" style={{ height: "450px" }}>
                 <div
                     ref={mapContainerRef}
                     className="w-full h-full"
