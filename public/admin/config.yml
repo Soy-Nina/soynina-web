@@ -8,6 +8,543 @@ public_folder: "/reports"
 
 locale: "es"
 
+# YAML anchor — defined once, reused for both es and en file entries
+x-translation-fields: &translation-fields
+
+  - label: "Metadata"
+    name: "Metadata"
+    widget: "object"
+    fields:
+      - { label: "Título / Title", name: "title", widget: "string" }
+      - { label: "Descripción / Description", name: "description", widget: "text" }
+
+  - label: "Navigation"
+    name: "Navigation"
+    widget: "object"
+    fields:
+      - { label: "¿Quiénes Somos?", name: "quienesSomos", widget: "string" }
+      - { label: "Programas", name: "programas", widget: "string" }
+      - { label: "Voluntariado", name: "voluntariado", widget: "string" }
+      - { label: "Blog", name: "blog", widget: "string" }
+      - { label: "Eventos", name: "eventos", widget: "string" }
+      - { label: "Informes", name: "informes", widget: "string" }
+      - { label: "Contacto", name: "contacto", widget: "string" }
+      - { label: "Donar Ahora", name: "donarAhora", widget: "string" }
+      - { label: "Cambiar idioma", name: "changeLanguage", widget: "string" }
+
+  - label: "Hero"
+    name: "Hero"
+    widget: "object"
+    fields:
+      - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+      - { label: "Headline 1", name: "headline1", widget: "string" }
+      - { label: "Headline (highlighted)", name: "headlineHighlight", widget: "string" }
+      - { label: "Headline 2", name: "headline2", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "CTA Donar", name: "ctaDonate", widget: "string" }
+      - { label: "CTA Voluntaria", name: "ctaVolunteer", widget: "string" }
+      - { label: "Alt imagen", name: "imageAlt", widget: "string" }
+      - label: "Stats"
+        name: "stats"
+        widget: "object"
+        fields:
+          - { label: "Vidas impactadas", name: "livesImpacted", widget: "string" }
+          - { label: "Niñas activas", name: "activeGirls", widget: "string" }
+          - { label: "Horas voluntariado", name: "volunteerHours", widget: "string" }
+          - { label: "Comunidades", name: "communities", widget: "string" }
+
+  - label: "Programs"
+    name: "Programs"
+    widget: "object"
+    fields:
+      - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+      - { label: "Título 1", name: "title1", widget: "string" }
+      - { label: "Título 2", name: "title2", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Ver todos", name: "viewAll", widget: "string" }
+      - label: "Programa 1 (Club Niña)"
+        name: "program1"
+        widget: "object"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Edad", name: "age", widget: "string" }
+          - { label: "Descripción", name: "description", widget: "text" }
+          - label: "Actividades"
+            name: "activities"
+            widget: "list"
+            field: { label: "Actividad", name: "activity", widget: "string" }
+      - label: "Programa 2 (Club Cole)"
+        name: "program2"
+        widget: "object"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Edad", name: "age", widget: "string" }
+          - { label: "Descripción", name: "description", widget: "text" }
+          - label: "Actividades"
+            name: "activities"
+            widget: "list"
+            field: { label: "Actividad", name: "activity", widget: "string" }
+      - label: "Programa 3 (Club Familias)"
+        name: "program3"
+        widget: "object"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Edad", name: "age", widget: "string" }
+          - { label: "Descripción", name: "description", widget: "text" }
+          - label: "Actividades"
+            name: "activities"
+            widget: "list"
+            field: { label: "Actividad", name: "activity", widget: "string" }
+      - label: "Programa 4 (Tutorías)"
+        name: "program4"
+        widget: "object"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Edad", name: "age", widget: "string" }
+          - { label: "Descripción", name: "description", widget: "text" }
+          - label: "Actividades"
+            name: "activities"
+            widget: "list"
+            field: { label: "Actividad", name: "activity", widget: "string" }
+
+  - label: "Impact"
+    name: "Impact"
+    widget: "object"
+    fields:
+      - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+      - { label: "Título 1", name: "title1", widget: "string" }
+      - { label: "Título (highlighted)", name: "titleHighlight", widget: "string" }
+      - { label: "Título 2", name: "title2", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - label: "Stats"
+        name: "stats"
+        widget: "object"
+        fields:
+          - label: "Stat 1"
+            name: "stat1"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "label", widget: "string" }
+              - { label: "Detalle", name: "detail", widget: "text" }
+          - label: "Stat 2"
+            name: "stat2"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "label", widget: "string" }
+              - { label: "Detalle", name: "detail", widget: "text" }
+          - label: "Stat 3"
+            name: "stat3"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "label", widget: "string" }
+              - { label: "Detalle", name: "detail", widget: "text" }
+          - label: "Stat 4"
+            name: "stat4"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta", name: "label", widget: "string" }
+              - { label: "Detalle", name: "detail", widget: "text" }
+      - { label: "Areas Eyebrow", name: "areasEyebrow", widget: "string" }
+      - { label: "Areas Título", name: "areasTitle", widget: "string" }
+      - label: "Área 1"
+        name: "area1"
+        widget: "object"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descripción", name: "description", widget: "text" }
+          - { label: "Etiqueta métrica", name: "metricLabel", widget: "string" }
+      - label: "Área 2"
+        name: "area2"
+        widget: "object"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descripción", name: "description", widget: "text" }
+          - { label: "Etiqueta métrica", name: "metricLabel", widget: "string" }
+      - label: "Área 3"
+        name: "area3"
+        widget: "object"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descripción", name: "description", widget: "text" }
+          - { label: "Etiqueta métrica", name: "metricLabel", widget: "string" }
+      - { label: "Presence Eyebrow", name: "presenceEyebrow", widget: "string" }
+      - { label: "Presence Título", name: "presenceTitle", widget: "string" }
+      - label: "Testimonios"
+        name: "testimonials"
+        widget: "object"
+        fields:
+          - label: "Testimonio 1"
+            name: "t1"
+            widget: "object"
+            fields:
+              - { label: "Cita", name: "quote", widget: "text" }
+              - { label: "Autor/a", name: "author", widget: "string" }
+              - { label: "Rol", name: "role", widget: "string" }
+          - label: "Testimonio 2"
+            name: "t2"
+            widget: "object"
+            fields:
+              - { label: "Cita", name: "quote", widget: "text" }
+              - { label: "Autor/a", name: "author", widget: "string" }
+              - { label: "Rol", name: "role", widget: "string" }
+          - label: "Testimonio 3"
+            name: "t3"
+            widget: "object"
+            fields:
+              - { label: "Cita", name: "quote", widget: "text" }
+              - { label: "Autor/a", name: "author", widget: "string" }
+              - { label: "Rol", name: "role", widget: "string" }
+      - { label: "CTA Título", name: "ctaTitle", widget: "string" }
+      - { label: "CTA Descripción", name: "ctaDescription", widget: "text" }
+      - { label: "CTA Donar", name: "ctaDonate", widget: "string" }
+      - { label: "CTA Voluntaria", name: "ctaVolunteer", widget: "string" }
+
+  - label: "Events"
+    name: "Events"
+    widget: "object"
+    fields:
+      - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+      - { label: "Título 1", name: "title1", widget: "string" }
+      - { label: "Título 2", name: "title2", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Ver todos", name: "viewAll", widget: "string" }
+
+  - label: "Donate"
+    name: "Donate"
+    widget: "object"
+    fields:
+      - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+      - { label: "Título 1", name: "title1", widget: "string" }
+      - { label: "Título (highlighted)", name: "titleHighlight", widget: "string" }
+      - { label: "Título 2", name: "title2", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - label: "Niveles de donación"
+        name: "levels"
+        widget: "object"
+        fields:
+          - label: "Nivel 1 (Amiga)"
+            name: "l1"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "string" }
+          - label: "Nivel 2 (Aliada)"
+            name: "l2"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "string" }
+          - label: "Nivel 3 (Protectora)"
+            name: "l3"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "string" }
+          - label: "Nivel 4 (Patrocinadora)"
+            name: "l4"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "string" }
+      - { label: "Deducible de impuestos", name: "taxDeductible", widget: "string" }
+      - { label: "Cómo donar", name: "howToDonate", widget: "string" }
+      - { label: "SINPE Móvil", name: "sinpeMobile", widget: "string" }
+      - { label: "Transferencia bancaria", name: "bankTransfer", widget: "string" }
+      - { label: "Banco", name: "bank", widget: "string" }
+      - { label: "Titular", name: "holder", widget: "string" }
+      - { label: "Cédula", name: "legalId", widget: "string" }
+      - { label: "Tarjeta crédito/débito", name: "creditCard", widget: "string" }
+      - { label: "Donar con tarjeta", name: "donateWithCard", widget: "string" }
+      - { label: "Pregunta corporativa", name: "corporateQuestion", widget: "text" }
+      - { label: "Contactar corporativo", name: "contactCorporate", widget: "string" }
+
+  - label: "Volunteer"
+    name: "Volunteer"
+    widget: "object"
+    fields:
+      - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+      - { label: "Título 1", name: "title1", widget: "string" }
+      - { label: "Título 2", name: "title2", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - label: "Roles"
+        name: "roles"
+        widget: "object"
+        fields:
+          - label: "Rol 1 (Clubes Semanales)"
+            name: "r1"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción corta", name: "desc", widget: "string" }
+          - label: "Rol 2 (Tutorías Académicas)"
+            name: "r2"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción corta", name: "desc", widget: "string" }
+          - label: "Rol 3 (Club Familias)"
+            name: "r3"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción corta", name: "desc", widget: "string" }
+          - label: "Rol 4 (Comunicación)"
+            name: "r4"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción corta", name: "desc", widget: "string" }
+          - label: "Rol 5 (Banco de Alimentos)"
+            name: "r5"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción corta", name: "desc", widget: "string" }
+          - label: "Rol 6 (Donantes)"
+            name: "r6"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción corta", name: "desc", widget: "string" }
+      - { label: "Título requisitos", name: "requirementsTitle", widget: "string" }
+      - { label: "Requisito 1", name: "requirement1", widget: "string" }
+      - { label: "Requisito 2", name: "requirement2", widget: "string" }
+      - { label: "Requisito 3", name: "requirement3", widget: "string" }
+      - { label: "CTA", name: "cta", widget: "string" }
+      - { label: "Etiqueta testimonio", name: "testimonialLabel", widget: "string" }
+      - { label: "Cita testimonio", name: "testimonialQuote", widget: "text" }
+      - { label: "Autor testimonio", name: "testimonialAuthor", widget: "string" }
+      - { label: "Alt imagen voluntaria", name: "volunteerImageAlt", widget: "string" }
+
+  - label: "Newsletter"
+    name: "Newsletter"
+    widget: "object"
+    fields:
+      - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+      - { label: "Título 1", name: "title1", widget: "string" }
+      - { label: "Título (highlighted)", name: "titleHighlight", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - label: "Beneficios"
+        name: "benefits"
+        widget: "list"
+        field: { label: "Beneficio", name: "benefit", widget: "string" }
+      - { label: "Nombre", name: "firstName", widget: "string" }
+      - { label: "Apellido", name: "lastName", widget: "string" }
+      - { label: "Correo", name: "email", widget: "string" }
+      - { label: "Placeholder nombre", name: "firstNamePlaceholder", widget: "string" }
+      - { label: "Placeholder apellido", name: "lastNamePlaceholder", widget: "string" }
+      - { label: "Placeholder correo", name: "emailPlaceholder", widget: "string" }
+      - { label: "Procesando", name: "processing", widget: "string" }
+      - { label: "Suscribirse", name: "subscribe", widget: "string" }
+      - { label: "Título éxito", name: "successTitle", widget: "string" }
+      - { label: "Mensaje éxito", name: "successMessage", widget: "text" }
+      - { label: "Volver", name: "back", widget: "string" }
+      - { label: "Error", name: "error", widget: "string" }
+      - { label: "Privacidad", name: "privacy", widget: "text" }
+
+  - label: "Footer"
+    name: "Footer"
+    widget: "object"
+    fields:
+      - { label: "Franja donar (texto)", name: "donateStrip", widget: "text" }
+      - { label: "Donar ahora", name: "donateNow", widget: "string" }
+      - { label: "Descripción marca", name: "brandDescription", widget: "string" }
+      - { label: "Organización (heading)", name: "organization", widget: "string" }
+      - { label: "¿Quiénes somos?", name: "quienesSomos", widget: "string" }
+      - { label: "Programas", name: "programas", widget: "string" }
+      - { label: "Sostenibilidad", name: "sostenibilidad", widget: "string" }
+      - { label: "Blog", name: "blog", widget: "string" }
+      - { label: "FAQ", name: "faq", widget: "string" }
+      - { label: "Apóyanos (heading)", name: "supportUs", widget: "string" }
+      - { label: "Hacer donación", name: "makeDonation", widget: "string" }
+      - { label: "Ser voluntaria", name: "beVolunteer", widget: "string" }
+      - { label: "Alianzas corporativas", name: "corporateAlliances", widget: "string" }
+      - { label: "Contacto", name: "contact", widget: "string" }
+      - { label: "Legal (heading)", name: "legal", widget: "string" }
+      - { label: "Política de privacidad", name: "privacyPolicy", widget: "string" }
+      - { label: "Términos de uso", name: "termsOfUse", widget: "string" }
+      - { label: "Cédula jurídica", name: "legalId", widget: "string" }
+      - { label: "Copyright", name: "copyright", widget: "string" }
+      - { label: "Hecho con corazón", name: "madeWith", widget: "string" }
+
+  - label: "Map"
+    name: "Map"
+    widget: "object"
+    fields:
+      - { label: "Comunidades activas", name: "activeCommunities", widget: "string" }
+      - { label: "Aviso dos dedos", name: "twoFingerScroll", widget: "string" }
+
+  - label: "LocaleSwitcher"
+    name: "LocaleSwitcher"
+    widget: "object"
+    fields:
+      - { label: "Etiqueta ES", name: "es", widget: "string" }
+      - { label: "Etiqueta EN", name: "en", widget: "string" }
+
+  - label: "¿Quiénes Somos? (página)"
+    name: "QuienesSomos"
+    widget: "object"
+    fields:
+      - { label: "Meta título", name: "metaTitle", widget: "string" }
+      - { label: "Meta descripción", name: "metaDescription", widget: "text" }
+      - { label: "Hero título", name: "heroTitle", widget: "string" }
+      - { label: "Hero subtítulo", name: "heroSubtitle", widget: "string" }
+      - { label: "Historia título", name: "historyTitle", widget: "string" }
+      - { label: "Historia párrafo 1", name: "historyP1", widget: "text" }
+      - { label: "Historia párrafo 2", name: "historyP2", widget: "text" }
+      - { label: "Historia párrafo 3", name: "historyP3", widget: "text" }
+      - { label: "Equipo título", name: "teamTitle", widget: "string" }
+      - { label: "Junta directiva título", name: "boardTitle", widget: "string" }
+      - { label: "Aliados corporativos título", name: "corporateTitle", widget: "string" }
+      - { label: "Aliados corporativos subtítulo", name: "corporateSubtitle", widget: "string" }
+      - { label: "Partners universitarios título", name: "universityTitle", widget: "string" }
+      - { label: "Partners universitarios subtítulo", name: "universitySubtitle", widget: "string" }
+      - { label: "CTA título", name: "ctaTitle", widget: "string" }
+      - { label: "CTA descripción", name: "ctaDescription", widget: "text" }
+      - { label: "CTA voluntariado", name: "ctaVolunteering", widget: "string" }
+      - { label: "CTA contacto", name: "ctaContact", widget: "string" }
+
+  - label: "Programas (página)"
+    name: "ProgramasPage"
+    widget: "object"
+    fields:
+      - { label: "Meta título", name: "metaTitle", widget: "string" }
+      - { label: "Meta descripción", name: "metaDescription", widget: "text" }
+      - { label: "Hero título", name: "heroTitle", widget: "string" }
+      - { label: "Hero subtítulo", name: "heroSubtitle", widget: "string" }
+      - { label: "Metodología título", name: "methodologyTitle", widget: "string" }
+      - { label: "Metodología párrafo 1", name: "methodologyP1", widget: "text" }
+      - { label: "Metodología párrafo 2", name: "methodologyP2", widget: "text" }
+      - { label: "CTA título", name: "ctaTitle", widget: "string" }
+      - { label: "CTA descripción", name: "ctaDescription", widget: "text" }
+      - { label: "CTA botón", name: "ctaButton", widget: "string" }
+
+  - label: "Eventos (página)"
+    name: "EventosPage"
+    widget: "object"
+    fields:
+      - { label: "Meta título", name: "metaTitle", widget: "string" }
+      - { label: "Meta descripción", name: "metaDescription", widget: "text" }
+      - { label: "Hero título", name: "heroTitle", widget: "string" }
+      - { label: "Hero subtítulo", name: "heroSubtitle", widget: "string" }
+      - { label: "Calendario título", name: "calendarTitle", widget: "string" }
+      - { label: "Calendario descripción", name: "calendarDescription", widget: "text" }
+      - { label: "CTA título", name: "ctaTitle", widget: "string" }
+      - { label: "CTA descripción", name: "ctaDescription", widget: "text" }
+      - { label: "CTA voluntaria", name: "ctaVolunteer", widget: "string" }
+      - { label: "CTA contacto", name: "ctaContact", widget: "string" }
+
+  - label: "Contacto (página)"
+    name: "ContactoPage"
+    widget: "object"
+    fields:
+      - { label: "Meta título", name: "metaTitle", widget: "string" }
+      - { label: "Meta descripción", name: "metaDescription", widget: "text" }
+      - { label: "Hero título", name: "heroTitle", widget: "string" }
+      - { label: "Hero subtítulo", name: "heroSubtitle", widget: "string" }
+      - { label: "Badge", name: "badge", widget: "string" }
+      - { label: "Título 1", name: "title1", widget: "string" }
+      - { label: "Título (highlighted)", name: "titleHighlight", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Email alternativo", name: "emailAlt", widget: "string" }
+      - { label: "Nombre", name: "firstName", widget: "string" }
+      - { label: "Apellido", name: "lastName", widget: "string" }
+      - { label: "Correo", name: "email", widget: "string" }
+      - { label: "Mensaje (label)", name: "message", widget: "string" }
+      - { label: "Placeholder nombre", name: "firstNamePlaceholder", widget: "string" }
+      - { label: "Placeholder apellido", name: "lastNamePlaceholder", widget: "string" }
+      - { label: "Placeholder correo", name: "emailPlaceholder", widget: "string" }
+      - { label: "Placeholder mensaje", name: "messagePlaceholder", widget: "string" }
+      - { label: "Enviando", name: "sending", widget: "string" }
+      - { label: "Enviar", name: "send", widget: "string" }
+      - { label: "Título éxito", name: "successTitle", widget: "string" }
+      - { label: "Mensaje éxito", name: "successMessage", widget: "text" }
+      - { label: "Enviar otro", name: "sendAnother", widget: "string" }
+      - { label: "Error", name: "error", widget: "string" }
+      - { label: "Privacidad", name: "privacy", widget: "text" }
+
+  - label: "Informes (página)"
+    name: "InformesPage"
+    widget: "object"
+    fields:
+      - { label: "Meta título", name: "metaTitle", widget: "string" }
+      - { label: "Meta descripción", name: "metaDescription", widget: "text" }
+      - { label: "Hero título", name: "heroTitle", widget: "string" }
+      - { label: "Hero subtítulo", name: "heroSubtitle", widget: "string" }
+
+  - label: "Reports (componente)"
+    name: "Reports"
+    widget: "object"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - label: "Sin informes"
+        name: "noReports"
+        widget: "string"
+        hint: "No borrar {year} — es un placeholder dinámico que next-intl reemplaza con el año."
+      - { label: "Ver PDF", name: "viewPdf", widget: "string" }
+      - { label: "Descargar", name: "download", widget: "string" }
+      - label: "Meses (mantener exactamente 12 entradas)"
+        name: "months"
+        widget: "list"
+        min: 12
+        max: 12
+        field: { label: "Mes", name: "month", widget: "string" }
+
+  - label: "FAQ (página)"
+    name: "FAQPage"
+    widget: "object"
+    fields:
+      - { label: "Hero título", name: "heroTitle", widget: "string" }
+      - { label: "Hero subtítulo", name: "heroSubtitle", widget: "string" }
+      - { label: "CTA título", name: "ctaTitle", widget: "string" }
+      - { label: "CTA descripción", name: "ctaDescription", widget: "text" }
+      - { label: "CTA botón", name: "ctaButton", widget: "string" }
+
+  - label: "Voluntariado (página)"
+    name: "VoluntariadoPage"
+    widget: "object"
+    fields:
+      - { label: "Meta título", name: "metaTitle", widget: "string" }
+      - { label: "Meta descripción", name: "metaDescription", widget: "text" }
+      - { label: "Hero título", name: "heroTitle", widget: "string" }
+      - { label: "Hero subtítulo", name: "heroSubtitle", widget: "string" }
+      - { label: "¿Por qué? título", name: "whyTitle", widget: "string" }
+      - { label: "¿Por qué? descripción", name: "whyDescription", widget: "text" }
+      - { label: "Equipos nacionales título", name: "nationalTitle", widget: "string" }
+      - { label: "Historias voluntarias título", name: "testimoniesTitle", widget: "string" }
+      - { label: "Voluntariado corporativo título", name: "corporateTitle", widget: "string" }
+      - { label: "Voluntariado internacional título", name: "internationalTitle", widget: "string" }
+      - { label: "Internships título", name: "internshipsTitle", widget: "string" }
+      - { label: "Requisitos título", name: "requirementsTitle", widget: "string" }
+      - { label: "CTA título", name: "ctaTitle", widget: "string" }
+      - { label: "CTA descripción", name: "ctaDescription", widget: "text" }
+      - { label: "CTA botón", name: "ctaButton", widget: "string" }
+
+  - label: "Sostenibilidad (página)"
+    name: "SostenibilidadPage"
+    widget: "object"
+    fields:
+      - { label: "Meta título", name: "metaTitle", widget: "string" }
+      - { label: "Meta descripción", name: "metaDescription", widget: "text" }
+      - { label: "Hero título", name: "heroTitle", widget: "string" }
+      - { label: "Hero subtítulo", name: "heroSubtitle", widget: "string" }
+      - { label: "CTA título", name: "ctaTitle", widget: "string" }
+      - { label: "CTA descripción", name: "ctaDescription", widget: "text" }
+      - { label: "CTA botón", name: "ctaButton", widget: "string" }
+
+  - label: "Blog (página)"
+    name: "BlogPage"
+    widget: "object"
+    fields:
+      - { label: "Hero título", name: "heroTitle", widget: "string" }
+      - { label: "Hero subtítulo", name: "heroSubtitle", widget: "string" }
+      - { label: "Suscripción blog título", name: "subscribeBlog", widget: "string" }
+      - { label: "Suscripción descripción", name: "subscribeDescription", widget: "text" }
+      - { label: "Placeholder correo", name: "emailPlaceholder", widget: "string" }
+      - { label: "Botón suscribirse", name: "subscribeButton", widget: "string" }
+      - { label: "Por (autoría)", name: "by", widget: "string" }
+
 collections:
   - name: "reports"
     label: "Informes Mensuales"
@@ -21,3 +558,16 @@ collections:
       - { label: "Año", name: "year", widget: "number", value_type: "int", min: 2020, max: 2099 }
       - { label: "Descripción", name: "description", widget: "text", hint: "Breve resumen del contenido del informe" }
       - { label: "Archivo PDF", name: "pdf", widget: "file", media_folder: "/public/reports", public_folder: "/reports", hint: "Sube el archivo PDF del informe" }
+
+  - name: "translations"
+    label: "Textos del Sitio"
+    format: json
+    files:
+      - name: "es"
+        label: "Español (es.json)"
+        file: "messages/es.json"
+        fields: *translation-fields
+      - name: "en"
+        label: "English (en.json)"
+        file: "messages/en.json"
+        fields: *translation-fields
