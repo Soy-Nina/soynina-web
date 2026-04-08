@@ -69,35 +69,40 @@ export default function Programs() {
           {programs.map((program, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col"
-              style={{ borderLeft: `4px solid ${program.accent}` }}
+              className="group relative rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col aspect-square sm:aspect-[4/3]"
             >
-              <div className="relative h-52 overflow-hidden">
-                <img
-                  src={program.image}
-                  alt={program.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-7 flex flex-col flex-1">
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-2xl font-black text-[#140b3f]">{program.title}</h3>
+              {/* Background Image */}
+              <img
+                src={program.image}
+                alt={program.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              
+              {/* Gradient Overlay for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#140b3f] via-[#140b3f]/70 to-transparent opacity-90 transition-opacity duration-500" />
+              
+              {/* Content */}
+              <div className="relative p-8 flex flex-col h-full justify-end z-10">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="text-3xl font-black text-white leading-tight">{program.title}</h3>
                   <span
-                    className="text-xs font-bold px-3 py-1 rounded-full text-white ml-4 flex-shrink-0 mt-1"
+                    className="text-xs font-bold px-3 py-1.5 rounded-full text-white ml-4 flex-shrink-0 shadow-md"
                     style={{ backgroundColor: program.accent }}
                   >
                     {program.age}
                   </span>
                 </div>
-                <p className="text-gray-600 leading-relaxed mb-5 text-sm">{program.description}</p>
-                <ul className="space-y-2 mt-auto">
+                
+                <p className="text-gray-200 leading-relaxed mb-6 text-sm">{program.description}</p>
+                
+                <ul className="space-y-3 mt-auto">
                   {program.activities.map((activity, i) => (
-                    <li key={i} className="flex items-center gap-3 text-sm text-gray-700">
+                    <li key={i} className="flex items-start gap-3 text-sm text-gray-100 font-medium">
                       <span
-                        className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                        className="w-2 h-2 rounded-full flex-shrink-0 mt-1.5 shadow-sm"
                         style={{ backgroundColor: program.accent }}
                       />
-                      {activity}
+                      <span className="flex-1">{activity}</span>
                     </li>
                   ))}
                 </ul>
