@@ -171,6 +171,9 @@
     "successMessage": "Tu suscripción ha sido confirmada. Pronto recibirás noticias nuestras.",
     "back": "Volver",
     "error": "Hubo un problema. Por favor intenta de nuevo.",
+    "languagePreference": "Idioma de preferencia",
+    "spanish": "Español",
+    "english": "Inglés",
     "privacy": "Al suscribirte, aceptás nuestra Política de Privacidad. Podés darte de baja en cualquier momento desde el pie de cada correo."
   },
   "Footer": {

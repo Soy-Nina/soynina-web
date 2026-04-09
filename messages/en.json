@@ -171,6 +171,9 @@
     "successMessage": "Your subscription has been confirmed. You'll hear from us soon.",
     "back": "Go back",
     "error": "Something went wrong. Please try again.",
+    "languagePreference": "Language preference",
+    "spanish": "Spanish",
+    "english": "English",
     "privacy": "By subscribing, you accept our Privacy Policy. You can unsubscribe anytime from the footer of each email."
   },
   "Footer": {
