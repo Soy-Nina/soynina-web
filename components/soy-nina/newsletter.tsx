@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { Mail, CheckCircle2, Loader2, ArrowRight } from "lucide-react"
-import { useTranslations } from "next-intl"
+import { Mail, CheckCircle2, Loader2, ArrowRight, Languages } from "lucide-react"
+import { useTranslations, useLocale } from "next-intl"
 
 // ──────────────────────────────────────────────────────────────────────
 // LITTLE GREEN LIGHT CONFIGURATION
@@ -12,15 +12,18 @@ const FIELD_NAMES = {
     firstName: "submission[args][field_6]",
     lastName: "submission[args][field_7]",
     email: "submission[args][field_9]",
+    language: "submission[args][field_17]",
     honeypot: "field_9_verification", // Must remain empty
 }
 
 export default function Newsletter() {
     const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
+    const locale = useLocale()
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
         email: "",
+        language: locale === "es" ? "Spanish" : "English",
         honeypot: "",
     })
     const t = useTranslations("Newsletter")
@@ -34,6 +37,7 @@ export default function Newsletter() {
             body.append(FIELD_NAMES.firstName, formData.firstName)
             body.append(FIELD_NAMES.lastName, formData.lastName)
             body.append(FIELD_NAMES.email, formData.email)
+            body.append(FIELD_NAMES.language, formData.language)
             body.append(FIELD_NAMES.honeypot, formData.honeypot)
 
             await fetch(LGL_ACTION_URL, {
@@ -113,6 +117,36 @@ export default function Newsletter() {
                                     <div className="space-y-2 text-left">
                                         <label htmlFor="email" className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1">{t("email")}</label>
                                         <input id="email" required type="email" placeholder={t("emailPlaceholder")} className="w-full bg-[#f8f4ff] border-2 border-transparent focus:border-[#4526c9]/20 focus:bg-white rounded-2xl px-5 py-4 outline-none transition-all text-[#140b3f] font-medium" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+                                    </div>
+
+                                    <div className="space-y-3 text-left">
+                                        <label className="text-xs font-bold uppercase tracking-wider text-gray-400 ml-1 flex items-center gap-2">
+                                            <Languages className="w-3 h-3 text-[#4526c9]" />
+                                            {t("languagePreference")}
+                                        </label>
+                                        <div className="flex gap-4">
+                                            {[
+                                                { id: "es", label: t("spanish"), value: "Spanish" },
+                                                { id: "en", label: t("english"), value: "English" }
+                                            ].map((lang) => (
+                                                <label key={lang.id} className={`flex-1 flex items-center justify-between px-5 py-4 rounded-2xl border-2 transition-all cursor-pointer ${formData.language === lang.value ? "bg-white border-[#4526c9] shadow-md shadow-[#4526c9]/5" : "bg-[#f8f4ff] border-transparent hover:bg-white hover:border-[#4526c9]/20"}`}>
+                                                    <span className={`font-bold text-sm ${formData.language === lang.value ? "text-[#4526c9]" : "text-gray-500"}`}>{lang.label}</span>
+                                                    <div className="relative flex items-center justify-center">
+                                                        <input
+                                                            type="radio"
+                                                            name="language"
+                                                            className="sr-only"
+                                                            value={lang.value}
+                                                            checked={formData.language === lang.value}
+                                                            onChange={(e) => setFormData({ ...formData, language: e.target.value })}
+                                                        />
+                                                        <div className={`w-5 h-5 rounded-full border-2 transition-all flex items-center justify-center ${formData.language === lang.value ? "border-[#4526c9] bg-[#4526c9]" : "border-gray-300 bg-white"}`}>
+                                                            {formData.language === lang.value && <div className="w-2 h-2 rounded-full bg-white" />}
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            ))}
+                                        </div>
                                     </div>
 
                                     <div className="hidden">
