@@ -3,6 +3,8 @@ backend:
   repo: Soy-Nina/soynina-web
   branch: main
 
+publish_mode: editorial_workflow
+
 media_folder: "public/reports"
 public_folder: "/reports"
 
