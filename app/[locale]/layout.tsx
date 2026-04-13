@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Outfit } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, setRequestLocale } from "next-intl/server"
 import { routing } from "@/src/i18n/routing"
@@ -48,7 +48,14 @@ export default async function LocaleLayout({
           {children}
           <Footer />
         </NextIntlClientProvider>
-        <Analytics />
+        {process.env.NEXT_PUBLIC_CF_BEACON_TOKEN && (
+          <Script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({ token: process.env.NEXT_PUBLIC_CF_BEACON_TOKEN })}
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   )
