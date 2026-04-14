@@ -50,10 +50,30 @@ x-translation-fields: &translation-fields
         name: "stats"
         widget: "object"
         fields:
-          - { label: "Vidas impactadas", name: "livesImpacted", widget: "string" }
-          - { label: "Niñas activas", name: "activeGirls", widget: "string" }
-          - { label: "Horas voluntariado", name: "volunteerHours", widget: "string" }
-          - { label: "Comunidades", name: "communities", widget: "string" }
+          - label: "Vidas impactadas"
+            name: "livesImpacted"
+            widget: "object"
+            fields:
+              - { label: "Valor", name: "value", widget: "string" }
+              - { label: "Etiqueta", name: "label", widget: "string" }
+          - label: "Niñas activas"
+            name: "activeGirls"
+            widget: "object"
+            fields:
+              - { label: "Valor", name: "value", widget: "string" }
+              - { label: "Etiqueta", name: "label", widget: "string" }
+          - label: "Horas voluntariado"
+            name: "volunteerHours"
+            widget: "object"
+            fields:
+              - { label: "Valor", name: "value", widget: "string" }
+              - { label: "Etiqueta", name: "label", widget: "string" }
+          - label: "Comunidades"
+            name: "communities"
+            widget: "object"
+            fields:
+              - { label: "Valor", name: "value", widget: "string" }
+              - { label: "Etiqueta", name: "label", widget: "string" }
 
   - label: "Programs"
     name: "Programs"

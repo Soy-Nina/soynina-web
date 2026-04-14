@@ -23,10 +23,10 @@
     "ctaDonate": "Donate now",
     "ctaVolunteer": "Become a volunteer",
     "stats": {
-      "livesImpacted": "Lives impacted",
-      "activeGirls": "Active girls",
-      "volunteerHours": "Volunteer hours",
-      "communities": "Communities"
+      "livesImpacted": { "value": "600+", "label": "Lives impacted" },
+      "activeGirls": { "value": "200+", "label": "Active girls" },
+      "volunteerHours": { "value": "28,000", "label": "Volunteer hours" },
+      "communities": { "value": "4", "label": "Communities" }
     },
     "imageAlt": "Girls learning together in Costa Rica"
   },

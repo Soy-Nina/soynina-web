@@ -8,10 +8,10 @@ export default function Hero() {
 
 
   const stats = [
-    { value: "600+", label: t("stats.livesImpacted") },
-    { value: "200+", label: t("stats.activeGirls") },
-    { value: "28,000", label: t("stats.volunteerHours") },
-    { value: "4", label: t("stats.communities") },
+    { value: t("stats.livesImpacted.value"), label: t("stats.livesImpacted.label") },
+    { value: t("stats.activeGirls.value"), label: t("stats.activeGirls.label") },
+    { value: t("stats.volunteerHours.value"), label: t("stats.volunteerHours.label") },
+    { value: t("stats.communities.value"), label: t("stats.communities.label") },
   ]
 
   return (
