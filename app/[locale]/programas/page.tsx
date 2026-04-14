@@ -43,36 +43,36 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
               <Users size={40} className="text-[#4526c9]" />
               <h2 className="text-4xl font-black text-[#140b3f]">Club Niña</h2>
             </div>
-            <p className="text-xl text-gray-600 mb-8">{locale === "en" ? "Elementary (Ages 6-12)" : "Primaria (Edades 6-12 años)"}</p>
+            <p className="text-xl text-gray-600 mb-8">{t("clubNinaAge")}</p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-gradient-to-br from-[#4526c9]/10 to-transparent rounded-xl p-8 border border-[#4526c9]/20">
-                <h3 className="text-2xl font-bold text-[#140b3f] mb-4">{locale === "en" ? "First Cycle" : "Primer Ciclo"}</h3>
-                <p className="text-gray-600 mb-4">{locale === "en" ? "Ages 6-8 (Grades 1-3)" : "Edades 6-8 años (Grados 1-3)"}</p>
+                <h3 className="text-2xl font-bold text-[#140b3f] mb-4">{t("clubNinaFirstCycleTitle")}</h3>
+                <p className="text-gray-600 mb-4">{t("clubNinaFirstCycleAge")}</p>
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span><strong>{locale === "en" ? "Self-awareness:" : "Autoconocimiento:"}</strong> {locale === "en" ? "Identity and self-esteem" : "Identidad y autoestima"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span><strong>{locale === "en" ? "Emotional management:" : "Gestión emocional:"}</strong> {locale === "en" ? "Recognizing and expressing emotions" : "Reconocer y expresar emociones"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span><strong>{locale === "en" ? "Social skills:" : "Habilidades sociales:"}</strong> {locale === "en" ? "Empathy and communication" : "Empatía y comunicación"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span><strong>{locale === "en" ? "Self-care:" : "Autocuidado:"}</strong> {locale === "en" ? "Healthy habits" : "Hábitos saludables"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span><strong>{locale === "en" ? "Girls' rights:" : "Derechos de niñas:"}</strong> {locale === "en" ? "Values and solidarity" : "Valores y solidaridad"}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span><strong>{t("clubNinaFirstCycle1Label")}</strong> {t("clubNinaFirstCycle1Value")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span><strong>{t("clubNinaFirstCycle2Label")}</strong> {t("clubNinaFirstCycle2Value")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span><strong>{t("clubNinaFirstCycle3Label")}</strong> {t("clubNinaFirstCycle3Value")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span><strong>{t("clubNinaFirstCycle4Label")}</strong> {t("clubNinaFirstCycle4Value")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span><strong>{t("clubNinaFirstCycle5Label")}</strong> {t("clubNinaFirstCycle5Value")}</span></li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-[#fe35fe]/10 to-transparent rounded-xl p-8 border border-[#fe35fe]/20">
-                <h3 className="text-2xl font-bold text-[#140b3f] mb-4">{locale === "en" ? "Second Cycle" : "Segundo Ciclo"}</h3>
-                <p className="text-gray-600 mb-4">{locale === "en" ? "Ages 9-12 (Grades 4-6)" : "Edades 9-12 años (Grados 4-6)"}</p>
+                <h3 className="text-2xl font-bold text-[#140b3f] mb-4">{t("clubNinaSecondCycleTitle")}</h3>
+                <p className="text-gray-600 mb-4">{t("clubNinaSecondCycleAge")}</p>
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start gap-3"><span className="text-[#fe35fe] font-bold mt-1">•</span><span><strong>{locale === "en" ? "Life project:" : "Proyecto de vida:"}</strong> {locale === "en" ? "Exploring interests" : "Exploración de intereses"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#fe35fe] font-bold mt-1">•</span><span><strong>{locale === "en" ? "Leadership:" : "Liderazgo:"}</strong> {locale === "en" ? "Decision-making" : "Toma de decisiones"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#fe35fe] font-bold mt-1">•</span><span><strong>{locale === "en" ? "Critical thinking:" : "Pensamiento crítico:"}</strong> {locale === "en" ? "Analysis and reflection" : "Análisis y reflexión"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#fe35fe] font-bold mt-1">•</span><span><strong>{locale === "en" ? "Study habits:" : "Hábitos de estudio:"}</strong> {locale === "en" ? "Learning techniques" : "Técnicas de aprendizaje"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#fe35fe] font-bold mt-1">•</span><span><strong>{locale === "en" ? "Violence prevention:" : "Prevención de violencia:"}</strong> {locale === "en" ? "Recognize and report" : "Reconocer y denunciar"}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#fe35fe] font-bold mt-1">•</span><span><strong>{t("clubNinaSecondCycle1Label")}</strong> {t("clubNinaSecondCycle1Value")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#fe35fe] font-bold mt-1">•</span><span><strong>{t("clubNinaSecondCycle2Label")}</strong> {t("clubNinaSecondCycle2Value")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#fe35fe] font-bold mt-1">•</span><span><strong>{t("clubNinaSecondCycle3Label")}</strong> {t("clubNinaSecondCycle3Value")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#fe35fe] font-bold mt-1">•</span><span><strong>{t("clubNinaSecondCycle4Label")}</strong> {t("clubNinaSecondCycle4Value")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#fe35fe] font-bold mt-1">•</span><span><strong>{t("clubNinaSecondCycle5Label")}</strong> {t("clubNinaSecondCycle5Value")}</span></li>
                 </ul>
               </div>
             </div>
 
             <div className="bg-[#e0ff4f]/10 rounded-lg p-6 border-l-4 border-[#e0ff4f]">
-              <p className="text-gray-700"><strong>{locale === "en" ? "Frequency:" : "Frecuencia:"}</strong> {locale === "en" ? "Weekly 2-hour sessions" : "Sesiones semanales de 2 horas"} | <strong>{locale === "en" ? "Methodology:" : "Metodología:"}</strong> {locale === "en" ? "Playful, participatory, and inclusive" : "Lúdica, participativa e inclusiva"}</p>
+              <p className="text-gray-700"><strong>{t("clubNinaFrequencyLabel")}</strong> {t("clubNinaFrequencyValue")} | <strong>{t("clubNinaMethodologyLabel")}</strong> {t("clubNinaMethodologyValue")}</p>
             </div>
           </div>
         </div>
@@ -86,36 +86,36 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
               <BookOpen size={40} className="text-[#fe35fe]" />
               <h2 className="text-4xl font-black text-[#140b3f]">Club Cole</h2>
             </div>
-            <p className="text-xl text-gray-600 mb-8">{locale === "en" ? "Secondary (Ages 13-18)" : "Secundaria (Edades 13-18 años)"}</p>
+            <p className="text-xl text-gray-600 mb-8">{t("clubColeAge")}</p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-gradient-to-br from-[#4526c9]/10 to-transparent rounded-xl p-8 border border-[#4526c9]/20">
-                <h3 className="text-2xl font-bold text-[#140b3f] mb-4">III {locale === "en" ? "Cycle" : "Ciclo"}</h3>
-                <p className="text-gray-600 mb-4">{locale === "en" ? "Ages 13-15 (Grades 7-9)" : "Edades 13-15 años (Grados 7-9)"}</p>
+                <h3 className="text-2xl font-bold text-[#140b3f] mb-4">{t("clubColeCycle3Title")}</h3>
+                <p className="text-gray-600 mb-4">{t("clubColeCycle3Age")}</p>
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span>{locale === "en" ? "Personal development and dignified life" : "Desarrollo personal y vida digna"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span>{locale === "en" ? "Holistic life project" : "Proyecto de vida integral"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span>{locale === "en" ? "Comprehensive and respectful sex education" : "Educación sexual integral y respetuosa"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span>{locale === "en" ? "Critical thinking and citizenship" : "Pensamiento crítico y ciudadanía"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span>{locale === "en" ? "Participatory leadership" : "Liderazgo participativo"}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span>{t("clubColeCycle3Item1")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span>{t("clubColeCycle3Item2")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span>{t("clubColeCycle3Item3")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span>{t("clubColeCycle3Item4")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#4526c9] font-bold mt-1">•</span><span>{t("clubColeCycle3Item5")}</span></li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-[#00c49a]/10 to-transparent rounded-xl p-8 border border-[#00c49a]/20">
-                <h3 className="text-2xl font-bold text-[#140b3f] mb-4">IV {locale === "en" ? "Cycle" : "Ciclo"}</h3>
-                <p className="text-gray-600 mb-4">{locale === "en" ? "Ages 16-18 (Grades 10-12)" : "Edades 16-18 años (Grados 10-12)"}</p>
+                <h3 className="text-2xl font-bold text-[#140b3f] mb-4">{t("clubColeCycle4Title")}</h3>
+                <p className="text-gray-600 mb-4">{t("clubColeCycle4Age")}</p>
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start gap-3"><span className="text-[#00c49a] font-bold mt-1">•</span><span>{locale === "en" ? "1 monthly socio-emotional session" : "1 sesión mensual socioemocional"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#00c49a] font-bold mt-1">•</span><span>{locale === "en" ? "2 weekly English classes" : "2 clases semanales de inglés"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#00c49a] font-bold mt-1">•</span><span>{locale === "en" ? "University/work preparation" : "Preparación para universidad/trabajo"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#00c49a] font-bold mt-1">•</span><span>{locale === "en" ? "Life project consolidation" : "Consolidación de proyecto de vida"}</span></li>
-                  <li className="flex items-start gap-3"><span className="text-[#00c49a] font-bold mt-1">•</span><span>{locale === "en" ? "Personalized mentoring" : "Acompañamiento personalizado"}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#00c49a] font-bold mt-1">•</span><span>{t("clubColeCycle4Item1")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#00c49a] font-bold mt-1">•</span><span>{t("clubColeCycle4Item2")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#00c49a] font-bold mt-1">•</span><span>{t("clubColeCycle4Item3")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#00c49a] font-bold mt-1">•</span><span>{t("clubColeCycle4Item4")}</span></li>
+                  <li className="flex items-start gap-3"><span className="text-[#00c49a] font-bold mt-1">•</span><span>{t("clubColeCycle4Item5")}</span></li>
                 </ul>
               </div>
             </div>
 
             <div className="bg-[#e0ff4f]/10 rounded-lg p-6 border-l-4 border-[#e0ff4f]">
-              <p className="text-gray-700"><strong>{locale === "en" ? "Facilitators:" : "Facilitadores:"}</strong> {locale === "en" ? "Social Sciences/Education professionals + trained volunteers" : "Profesionales en Ciencias Sociales/Educación + voluntarios capacitados"} | <strong>{locale === "en" ? "Support:" : "Apoyo:"}</strong> {locale === "en" ? "Holistic and personalized mentoring" : "Acompañamiento integral y personalizado"}</p>
+              <p className="text-gray-700"><strong>{t("clubColeFacilitatorsLabel")}</strong> {t("clubColeFacilitatorsValue")} | <strong>{t("clubColeSupportLabel")}</strong> {t("clubColeSupportValue")}</p>
             </div>
           </div>
         </div>
@@ -131,17 +131,17 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
             </div>
 
             <div className="bg-gradient-to-br from-[#00c49a]/10 to-[#4526c9]/10 rounded-xl p-8 border border-gray-200 mb-8">
-              <h3 className="text-2xl font-bold text-[#140b3f] mb-6">{locale === "en" ? "Training Spaces for Families" : "Espacios Formativos para Familias"}</h3>
+              <h3 className="text-2xl font-bold text-[#140b3f] mb-6">{t("clubFamiliasTrainingTitle")}</h3>
               <div className="space-y-4 text-gray-700">
-                <p><strong>{locale === "en" ? "Frequency:" : "Frecuencia:"}</strong> {locale === "en" ? "Monthly virtual sessions" : "Sesiones virtuales mensuales"}</p>
-                <p><strong>{locale === "en" ? "Audience:" : "Público:"}</strong> {locale === "en" ? "Parents, grandparents, and caregivers of our beneficiaries" : "Padres, madres, abuelos y cuidadores de nuestras beneficiarias"}</p>
-                <p><strong>{locale === "en" ? "Methodology:" : "Metodología:"}</strong> {locale === "en" ? "Positive Discipline and human rights approach" : "Disciplina Positiva y enfoque de derechos humanos"}</p>
-                <p><strong>{locale === "en" ? "Main topics:" : "Temas principales:"}</strong></p>
+                <p><strong>{t("clubFamiliasFrequencyLabel")}</strong> {t("clubFamiliasFrequencyValue")}</p>
+                <p><strong>{t("clubFamiliasAudienceLabel")}</strong> {t("clubFamiliasAudienceValue")}</p>
+                <p><strong>{t("clubFamiliasMethodologyLabel")}</strong> {t("clubFamiliasMethodologyValue")}</p>
+                <p><strong>{t("clubFamiliasTopicsLabel")}</strong></p>
                 <ul className="list-disc list-inside ml-4 space-y-2">
-                  <li>{locale === "en" ? "Affective communication and mutual understanding" : "Comunicación afectiva y mutua comprensión"}</li>
-                  <li>{locale === "en" ? "Empathy and conflict resolution" : "Empatía y resolución de conflictos"}</li>
-                  <li>{locale === "en" ? "Love-based discipline" : "Disciplina basada en el amor"}</li>
-                  <li>{locale === "en" ? "Strengthening family bonds" : "Fortalecimiento de vínculos familiares"}</li>
+                  <li>{t("clubFamiliasTopic1")}</li>
+                  <li>{t("clubFamiliasTopic2")}</li>
+                  <li>{t("clubFamiliasTopic3")}</li>
+                  <li>{t("clubFamiliasTopic4")}</li>
                 </ul>
               </div>
             </div>
@@ -155,32 +155,32 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-4 mb-8">
               <Zap size={40} className="text-[#e0ff4f]" />
-              <h2 className="text-4xl font-black text-[#140b3f]">{locale === "en" ? "Academic Tutoring" : "Tutorías Académicas"}</h2>
+              <h2 className="text-4xl font-black text-[#140b3f]">{t("tutoriasTitle")}</h2>
             </div>
 
             <div className="bg-gradient-to-br from-[#e0ff4f]/20 to-transparent rounded-xl p-8 border border-[#e0ff4f]/30">
               <div className="space-y-6 text-gray-700">
                 <div>
-                  <h3 className="text-2xl font-bold text-[#140b3f] mb-3">{locale === "en" ? "Comprehensive Academic Support Program" : "Programa Integral de Apoyo Académico"}</h3>
-                  <p>{locale === "en" ? "All subjects: Spanish, Math, Science, English, and more. Includes a specialized study habits program." : "Todas las asignaturas: Español, Matemáticas, Ciencias, Inglés y más. Incluye programa especializado en hábitos de estudio."}</p>
+                  <h3 className="text-2xl font-bold text-[#140b3f] mb-3">{t("tutoriasProgramTitle")}</h3>
+                  <p>{t("tutoriasProgramDescription")}</p>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-[#140b3f] mb-2">{locale === "en" ? "Modalities" : "Modalidades"}</h3>
+                  <h3 className="font-bold text-[#140b3f] mb-2">{t("tutoriasModalitiesTitle")}</h3>
                   <ul className="list-disc list-inside space-y-2">
-                    <li><strong>{locale === "en" ? "Cycles:" : "Ciclos:"}</strong> {locale === "en" ? "4-8 weeks with concrete study goals" : "4-8 semanas con metas concretas de estudio"}</li>
-                    <li><strong>{locale === "en" ? "Permanent:" : "Permanente:"}</strong> {locale === "en" ? "Special cases requiring ongoing support" : "Casos especiales requieren acompañamiento continuo"}</li>
-                    <li><strong>{locale === "en" ? "Virtual:" : "Virtual:"}</strong> {locale === "en" ? "Flexible scheduling" : "Flexibilidad de horarios según disponibilidad"}</li>
+                    <li><strong>{t("tutoriasCyclesLabel")}</strong> {t("tutoriasCyclesValue")}</li>
+                    <li><strong>{t("tutoriasPermanentLabel")}</strong> {t("tutoriasPermanentValue")}</li>
+                    <li><strong>{t("tutoriasVirtualLabel")}</strong> {t("tutoriasVirtualValue")}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-[#140b3f] mb-2">{locale === "en" ? "Organization" : "Organización"}</h3>
-                  <p>{locale === "en" ? "Based on community demand. We prioritize students with the greatest academic and personal vulnerability." : "Según demanda comunitaria. Priorizamos estudiantes con mayor vulnerabilidad académica y personal."}</p>
+                  <h3 className="font-bold text-[#140b3f] mb-2">{t("tutoriasOrganizationTitle")}</h3>
+                  <p>{t("tutoriasOrganizationValue")}</p>
                 </div>
 
                 <div className="bg-white rounded-lg p-4 border-l-4 border-[#e0ff4f]">
-                  <p className="text-sm text-gray-600"><strong>{locale === "en" ? "Note:" : "Nota:"}</strong> {locale === "en" ? "Academic tutoring is recognized as a fundamental tool for the holistic development of the individual and access to opportunities." : "Las tutorías académicas se reconocen como herramienta fundamental para el desarrollo integral de la persona y acceso a oportunidades."}</p>
+                  <p className="text-sm text-gray-600"><strong>{t("tutoriasNoteLabel")}</strong> {t("tutoriasNoteValue")}</p>
                 </div>
               </div>
             </div>
