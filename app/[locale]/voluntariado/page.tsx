@@ -16,58 +16,58 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
 
   const nationalTeams = [
     {
-      name: locale === "en" ? "Weekly Clubs" : "Clubes Semanales",
+      name: t("team1Name"),
       icon: "💜",
-      description: locale === "en" ? "Facilitate educational and empowerment activities" : "Facilita actividades educativas y de empoderamiento",
-      details: locale === "en" ? ["In-person, every week", "Women only (protection)", "Transportation required", "Full year"] : ["Presencial, todas las semanas", "Solo mujeres (protección)", "Requiere transporte", "Año completo"]
+      description: t("team1Description"),
+      details: [t("team1Detail1"), t("team1Detail2"), t("team1Detail3"), t("team1Detail4")]
     },
     {
-      name: locale === "en" ? "Academic Tutoring" : "Tutorías Académicas",
+      name: t("team2Name"),
       icon: "📚",
-      description: locale === "en" ? "Teach various subjects" : "Enseña diferentes asignaturas",
-      details: locale === "en" ? ["Virtual, flexible hours", "Minimum 4 hours/week", "Creativity and organization", "Prepare materials and tracking sheets"] : ["Virtual, flexibilidad de horarios", "Mínimo 4 horas/semana", "Creatividad y organización", "Prepara materiales y hoja de seguimiento"]
+      description: t("team2Description"),
+      details: [t("team2Detail1"), t("team2Detail2"), t("team2Detail3"), t("team2Detail4")]
     },
     {
-      name: "Club Familias",
+      name: t("team3Name"),
       icon: "👨‍👩‍👧‍👦",
-      description: locale === "en" ? "Facilitate sessions with families" : "Facilita sesiones con familias",
-      details: locale === "en" ? ["Virtual, last Sunday of month", "Student/professional in social sciences", "Positive Discipline training", "Promote family communication"] : ["Virtual, último domingo de mes", "Estudiante/profesional en ciencias sociales", "Capacitación en Disciplina Positiva", "Promociona comunicación familiar"]
+      description: t("team3Description"),
+      details: [t("team3Detail1"), t("team3Detail2"), t("team3Detail3"), t("team3Detail4")]
     },
     {
-      name: locale === "en" ? "Recurring Donors" : "Donantes Recurrentes",
+      name: t("team4Name"),
       icon: "💝",
-      description: locale === "en" ? "Recruit monthly donors" : "Recluta donantes mensuales",
-      details: locale === "en" ? ["Virtual, 3-4 hours/week", "Social media campaigns", "Organization and communication", "Donor follow-up"] : ["Virtual, 3-4 horas/semana", "Campañas en redes sociales", "Organización y comunicación", "Seguimiento a donantes"]
+      description: t("team4Description"),
+      details: [t("team4Detail1"), t("team4Detail2"), t("team4Detail3"), t("team4Detail4")]
     },
     {
-      name: locale === "en" ? "Food Bank" : "Banco de Alimentos",
+      name: t("team5Name"),
       icon: "🍎",
-      description: locale === "en" ? "Manage and distribute food" : "Gestiona y distribuye alimentos",
-      details: locale === "en" ? ["Last Saturday of month, 8am-1pm", "Physical teamwork", "Sorting and distribution", "Physical capacity required"] : ["Último sábado del mes, 8am-1pm", "Trabajo físico en equipo", "Clasificación y distribución", "Requiere capacidad física"]
+      description: t("team5Description"),
+      details: [t("team5Detail1"), t("team5Detail2"), t("team5Detail3"), t("team5Detail4")]
     },
     {
-      name: locale === "en" ? "Communications & Social Media" : "Comunicación y Redes",
+      name: t("team6Name"),
       icon: "📱",
-      description: locale === "en" ? "Create social media content" : "Crea contenido para redes sociales",
-      details: locale === "en" ? ["Hybrid (virtual + in-person)", "Writing, design, photography, video", "Inspirational storytelling", "Creative flexibility"] : ["Híbrido (virtual + presencial)", "Redacción, diseño, fotografía, video", "Storytelling inspirador", "Flexibilidad creativa"]
+      description: t("team6Description"),
+      details: [t("team6Detail1"), t("team6Detail2"), t("team6Detail3"), t("team6Detail4")]
     }
   ]
 
   const testimonials = [
     {
-      name: "Eugenia",
-      role: locale === "en" ? "Tutoring Volunteer" : "Voluntaria de Tutorías",
-      quote: locale === "en" ? "It changed the way I see education. Watching the girls advance academically is transformative." : "Cambió mi forma de ver la educación. Ver cómo las niñas avanzan académicamente es transformador."
+      name: t("testimony1Name"),
+      role: t("testimony1Role"),
+      quote: t("testimony1Quote")
     },
     {
-      name: "María",
-      role: locale === "en" ? "Club Familias Volunteer" : "Voluntaria de Club Familias",
-      quote: locale === "en" ? "It allowed me to put my education knowledge into practice in a tangible and meaningful way." : "Me permitió poner en práctica mis conocimientos en educación de una forma tangible y significativa."
+      name: t("testimony2Name"),
+      role: t("testimony2Role"),
+      quote: t("testimony2Quote")
     },
     {
-      name: "Katherine",
-      role: locale === "en" ? "Donor Volunteer" : "Voluntaria de Donantes",
-      quote: locale === "en" ? "I found a community of women who believe in education with equity. It changed my perspective." : "Encontré una comunidad de mujeres que creen en educación con equidad. Cambió mi perspectiva."
+      name: t("testimony3Name"),
+      role: t("testimony3Role"),
+      quote: t("testimony3Quote")
     }
   ]
 
@@ -125,7 +125,7 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {testimonials.map((testimony, idx) => (
               <div key={idx} className="bg-white rounded-xl p-8 border-l-4 border-[#4526c9] shadow-md hover:shadow-lg transition">
-                <p className="text-gray-700 italic mb-6">"{testimony.quote}"</p>
+                <p className="text-gray-700 italic mb-6">&ldquo;{testimony.quote}&rdquo;</p>
                 <div>
                   <p className="font-bold text-[#140b3f]">{testimony.name}</p>
                   <p className="text-sm text-[#4526c9]">{testimony.role}</p>
@@ -145,11 +145,11 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
           </div>
           <div className="bg-gradient-to-br from-[#fe35fe]/10 to-transparent rounded-xl p-8 border border-[#fe35fe]/20">
             <p className="text-gray-700 text-lg mb-6">
-              ¿Tu empresa quiere hacer un impacto directo? Ofrecemos jornadas de voluntariado donde tus equipos interactúan con nuestras niñas en sesiones especiales, capacitaciones profesionales, mentoría y apoyo logístico.
+              {t("corporateDescription")}
             </p>
             <div className="bg-white rounded-lg p-6 border-l-4 border-[#fe35fe]">
               <p className="text-sm text-gray-600">
-                <strong>Contáctanos:</strong> info@soynina.onmicrosoft.com
+                <strong>{t("corporateContactLabel")}</strong> {t("corporateEmail")}
               </p>
             </div>
           </div>
@@ -165,11 +165,11 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
           </div>
           <div className="bg-gradient-to-br from-[#00c49a]/10 to-transparent rounded-xl p-8 border border-[#00c49a]/20 mb-8">
             <p className="text-gray-700 text-lg mb-6">
-              Colaboramos con voluntarios internacionales que buscan intercambio cultural y aprendizaje mutuo. Apoya talleres, proyectos educativos, campañas de sensibilización o propicia perspectivas globales en nuestros espacios.
+              {t("internationalDescription")}
             </p>
             <div className="bg-white rounded-lg p-6 border-l-4 border-[#00c49a]">
               <p className="text-sm text-gray-600">
-                <strong>Contáctanos:</strong> info@soynina.onmicrosoft.com
+                <strong>{t("internationalContactLabel")}</strong> {t("internationalEmail")}
               </p>
             </div>
           </div>
@@ -185,42 +185,42 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
           </div>
           <div className="bg-gradient-to-br from-[#e0ff4f]/10 to-transparent rounded-xl p-8 border border-[#e0ff4f]/20">
             <p className="text-gray-700 text-lg mb-6">
-              Tenemos convenios activos con universidades públicas y privadas. Estudiantes de Educación, Psicología, Trabajo Social y Comunicación pueden realizar prácticas profesionales o TCU con nosotros.
+              {t("internshipsDescription")}
             </p>
 
             <div className="space-y-6 mb-8">
               <div className="bg-white rounded-lg p-6 border border-gray-200">
-                <h3 className="font-bold text-[#140b3f] mb-3">Modalidades de Práctica</h3>
+                <h3 className="font-bold text-[#140b3f] mb-3">{t("internshipsModalitiesTitle")}</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
                     <span className="text-[#e0ff4f] font-bold">•</span>
-                    <span>Acompañamiento directo a niñas y adolescentes</span>
+                    <span>{t("internshipsModality1")}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#e0ff4f] font-bold">•</span>
-                    <span>Áreas administrativas y comunicacionales</span>
+                    <span>{t("internshipsModality2")}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#e0ff4f] font-bold">•</span>
-                    <span>Diseño e implementación de proyectos</span>
+                    <span>{t("internshipsModality3")}</span>
                   </li>
                 </ul>
               </div>
 
               <div className="bg-white rounded-lg p-6 border border-gray-200">
-                <h3 className="font-bold text-[#140b3f] mb-3">Experiencia Internacional</h3>
-                <p className="text-gray-700 mb-3">Máximo 2 semanas para estudiantes universitarios. Incluye:</p>
+                <h3 className="font-bold text-[#140b3f] mb-3">{t("internshipsExperienceTitle")}</h3>
+                <p className="text-gray-700 mb-3">{t("internshipsExperienceIntro")}</p>
                 <ul className="space-y-2 text-gray-700">
-                  <li>✓ Transporte local y comidas</li>
-                  <li>✓ Hospedaje en la comunidad</li>
-                  <li>✓ Capacitación y acompañamiento profesional</li>
-                  <li>✗ No incluye: Pasajes aéreos ni gastos personales</li>
+                  <li>{t("internshipsExperience1")}</li>
+                  <li>{t("internshipsExperience2")}</li>
+                  <li>{t("internshipsExperience3")}</li>
+                  <li>{t("internshipsExperience4")}</li>
                 </ul>
               </div>
 
               <div className="bg-white rounded-lg p-6 border-l-4 border-[#e0ff4f]">
                 <p className="text-sm text-gray-600">
-                  <strong>Coordinadora de Prácticas:</strong> andrea@soynina.onmicrosoft.com
+                  <strong>{t("internshipsCoordinatorLabel")}</strong> {t("internshipsCoordinatorEmail")}
                 </p>
               </div>
             </div>
@@ -234,20 +234,20 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
           <h2 className="text-4xl font-black text-[#140b3f] mb-8 text-center">{t("requirementsTitle")}</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white rounded-lg p-6 border-2 border-[#4526c9]">
-              <h3 className="text-xl font-bold text-[#140b3f] mb-4">General</h3>
+              <h3 className="text-xl font-bold text-[#140b3f] mb-4">{t("requirementsGeneralTitle")}</h3>
               <ul className="space-y-3 text-gray-700">
-                <li>✓ Mayor de 18 años</li>
-                <li>✓ Compromiso con protección de niñez</li>
-                <li>✓ Mínimo 2-3 horas por semana (varía según rol)</li>
+                <li>✓ {t("requirementsGeneral1")}</li>
+                <li>✓ {t("requirementsGeneral2")}</li>
+                <li>✓ {t("requirementsGeneral3")}</li>
               </ul>
             </div>
             <div className="bg-white rounded-lg p-6 border-2 border-[#4526c9]">
-              <h3 className="text-xl font-bold text-[#140b3f] mb-4">Proceso</h3>
+              <h3 className="text-xl font-bold text-[#140b3f] mb-4">{t("requirementsProcessTitle")}</h3>
               <ul className="space-y-3 text-gray-700">
-                <li>1. Formulario de solicitud</li>
-                <li>2. Copia de hoja de delincuencia</li>
-                <li>3. Acuerdo de confidencialidad</li>
-                <li>4. Inducción organizacional</li>
+                <li>{t("requirementsProcess1")}</li>
+                <li>{t("requirementsProcess2")}</li>
+                <li>{t("requirementsProcess3")}</li>
+                <li>{t("requirementsProcess4")}</li>
               </ul>
             </div>
           </div>
