@@ -104,10 +104,10 @@
     "title2": "lives.",
     "description": "Every contribution, no matter the size, makes a difference. 85% of our funds go directly to programs — we publish annual financial reports.",
     "levels": {
-      "l1": { "value": 10, "title": "Friend", "description": "Materials for one girl for a month" },
-      "l2": { "value": 25, "title": "Ally", "description": "Snacks for 10 girls for a week" },
-      "l3": { "value": 50, "title": "Protector", "description": "A complete workshop for 15 girls" },
-      "l4": { "value": 100, "title": "Sponsor", "description": "Full program support for one month" }
+      "l1": { "title": "Friend", "description": "Materials for one girl for a month" },
+      "l2": { "title": "Ally", "description": "Snacks for 10 girls for a week" },
+      "l3": { "title": "Protector", "description": "A complete workshop for 15 girls" },
+      "l4": { "title": "Sponsor", "description": "Full program support for one month" }
     },
     "taxDeductible": "Tax-deductible donations · Costa Rica",
     "howToDonate": "How to donate",

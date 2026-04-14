@@ -259,28 +259,24 @@ x-translation-fields: &translation-fields
             name: "l1"
             widget: "object"
             fields:
-              - { label: "Valor (USD)", name: "value", widget: "number", value_type: "int" }
               - { label: "Título", name: "title", widget: "string" }
               - { label: "Descripción", name: "description", widget: "string" }
           - label: "Nivel 2 (Aliada)"
             name: "l2"
             widget: "object"
             fields:
-              - { label: "Valor (USD)", name: "value", widget: "number", value_type: "int" }
               - { label: "Título", name: "title", widget: "string" }
               - { label: "Descripción", name: "description", widget: "string" }
           - label: "Nivel 3 (Protectora)"
             name: "l3"
             widget: "object"
             fields:
-              - { label: "Valor (USD)", name: "value", widget: "number", value_type: "int" }
               - { label: "Título", name: "title", widget: "string" }
               - { label: "Descripción", name: "description", widget: "string" }
           - label: "Nivel 4 (Patrocinadora)"
             name: "l4"
             widget: "object"
             fields:
-              - { label: "Valor (USD)", name: "value", widget: "number", value_type: "int", hint: "Deja en 0 o vacío para '100+' / Otros" }
               - { label: "Título", name: "title", widget: "string" }
               - { label: "Descripción", name: "description", widget: "string" }
       - { label: "Deducible de impuestos", name: "taxDeductible", widget: "string" }

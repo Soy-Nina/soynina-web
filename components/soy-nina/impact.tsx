@@ -120,10 +120,10 @@ export default function Impact() {
   const t = useTranslations("Impact")
 
   const stats = [
-    { value: Number(t("stats.stat1.value")), suffix: t("stats.stat1.suffix"), label: t("stats.stat1.label"), detail: t("stats.stat1.detail"), icon: "✦", accent: "#4526c9" },
-    { value: Number(t("stats.stat2.value")), suffix: t("stats.stat2.suffix"), label: t("stats.stat2.label"), detail: t("stats.stat2.detail"), icon: "♡", accent: "#00c49a" },
-    { value: Number(t("stats.stat3.value")), suffix: t("stats.stat3.suffix"), label: t("stats.stat3.label"), detail: t("stats.stat3.detail"), icon: "⏱", accent: "#e0a800" },
-    { value: Number(t("stats.stat4.value")), suffix: t("stats.stat4.suffix"), label: t("stats.stat4.label"), detail: t("stats.stat4.detail"), icon: "📚", accent: "#fe35fe" },
+    { value: Number(t.raw("stats.stat1.value")), suffix: t("stats.stat1.suffix"), label: t("stats.stat1.label"), detail: t("stats.stat1.detail"), icon: "✦", accent: "#4526c9" },
+    { value: Number(t.raw("stats.stat2.value")), suffix: t("stats.stat2.suffix"), label: t("stats.stat2.label"), detail: t("stats.stat2.detail"), icon: "♡", accent: "#00c49a" },
+    { value: Number(t.raw("stats.stat3.value")), suffix: t("stats.stat3.suffix"), label: t("stats.stat3.label"), detail: t("stats.stat3.detail"), icon: "⏱", accent: "#e0a800" },
+    { value: Number(t.raw("stats.stat4.value")), suffix: t("stats.stat4.suffix"), label: t("stats.stat4.label"), detail: t("stats.stat4.detail"), icon: "📚", accent: "#fe35fe" },
   ]
 
   const impactAreas = [
