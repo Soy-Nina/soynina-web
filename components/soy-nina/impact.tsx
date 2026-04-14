@@ -120,16 +120,16 @@ export default function Impact() {
   const t = useTranslations("Impact")
 
   const stats = [
-    { value: 600, suffix: "+", label: t("stats.stat1.label"), detail: t("stats.stat1.detail"), icon: "✦", accent: "#4526c9" },
-    { value: 200, suffix: "+", label: t("stats.stat2.label"), detail: t("stats.stat2.detail"), icon: "♡", accent: "#00c49a" },
-    { value: 28000, suffix: "", label: t("stats.stat3.label"), detail: t("stats.stat3.detail"), icon: "⏱", accent: "#e0a800" },
-    { value: 95, suffix: "%", label: t("stats.stat4.label"), detail: t("stats.stat4.detail"), icon: "📚", accent: "#fe35fe" },
+    { value: Number(t("stats.stat1.value")), suffix: t("stats.stat1.suffix"), label: t("stats.stat1.label"), detail: t("stats.stat1.detail"), icon: "✦", accent: "#4526c9" },
+    { value: Number(t("stats.stat2.value")), suffix: t("stats.stat2.suffix"), label: t("stats.stat2.label"), detail: t("stats.stat2.detail"), icon: "♡", accent: "#00c49a" },
+    { value: Number(t("stats.stat3.value")), suffix: t("stats.stat3.suffix"), label: t("stats.stat3.label"), detail: t("stats.stat3.detail"), icon: "⏱", accent: "#e0a800" },
+    { value: Number(t("stats.stat4.value")), suffix: t("stats.stat4.suffix"), label: t("stats.stat4.label"), detail: t("stats.stat4.detail"), icon: "📚", accent: "#fe35fe" },
   ]
 
   const impactAreas = [
-    { title: t("area1.title"), description: t("area1.description"), metric: "92%", metricLabel: t("area1.metricLabel"), color: "#4526c9" },
-    { title: t("area2.title"), description: t("area2.description"), metric: "5", metricLabel: t("area2.metricLabel"), color: "#00c49a" },
-    { title: t("area3.title"), description: t("area3.description"), metric: "3×", metricLabel: t("area3.metricLabel"), color: "#e0a800" },
+    { title: t("area1.title"), description: t("area1.description"), metric: t("area1.metric"), metricLabel: t("area1.metricLabel"), color: "#4526c9" },
+    { title: t("area2.title"), description: t("area2.description"), metric: t("area2.metric"), metricLabel: t("area2.metricLabel"), color: "#00c49a" },
+    { title: t("area3.title"), description: t("area3.description"), metric: t("area3.metric"), metricLabel: t("area3.metricLabel"), color: "#e0a800" },
   ]
 
   const testimonials = [

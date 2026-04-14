@@ -68,16 +68,16 @@
     "title2": "que cambió su futuro.",
     "description": "Desde 2018 trabajamos en las comunidades más vulnerables del Gran Área Metropolitana de Costa Rica. Estos números representan vidas reales, familias fortalecidas y un futuro más justo.",
     "stats": {
-      "stat1": { "label": "Vidas transformadas", "detail": "Desde 2018, más de 600 niñas, adolescentes y sus familias han pasado por nuestros programas en 5 comunidades del Gran Área Metropolitana." },
-      "stat2": { "label": "Niñas activas hoy", "detail": "Actualmente más de 200 niñas y adolescentes participan activamente en nuestros 4 programas semanales: Club Niña, Club Cole, Club Familias y Tutorías." },
-      "stat3": { "label": "Horas voluntarias", "detail": "Nuestra red de más de 200 voluntarias profesionales ha aportado 28,000 horas de apoyo en trabajo social, psicología, educación y mentoría." },
-      "stat4": { "label": "Retención escolar", "detail": "El 95% de las participantes del programa se mantienen en el sistema educativo, frente a un promedio nacional significativamente menor en zonas de riesgo." }
+      "stat1": { "value": 600, "suffix": "+", "label": "Vidas transformadas", "detail": "Desde 2018, más de 600 niñas, adolescentes y sus familias han pasado por nuestros programas en 5 comunidades del Gran Área Metropolitana." },
+      "stat2": { "value": 200, "suffix": "+", "label": "Niñas activas hoy", "detail": "Actualmente más de 200 niñas y adolescentes participan activamente en nuestros 4 programas semanales: Club Niña, Club Cole, Club Familias y Tutorías." },
+      "stat3": { "value": 28000, "suffix": "", "label": "Horas voluntarias", "detail": "Nuestra red de más de 200 voluntarias profesionales ha aportado 28,000 horas de apoyo en trabajo social, psicología, educación y mentoría." },
+      "stat4": { "value": 95, "suffix": "%", "label": "Retención escolar", "detail": "El 95% de las participantes del programa se mantienen en el sistema educativo, frente a un promedio nacional significativamente menor en zonas de riesgo." }
     },
     "areasEyebrow": "Áreas de transformación",
     "areasTitle": "Impacto que se multiplica.",
-    "area1": { "title": "Autoestima y liderazgo", "description": "Las niñas desarrollan confianza en sí mismas, aprenden a usar su voz y se convierten en agentes de cambio en sus comunidades.", "metricLabel": "reporta mayor confianza" },
-    "area2": { "title": "Prevención de violencia", "description": "Educación en derechos, límites saludables y redes de apoyo que protegen a niñas y adolescentes de situaciones de riesgo.", "metricLabel": "comunidades protegidas" },
-    "area3": { "title": "Éxito académico", "description": "Tutorías personalizadas y acompañamiento que transforman la relación de las niñas con la educación y abren oportunidades.", "metricLabel": "más probabilidad de graduarse" },
+    "area1": { "title": "Autoestima y liderazgo", "description": "Las niñas desarrollan confianza en sí mismas, aprenden a usar su voz y se convierten en agentes de cambio en sus comunidades.", "metric": "92%", "metricLabel": "reporta mayor confianza" },
+    "area2": { "title": "Prevención de violencia", "description": "Educación en derechos, límites saludables y redes de apoyo que protegen a niñas y adolescentes de situaciones de riesgo.", "metric": "5", "metricLabel": "comunidades protegidas" },
+    "area3": { "title": "Éxito académico", "description": "Tutorías personalizadas y acompañamiento que transforman la relación de las niñas con la educación y abren oportunidades.", "metric": "3×", "metricLabel": "más probabilidad de graduarse" },
     "presenceEyebrow": "Presencia",
     "presenceTitle": "5 comunidades, un mismo compromiso.",
     "testimonials": {
@@ -104,16 +104,18 @@
     "title2": "vidas.",
     "description": "Cada aporte, sin importar su tamaño, hace la diferencia. El 85% de nuestros fondos va directamente a programas — publicamos informes financieros anuales.",
     "levels": {
-      "l1": { "title": "Amiga", "description": "Materiales para una niña durante un mes" },
-      "l2": { "title": "Aliada", "description": "Meriendas para 10 niñas por una semana" },
-      "l3": { "title": "Protectora", "description": "Un taller completo para 15 niñas" },
-      "l4": { "title": "Patrocinadora", "description": "Apoyo integral a un programa por un mes" }
+      "l1": { "value": 10, "title": "Amiga", "description": "Materiales para una niña durante un mes" },
+      "l2": { "value": 25, "title": "Aliada", "description": "Meriendas para 10 niñas por una semana" },
+      "l3": { "value": 50, "title": "Protectora", "description": "Un taller completo para 15 niñas" },
+      "l4": { "value": 100, "title": "Patrocinadora", "description": "Apoyo integral a un programa por un mes" }
     },
     "taxDeductible": "Donaciones deducibles de impuestos · Costa Rica",
     "howToDonate": "Cómo donar",
     "sinpeMobile": "SINPE Móvil",
+    "sinpeNumber": "8888-8888",
     "bankTransfer": "Transferencia bancaria",
-    "bank": "Banco",
+    "bankName": "Banco Nacional de Costa Rica",
+    "iban": "CR12345678901234567890",
     "holder": "Titular",
     "legalId": "Cédula",
     "creditCard": "Tarjeta de crédito / débito",
