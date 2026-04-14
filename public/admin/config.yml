@@ -146,24 +146,32 @@ x-translation-fields: &translation-fields
             name: "stat1"
             widget: "object"
             fields:
+              - { label: "Valor (número)", name: "value", widget: "number", value_type: "int" }
+              - { label: "Sufijo (ej: +)", name: "suffix", widget: "string" }
               - { label: "Etiqueta", name: "label", widget: "string" }
               - { label: "Detalle", name: "detail", widget: "text" }
           - label: "Stat 2"
             name: "stat2"
             widget: "object"
             fields:
+              - { label: "Valor (número)", name: "value", widget: "number", value_type: "int" }
+              - { label: "Sufijo (ej: +)", name: "suffix", widget: "string" }
               - { label: "Etiqueta", name: "label", widget: "string" }
               - { label: "Detalle", name: "detail", widget: "text" }
           - label: "Stat 3"
             name: "stat3"
             widget: "object"
             fields:
+              - { label: "Valor (número)", name: "value", widget: "number", value_type: "int" }
+              - { label: "Sufijo", name: "suffix", widget: "string", required: false }
               - { label: "Etiqueta", name: "label", widget: "string" }
               - { label: "Detalle", name: "detail", widget: "text" }
           - label: "Stat 4"
             name: "stat4"
             widget: "object"
             fields:
+              - { label: "Valor (número)", name: "value", widget: "number", value_type: "int" }
+              - { label: "Sufijo (ej: %)", name: "suffix", widget: "string" }
               - { label: "Etiqueta", name: "label", widget: "string" }
               - { label: "Detalle", name: "detail", widget: "text" }
       - { label: "Areas Eyebrow", name: "areasEyebrow", widget: "string" }
@@ -174,6 +182,7 @@ x-translation-fields: &translation-fields
         fields:
           - { label: "Título", name: "title", widget: "string" }
           - { label: "Descripción", name: "description", widget: "text" }
+          - { label: "Métrica (ej: 92%)", name: "metric", widget: "string" }
           - { label: "Etiqueta métrica", name: "metricLabel", widget: "string" }
       - label: "Área 2"
         name: "area2"
@@ -181,6 +190,7 @@ x-translation-fields: &translation-fields
         fields:
           - { label: "Título", name: "title", widget: "string" }
           - { label: "Descripción", name: "description", widget: "text" }
+          - { label: "Métrica (ej: 5)", name: "metric", widget: "string" }
           - { label: "Etiqueta métrica", name: "metricLabel", widget: "string" }
       - label: "Área 3"
         name: "area3"
@@ -188,6 +198,7 @@ x-translation-fields: &translation-fields
         fields:
           - { label: "Título", name: "title", widget: "string" }
           - { label: "Descripción", name: "description", widget: "text" }
+          - { label: "Métrica (ej: 3×)", name: "metric", widget: "string" }
           - { label: "Etiqueta métrica", name: "metricLabel", widget: "string" }
       - { label: "Presence Eyebrow", name: "presenceEyebrow", widget: "string" }
       - { label: "Presence Título", name: "presenceTitle", widget: "string" }
@@ -248,31 +259,37 @@ x-translation-fields: &translation-fields
             name: "l1"
             widget: "object"
             fields:
+              - { label: "Valor (USD)", name: "value", widget: "number", value_type: "int" }
               - { label: "Título", name: "title", widget: "string" }
               - { label: "Descripción", name: "description", widget: "string" }
           - label: "Nivel 2 (Aliada)"
             name: "l2"
             widget: "object"
             fields:
+              - { label: "Valor (USD)", name: "value", widget: "number", value_type: "int" }
               - { label: "Título", name: "title", widget: "string" }
               - { label: "Descripción", name: "description", widget: "string" }
           - label: "Nivel 3 (Protectora)"
             name: "l3"
             widget: "object"
             fields:
+              - { label: "Valor (USD)", name: "value", widget: "number", value_type: "int" }
               - { label: "Título", name: "title", widget: "string" }
               - { label: "Descripción", name: "description", widget: "string" }
           - label: "Nivel 4 (Patrocinadora)"
             name: "l4"
             widget: "object"
             fields:
+              - { label: "Valor (USD)", name: "value", widget: "number", value_type: "int", hint: "Deja en 0 o vacío para '100+' / Otros" }
               - { label: "Título", name: "title", widget: "string" }
               - { label: "Descripción", name: "description", widget: "string" }
       - { label: "Deducible de impuestos", name: "taxDeductible", widget: "string" }
       - { label: "Cómo donar", name: "howToDonate", widget: "string" }
-      - { label: "SINPE Móvil", name: "sinpeMobile", widget: "string" }
-      - { label: "Transferencia bancaria", name: "bankTransfer", widget: "string" }
-      - { label: "Banco", name: "bank", widget: "string" }
+      - { label: "SINPE Móvil (título)", name: "sinpeMobile", widget: "string" }
+      - { label: "Número SINPE", name: "sinpeNumber", widget: "string" }
+      - { label: "Transferencia bancaria (título)", name: "bankTransfer", widget: "string" }
+      - { label: "Nombre Banco", name: "bankName", widget: "string" }
+      - { label: "IBAN", name: "iban", widget: "string" }
       - { label: "Titular", name: "holder", widget: "string" }
       - { label: "Cédula", name: "legalId", widget: "string" }
       - { label: "Tarjeta crédito/débito", name: "creditCard", widget: "string" }

@@ -18,10 +18,10 @@ export default function Donate() {
   const [confirmedAmount, setConfirmedAmount] = useState<number | null>(null)
 
   const donationLevels = [
-    { value: 10,   label: "$10",   title: t("levels.l1.title"), description: t("levels.l1.description") },
-    { value: 25,   label: "$25",   title: t("levels.l2.title"), description: t("levels.l2.description") },
-    { value: 50,   label: "$50",   title: t("levels.l3.title"), description: t("levels.l3.description") },
-    { value: null, label: "$100+", title: t("levels.l4.title"), description: t("levels.l4.description") },
+    { value: Number(t("levels.l1.value")), label: `$${t("levels.l1.value")}`, title: t("levels.l1.title"), description: t("levels.l1.description") },
+    { value: Number(t("levels.l2.value")), label: `$${t("levels.l2.value")}`, title: t("levels.l2.title"), description: t("levels.l2.description") },
+    { value: Number(t("levels.l3.value")), label: `$${t("levels.l3.value")}`, title: t("levels.l3.title"), description: t("levels.l3.description") },
+    { value: null, label: `$${t("levels.l4.value")}+`, title: t("levels.l4.title"), description: t("levels.l4.description") },
   ]
 
   const effectiveAmount = isCustomActive
@@ -162,7 +162,7 @@ export default function Donate() {
                 <div>
                   <p className="text-xs font-bold tracking-[0.15em] uppercase text-white/50 mb-3">{t("sinpeMobile")}</p>
                   <div className="flex items-baseline gap-4">
-                    <span className="text-4xl font-black text-[#e0ff4f]">8888-8888</span>
+                    <span className="text-4xl font-black text-[#e0ff4f]">{t("sinpeNumber")}</span>
                     <span className="text-white/60 text-sm">Fundación Soy Niña</span>
                   </div>
                 </div>
@@ -171,8 +171,8 @@ export default function Donate() {
                 <div>
                   <p className="text-xs font-bold tracking-[0.15em] uppercase text-white/50 mb-3">{t("bankTransfer")}</p>
                   <div className="space-y-2 text-sm">
-                    <p><span className="text-white/50">{t("bank")}:</span> <span className="text-white">Banco Nacional de Costa Rica</span></p>
-                    <p><span className="text-white/50">IBAN:</span> <span className="text-white font-mono">CR12345678901234567890</span></p>
+                    <p><span className="text-white/50">{t("bankName")}:</span> <span className="text-white">Banco Nacional de Costa Rica</span></p>
+                    <p><span className="text-white/50">IBAN:</span> <span className="text-white font-mono">{t("iban")}</span></p>
                     <p><span className="text-white/50">{t("holder")}:</span> <span className="text-white">Fundación Soy Niña</span></p>
                     <p><span className="text-white/50">{t("legalId")}:</span> <span className="text-white">3-101-123456</span></p>
                   </div>
