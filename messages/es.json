@@ -15,10 +15,10 @@
     "changeLanguage": "Cambiar idioma"
   },
   "Hero": {
-    "eyebrow": "Costa Rica · Desde 2015",
-    "headline1": "Niñas que se conocen,",
-    "headlineHighlight": "se cuidan",
-    "headline2": "y lideran.",
+    "eyebrow": "Costa Rica · Desde 2018",
+    "headline1": "Niñas y adolescentes que potencian sus habilidades,",
+    "headlineHighlight": "rompen ciclos de pobreza",
+    "headline2": "y construyen su futuro.",
     "description": "Programas socioeducativos que transforman vidas en San José, Heredia y Alajuela — construyendo futuros desde adentro hacia afuera.",
     "ctaDonate": "Dona ahora",
     "ctaVolunteer": "Sé voluntaria",
@@ -34,19 +34,19 @@
     "eyebrow": "Programas",
     "title1": "Lo que",
     "title2": "hacemos.",
-    "description": "Cuatro programas complementarios que acompañan a niñas, adolescentes y sus familias — desde la primaria hasta la vida adulta temprana.",
+    "description": "Cuatro programas que fortalecen el desarrollo socioemocional y educativo de niñas y adolescentes, desde la primaria hasta la vida adulta temprana, trabajando también con sus familias.",
     "viewAll": "Ver todos los programas",
     "program1": {
       "title": "Club Niña",
       "age": "6–12 años",
       "description": "Desarrolla habilidades socioemocionales, pensamiento crítico y autocuidado en niñas de primaria.",
-      "activities": ["Talleres de autoestima y liderazgo", "Educación en derechos", "Arte y expresión creativa"]
+      "activities": ["Prevención de violencia", "Educación en derechos", "Arte y expresión creativa"]
     },
     "program2": {
       "title": "Club Cole",
       "age": "13–17 años",
-      "description": "Empodera a adolescentes fortaleciendo su autonomía, toma de decisiones y proyecto de vida.",
-      "activities": ["Educación sexual integral", "Prevención de violencia", "Orientación vocacional"]
+      "description": "Fortalece la autonomía de adolescentes, su toma de decisiones y la construcción de su proyecto de vida.",
+      "activities": ["Educación sexual integral", "Desarrollo de habilidades técnicas como inglés.", "Orientación vocacional"]
     },
     "program3": {
       "title": "Club Familias",
@@ -58,7 +58,7 @@
       "title": "Tutorías",
       "age": "Apoyo académico",
       "description": "Refuerzo educativo personalizado para mejorar el rendimiento académico y prevenir la deserción.",
-      "activities": ["Apoyo en matemáticas y español", "Técnicas de estudio", "Acompañamiento individualizado"]
+      "activities": ["Apoyo en todas las materias", "Técnicas de estudio", "Acompañamiento individualizado"]
     }
   },
   "Impact": {
@@ -66,11 +66,11 @@
     "title1": "Cada número",
     "titleHighlight": "es una niña",
     "title2": "que cambió su futuro.",
-    "description": "Desde 2018 trabajamos en las comunidades más vulnerables del Gran Área Metropolitana de Costa Rica. Estos números representan vidas reales, familias fortalecidas y un futuro más justo.",
+    "description": "Desde 2018 trabajamos en las comunidades vulnerables del Gran Área Metropolitana de Costa Rica. Estos números representan vidas reales, familias fortalecidas y un futuro más justo.",
     "stats": {
       "stat1": { "value": 600, "suffix": "+", "label": "Vidas transformadas", "detail": "Desde 2018, más de 600 niñas, adolescentes y sus familias han pasado por nuestros programas en 5 comunidades del Gran Área Metropolitana." },
-      "stat2": { "value": 200, "suffix": "+", "label": "Niñas activas hoy", "detail": "Actualmente más de 200 niñas y adolescentes participan activamente en nuestros 4 programas semanales: Club Niña, Club Cole, Club Familias y Tutorías." },
-      "stat3": { "value": 28000, "suffix": "", "label": "Horas voluntarias", "detail": "Nuestra red de más de 200 voluntarias profesionales ha aportado 28,000 horas de apoyo en trabajo social, psicología, educación y mentoría." },
+      "stat2": { "value": 250, "suffix": "+", "label": "Niñas activas hoy", "detail": "Actualmente más de 250 niñas y adolescentes participan activamente en nuestros 4 programas semanales: Club Niña, Club Cole, Club Familias y Tutorías." },
+      "stat3": { "value": 28000, "suffix": "", "label": "Horas voluntarias", "detail": "Nuestra red de voluntarias ha aportado más de 28,000 horas de apoyo en clubes, tutorías, recaudación de fondos y acompañamiento en Club Familias, gracias al compromiso de estudiantes y profesionales que aportan su tiempo y habilidades." },
       "stat4": { "value": 95, "suffix": "%", "label": "Retención escolar", "detail": "El 95% de las participantes del programa se mantienen en el sistema educativo, frente a un promedio nacional significativamente menor en zonas de riesgo." }
     },
     "areasEyebrow": "Áreas de transformación",
@@ -92,24 +92,24 @@
   },
   "Events": {
     "eyebrow": "Eventos",
-    "title1": "Próximos",
-    "title2": "eventos.",
-    "description": "Talleres, festivales y jornadas donde nuestras niñas, familias y voluntarias se encuentran para crecer juntas.",
+    "title1": "Próximas",
+    "title2": "Actividades.",
+    "description": "Talleres, congresos y jornadas de voluntariado donde nuestras niñas, familias y voluntarias se encuentran para crecer juntas.",
     "viewAll": "Ver todos los eventos"
   },
   "Donate": {
     "eyebrow": "Apóyanos",
     "title1": "Tu donación",
-    "titleHighlight": "transforma",
-    "title2": "vidas.",
+    "titleHighlight": "rompe ciclos",
+    "title2": "de violencia.",
     "description": "Cada aporte, sin importar su tamaño, hace la diferencia. El 85% de nuestros fondos va directamente a programas — publicamos informes financieros anuales.",
     "levels": {
-      "l1": { "title": "Amiga", "description": "Materiales para una niña durante un mes" },
-      "l2": { "title": "Aliada", "description": "Meriendas para 10 niñas por una semana" },
-      "l3": { "title": "Protectora", "description": "Un taller completo para 15 niñas" },
-      "l4": { "title": "Patrocinadora", "description": "Apoyo integral a un programa por un mes" }
+      "l1": { "title": "Una Sesión", "description": "Materiales para una sesión de una niña o adolescente." },
+      "l2": { "title": "Un Mes", "description": "Un mes completo de materiales y meriendas para una niña o adolescente." },
+      "l3": { "title": "Una Beneficiaria", "description": "La participación completa de una niña o adolescente en clubs, tutorías, paseos y actividades especiales." },
+      "l4": { "title": "Un Club", "description": "Apoyo integral a un programa por un mes." }
     },
-    "taxDeductible": "Donaciones deducibles de impuestos · Costa Rica",
+    "taxDeductible": "Donaciones deducibles de impuestos en Estados Unidos",
     "howToDonate": "Cómo donar",
     "sinpeMobile": "SINPE Móvil",
     "sinpeNumber": "8888-8888",
@@ -136,9 +136,9 @@
     "eyebrow": "Voluntariado",
     "title1": "Sé parte",
     "title2": "del cambio.",
-    "description": "Las voluntarias son el corazón de Soy Niña. Si creés en el poder de la educación para transformar vidas, tenemos un lugar para vos — desde facilitar clubes hasta crear contenido digital.",
+    "description": "Las voluntarias son el corazón de Soy Niña. Si creés en el poder de la educación para transformar vidas, tenemos un lugar para vos — desde acompañar en clubes hasta crear contenido digital.",
     "roles": {
-      "r1": { "title": "Clubes Semanales", "desc": "Facilita talleres educativos y de empoderamiento" },
+      "r1": { "title": "Clubes Semanales", "desc": "Acompaña en clubes semanales." },
       "r2": { "title": "Tutorías Académicas", "desc": "Enseña diferentes asignaturas de forma virtual" },
       "r3": { "title": "Club Familias", "desc": "Facilita sesiones virtuales con familias" },
       "r4": { "title": "Comunicación", "desc": "Crea contenido para redes sociales" },
@@ -148,7 +148,7 @@
     "requirementsTitle": "Requisitos básicos:",
     "requirement1": "Mayor de 18 años · mín. 2–4 hrs/semana",
     "requirement2": "Compromiso con protección de la niñez",
-    "requirement3": "Completar proceso de inducción (formulario → referencias → acuerdo)",
+    "requirement3": "Completar proceso de inducción (formulario → inducción → acuerdo)",
     "cta": "Ver oportunidades de voluntariado →",
     "testimonialLabel": "Voluntarias dicen:",
     "testimonialQuote": "\"Encontré una comunidad de mujeres que creen en educación con equidad.\"",
@@ -181,7 +181,7 @@
   "Footer": {
     "donateStrip": "El 85% de nuestros fondos va directamente a programas. Publicamos informes anuales.",
     "donateNow": "Donar ahora",
-    "brandDescription": "Empoderando a niñas y adolescentes en Costa Rica desde 2015.",
+    "brandDescription": "Niñas y adolescentes que desarrollan habilidades, rompen ciclos de pobreza y construyen su futuro.",
     "organization": "Organización",
     "quienesSomos": "¿Quiénes somos?",
     "programas": "Programas",
