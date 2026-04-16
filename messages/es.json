@@ -23,10 +23,22 @@
     "ctaDonate": "Dona ahora",
     "ctaVolunteer": "Sé voluntaria",
     "stats": {
-      "livesImpacted": { "value": "600+", "label": "Vidas impactadas" },
-      "activeGirls": { "value": "200+", "label": "Niñas activas" },
-      "volunteerHours": { "value": "28,000", "label": "Horas de voluntariado" },
-      "communities": { "value": "4", "label": "Comunidades" }
+      "livesImpacted": {
+        "value": "600+",
+        "label": "Vidas impactadas"
+      },
+      "activeGirls": {
+        "value": "200+",
+        "label": "Niñas activas"
+      },
+      "volunteerHours": {
+        "value": "28,000",
+        "label": "Horas de voluntariado"
+      },
+      "communities": {
+        "value": "4",
+        "label": "Comunidades"
+      }
     },
     "imageAlt": "Niñas aprendiendo juntas en Costa Rica"
   },
@@ -40,25 +52,41 @@
       "title": "Club Niña",
       "age": "6–12 años",
       "description": "Desarrolla habilidades socioemocionales, pensamiento crítico y autocuidado en niñas de primaria.",
-      "activities": ["Prevención de violencia", "Educación en derechos", "Arte y expresión creativa"]
+      "activities": [
+        "Prevención de violencia",
+        "Educación en derechos",
+        "Arte y expresión creativa"
+      ]
     },
     "program2": {
       "title": "Club Cole",
       "age": "13–17 años",
       "description": "Fortalece la autonomía de adolescentes, su toma de decisiones y la construcción de su proyecto de vida.",
-      "activities": ["Educación sexual integral", "Desarrollo de habilidades técnicas como inglés.", "Orientación vocacional"]
+      "activities": [
+        "Educación sexual integral",
+        "Desarrollo de habilidades técnicas como inglés.",
+        "Orientación vocacional"
+      ]
     },
     "program3": {
       "title": "Club Familias",
       "age": "Familias",
       "description": "Acompañamiento integral para fortalecer vínculos, habilidades parentales y desarrollo comunitario.",
-      "activities": ["Talleres de crianza positiva", "Gestión emocional familiar", "Redes de apoyo comunitario"]
+      "activities": [
+        "Talleres de crianza positiva",
+        "Gestión emocional familiar",
+        "Redes de apoyo comunitario"
+      ]
     },
     "program4": {
       "title": "Tutorías",
       "age": "Apoyo académico",
       "description": "Refuerzo educativo personalizado para mejorar el rendimiento académico y prevenir la deserción.",
-      "activities": ["Apoyo en todas las materias", "Técnicas de estudio", "Acompañamiento individualizado"]
+      "activities": [
+        "Apoyo en todas las materias",
+        "Técnicas de estudio",
+        "Acompañamiento individualizado"
+      ]
     }
   },
   "Impact": {
@@ -68,22 +96,69 @@
     "title2": "que cambió su futuro.",
     "description": "Desde 2018 trabajamos en las comunidades vulnerables del Gran Área Metropolitana de Costa Rica. Estos números representan vidas reales, familias fortalecidas y un futuro más justo.",
     "stats": {
-      "stat1": { "value": 600, "suffix": "+", "label": "Vidas transformadas", "detail": "Desde 2018, más de 600 niñas, adolescentes y sus familias han pasado por nuestros programas en 5 comunidades del Gran Área Metropolitana." },
-      "stat2": { "value": 250, "suffix": "+", "label": "Niñas activas hoy", "detail": "Actualmente más de 250 niñas y adolescentes participan activamente en nuestros 4 programas semanales: Club Niña, Club Cole, Club Familias y Tutorías." },
-      "stat3": { "value": 28000, "suffix": "", "label": "Horas voluntarias", "detail": "Nuestra red de voluntarias ha aportado más de 28,000 horas de apoyo en clubes, tutorías, recaudación de fondos y acompañamiento en Club Familias, gracias al compromiso de estudiantes y profesionales que aportan su tiempo y habilidades." },
-      "stat4": { "value": 95, "suffix": "%", "label": "Retención escolar", "detail": "El 95% de las participantes del programa se mantienen en el sistema educativo, frente a un promedio nacional significativamente menor en zonas de riesgo." }
+      "stat1": {
+        "value": 600,
+        "suffix": "+",
+        "label": "Vidas transformadas",
+        "detail": "Desde 2018, más de 600 niñas, adolescentes y sus familias han pasado por nuestros programas en 5 comunidades del Gran Área Metropolitana."
+      },
+      "stat2": {
+        "value": 250,
+        "suffix": "+",
+        "label": "Niñas activas hoy",
+        "detail": "Actualmente más de 250 niñas y adolescentes participan activamente en nuestros 4 programas semanales: Club Niña, Club Cole, Club Familias y Tutorías."
+      },
+      "stat3": {
+        "value": 28000,
+        "suffix": "",
+        "label": "Horas voluntarias",
+        "detail": "Nuestra red de voluntarias ha aportado más de 28,000 horas de apoyo en clubes, tutorías, recaudación de fondos y acompañamiento en Club Familias, gracias al compromiso de estudiantes y profesionales que aportan su tiempo y habilidades."
+      },
+      "stat4": {
+        "value": 95,
+        "suffix": "%",
+        "label": "Retención escolar",
+        "detail": "El 95% de las participantes del programa se mantienen en el sistema educativo, frente a un promedio nacional significativamente menor en zonas de riesgo."
+      }
     },
     "areasEyebrow": "Áreas de transformación",
     "areasTitle": "Impacto que se multiplica.",
-    "area1": { "title": "Autoestima y liderazgo", "description": "Las niñas desarrollan confianza en sí mismas, aprenden a usar su voz y se convierten en agentes de cambio en sus comunidades.", "metric": "92%", "metricLabel": "reporta mayor confianza" },
-    "area2": { "title": "Prevención de violencia", "description": "Educación en derechos, límites saludables y redes de apoyo que protegen a niñas y adolescentes de situaciones de riesgo.", "metric": "5", "metricLabel": "comunidades protegidas" },
-    "area3": { "title": "Éxito académico", "description": "Tutorías personalizadas y acompañamiento que transforman la relación de las niñas con la educación y abren oportunidades.", "metric": "3×", "metricLabel": "más probabilidad de graduarse" },
+    "area1": {
+      "title": "Autoestima y liderazgo",
+      "description": "Las niñas desarrollan confianza en sí mismas, aprenden a usar su voz y se convierten en agentes de cambio en sus comunidades.",
+      "metric": "92%",
+      "metricLabel": "reporta mayor confianza"
+    },
+    "area2": {
+      "title": "Prevención de violencia",
+      "description": "Educación en derechos, límites saludables y redes de apoyo que protegen a niñas y adolescentes de situaciones de riesgo.",
+      "metric": "5",
+      "metricLabel": "comunidades protegidas"
+    },
+    "area3": {
+      "title": "Éxito académico",
+      "description": "Tutorías personalizadas y acompañamiento que transforman la relación de las niñas con la educación y abren oportunidades.",
+      "metric": "3×",
+      "metricLabel": "más probabilidad de graduarse"
+    },
     "presenceEyebrow": "Presencia",
     "presenceTitle": "5 comunidades, un mismo compromiso.",
     "testimonials": {
-      "t1": { "quote": "Antes no me gustaba ir a la escuela. Ahora sé que puedo ser lo que yo quiera.", "author": "María, 11 años", "role": "Participante de Club Niña" },
-      "t2": { "quote": "Cambió mi forma de ver la educación. Ver cómo las niñas avanzan es transformador.", "author": "Eugenia", "role": "Voluntaria de Tutorías" },
-      "t3": { "quote": "Mi hija ahora defiende sus derechos. Eso no tiene precio.", "author": "Carolina", "role": "Madre participante de Club Familias" }
+      "t1": {
+        "quote": "Antes no me gustaba ir a la escuela. Ahora sé que puedo ser lo que yo quiera.",
+        "author": "María, 11 años",
+        "role": "Participante de Club Niña"
+      },
+      "t2": {
+        "quote": "Cambió mi forma de ver la educación. Ver cómo las niñas avanzan es transformador.",
+        "author": "Eugenia",
+        "role": "Voluntaria de Tutorías"
+      },
+      "t3": {
+        "quote": "Mi hija ahora defiende sus derechos. Eso no tiene precio.",
+        "author": "Carolina",
+        "role": "Madre participante de Club Familias"
+      }
     },
     "ctaTitle": "¿Quieres ser parte del cambio?",
     "ctaDescription": "Únete como voluntaria o dona para que más niñas tengan acceso a nuestros programas.",
@@ -104,10 +179,22 @@
     "title2": "de violencia.",
     "description": "Cada aporte, sin importar su tamaño, hace la diferencia. El 85% de nuestros fondos va directamente a programas — publicamos informes financieros anuales.",
     "levels": {
-      "l1": { "title": "Una Sesión", "description": "Materiales para una sesión de una niña o adolescente." },
-      "l2": { "title": "Un Mes", "description": "Un mes completo de materiales y meriendas para una niña o adolescente." },
-      "l3": { "title": "Una Beneficiaria", "description": "La participación completa de una niña o adolescente en clubs, tutorías, paseos y actividades especiales." },
-      "l4": { "title": "Un Club", "description": "Apoyo integral a un programa por un mes." }
+      "l1": {
+        "title": "Una Sesión",
+        "description": "Materiales para una sesión de una niña o adolescente."
+      },
+      "l2": {
+        "title": "Un Mes",
+        "description": "Un mes completo de materiales y meriendas para una niña o adolescente."
+      },
+      "l3": {
+        "title": "Una Beneficiaria",
+        "description": "La participación completa de una niña o adolescente en clubs, tutorías, paseos y actividades especiales."
+      },
+      "l4": {
+        "title": "Un Club",
+        "description": "Apoyo integral a un programa por un mes."
+      }
     },
     "taxDeductible": "Donaciones deducibles de impuestos en Estados Unidos",
     "howToDonate": "Cómo donar",
@@ -138,12 +225,30 @@
     "title2": "del cambio.",
     "description": "Las voluntarias son el corazón de Soy Niña. Si creés en el poder de la educación para transformar vidas, tenemos un lugar para vos — desde acompañar en clubes hasta crear contenido digital.",
     "roles": {
-      "r1": { "title": "Clubes Semanales", "desc": "Acompaña en clubes semanales." },
-      "r2": { "title": "Tutorías Académicas", "desc": "Enseña diferentes asignaturas de forma virtual" },
-      "r3": { "title": "Club Familias", "desc": "Facilita sesiones virtuales con familias" },
-      "r4": { "title": "Comunicación", "desc": "Crea contenido para redes sociales" },
-      "r5": { "title": "Banco de Alimentos", "desc": "Gestiona y distribuye alimentos mensualmente" },
-      "r6": { "title": "Donantes", "desc": "Recluta donantes y da seguimiento a campañas" }
+      "r1": {
+        "title": "Clubes Semanales",
+        "desc": "Acompaña en clubes semanales."
+      },
+      "r2": {
+        "title": "Tutorías Académicas",
+        "desc": "Enseña diferentes asignaturas de forma virtual"
+      },
+      "r3": {
+        "title": "Club Familias",
+        "desc": "Facilita sesiones virtuales con familias"
+      },
+      "r4": {
+        "title": "Comunicación",
+        "desc": "Crea contenido para redes sociales"
+      },
+      "r5": {
+        "title": "Banco de Alimentos",
+        "desc": "Gestiona y distribuye alimentos mensualmente"
+      },
+      "r6": {
+        "title": "Donantes",
+        "desc": "Recluta donantes y da seguimiento a campañas"
+      }
     },
     "requirementsTitle": "Requisitos básicos:",
     "requirement1": "Mayor de 18 años · mín. 2–4 hrs/semana",
@@ -160,7 +265,11 @@
     "title1": "Enterate de nuestro",
     "titleHighlight": "impacto.",
     "description": "Suscribite para recibir historias de impacto, avances de nuestros programas y oportunidades exclusivas para apoyar a las niñas de Costa Rica.",
-    "benefits": ["Reportes de impacto directo", "Historias de empoderamiento", "Eventos y voluntariado"],
+    "benefits": [
+      "Reportes de impacto directo",
+      "Historias de empoderamiento",
+      "Eventos y voluntariado"
+    ],
     "firstName": "Nombre",
     "lastName": "Apellido",
     "email": "Correo Electrónico",
@@ -364,7 +473,20 @@
     "noReports": "No hay informes disponibles para {year}.",
     "viewPdf": "Ver PDF",
     "download": "Descargar",
-    "months": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+    "months": [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
+    ]
   },
   "FAQPage": {
     "heroTitle": "Preguntas Frecuentes",
@@ -480,5 +602,16 @@
     "emailPlaceholder": "Tu correo electrónico",
     "subscribeButton": "Suscribirse",
     "by": "Por"
+  },
+  "BlogPost": {
+    "backToBlog": "Volver al blog",
+    "by": "Por",
+    "ctaTitle": "¿Quieres Apoyar Esta Misión?",
+    "ctaDescription": "Cada historia que compartimos es posible gracias al apoyo de personas como tú. Ya sea como donante, voluntaria o aliada, tu contribución hace diferencia.",
+    "ctaDonate": "Donar Ahora",
+    "ctaVolunteer": "Ser Voluntaria",
+    "relatedTitle": "Otros Artículos",
+    "notFound": "Artículo no encontrado",
+    "notFoundBack": "Volver al blog"
   }
 }
