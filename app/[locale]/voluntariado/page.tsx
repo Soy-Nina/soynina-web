@@ -154,6 +154,7 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
               </p>
             </div>
           </div>
+          </div>
         </div>
       </section>
 
@@ -174,6 +175,7 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
                 <strong>{t("internationalContactLabel")}</strong> {t("internationalEmail")}
               </p>
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -228,6 +230,7 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
               </div>
             </div>
           </div>
+          </div>
         </div>
       </section>
 
@@ -254,6 +257,7 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
                 <li>{t("requirementsProcess4")}</li>
               </ul>
             </div>
+          </div>
           </div>
         </div>
       </section>
