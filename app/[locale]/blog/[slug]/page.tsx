@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import { setRequestLocale, getTranslations } from "next-intl/server"
 import { getBlogPost, getBlogSlugs } from "@/lib/blog"
@@ -46,8 +47,17 @@ export default async function BlogPost({ params }: { params: Promise<{ locale: s
     <div className="min-h-screen">
       <main>
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-br from-[#140b3f] via-[#4526c9] to-[#fe35fe]">
-          <div className="container mx-auto px-8">
+        <section className="relative py-16 bg-gradient-to-br from-[#140b3f] via-[#4526c9] to-[#fe35fe]">
+          {post.coverImage && (
+            <Image
+              src={post.coverImage}
+              alt={post.title}
+              fill
+              className="object-cover opacity-30"
+              priority
+            />
+          )}
+          <div className="relative container mx-auto px-8">
             <Link href="/blog" className="flex items-center gap-2 text-white hover:text-[#e0ff4f] mb-6">
               <ArrowLeft size={20} />
               {t("backToBlog")}

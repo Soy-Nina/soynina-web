@@ -587,13 +587,16 @@ collections:
     folder: "content/blog/es"
     create: true
     slug: "{{slug}}"
+    media_folder: "/public/blog-images"
+    public_folder: "/blog-images"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Extracto", name: "excerpt", widget: "text" }
       - { label: "Fecha", name: "date", widget: "string", hint: "Ej: 4 de enero, 2026" }
       - { label: "Autor/a", name: "author", widget: "string" }
       - { label: "Categoría", name: "category", widget: "string" }
-      - { label: "Gradiente (CSS)", name: "gradient", widget: "string", default: "from-[#4526c9] to-[#fe35fe]", hint: "Clases de Tailwind para el color de portada. Ej: from-[#4526c9] to-[#fe35fe]" }
+      - { label: "Imagen de portada", name: "coverImage", widget: "image", required: false, hint: "Si no se sube imagen se usará el gradiente de color." }
+      - { label: "Gradiente (CSS)", name: "gradient", widget: "string", default: "from-[#4526c9] to-[#fe35fe]", hint: "Se usa solo si no hay imagen. Ej: from-[#4526c9] to-[#fe35fe]" }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   - name: "blog-en"
@@ -602,13 +605,16 @@ collections:
     folder: "content/blog/en"
     create: true
     slug: "{{slug}}"
+    media_folder: "/public/blog-images"
+    public_folder: "/blog-images"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Excerpt", name: "excerpt", widget: "text" }
       - { label: "Date", name: "date", widget: "string", hint: "E.g. January 4, 2026" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Category", name: "category", widget: "string" }
-      - { label: "Gradient (CSS)", name: "gradient", widget: "string", default: "from-[#4526c9] to-[#fe35fe]", hint: "Tailwind gradient classes for the cover. E.g. from-[#4526c9] to-[#fe35fe]" }
+      - { label: "Cover image", name: "coverImage", widget: "image", required: false, hint: "If no image is uploaded, the gradient will be used instead." }
+      - { label: "Gradient (CSS)", name: "gradient", widget: "string", default: "from-[#4526c9] to-[#fe35fe]", hint: "Only used when there is no cover image. E.g. from-[#4526c9] to-[#fe35fe]" }
       - { label: "Content", name: "body", widget: "markdown" }
 
   - name: "reports"

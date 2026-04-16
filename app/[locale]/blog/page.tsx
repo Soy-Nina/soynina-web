@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { setRequestLocale, getTranslations } from "next-intl/server"
 import PageHero from "@/components/soy-nina/page-hero"
 import { getBlogPosts } from "@/lib/blog"
@@ -31,8 +32,19 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
               {blogPosts.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`}>
                   <article className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer h-full flex flex-col">
-                    {/* Featured Image Gradient */}
-                    <div className={`relative h-48 bg-gradient-to-br ${post.gradient} overflow-hidden`} />
+                    {/* Cover image or gradient */}
+                    <div className="relative h-48 overflow-hidden">
+                      {post.coverImage ? (
+                        <Image
+                          src={post.coverImage}
+                          alt={post.title}
+                          fill
+                          className="object-cover"
+                        />
+                      ) : (
+                        <div className={`h-full w-full bg-gradient-to-br ${post.gradient}`} />
+                      )}
+                    </div>
 
                     {/* Content */}
                     <div className="p-6 flex flex-col flex-grow">

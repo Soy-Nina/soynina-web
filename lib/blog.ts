@@ -10,6 +10,7 @@ export interface BlogPost {
     author: string
     category: string
     gradient: string
+    coverImage: string
     slug: string
     content: string
 }
@@ -32,6 +33,7 @@ export function getBlogPosts(locale: string): BlogPost[] {
             author: data.author || "",
             category: data.category || "",
             gradient: data.gradient || "from-[#4526c9] to-[#fe35fe]",
+            coverImage: data.coverImage || "",
             slug: file.replace(/\.md$/, ""),
             content: "",
         }
@@ -54,6 +56,7 @@ export function getBlogPost(locale: string, slug: string): BlogPost | null {
         author: data.author || "",
         category: data.category || "",
         gradient: data.gradient || "from-[#4526c9] to-[#fe35fe]",
+        coverImage: data.coverImage || "",
         slug,
         content: marked(content) as string,
     }
