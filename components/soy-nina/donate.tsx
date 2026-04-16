@@ -19,8 +19,8 @@ export default function Donate() {
 
   const donationLevels = [
     { value: 10,   label: "$10",   title: t("levels.l1.title"), description: t("levels.l1.description") },
-    { value: 25,   label: "$25",   title: t("levels.l2.title"), description: t("levels.l2.description") },
-    { value: 50,   label: "$50",   title: t("levels.l3.title"), description: t("levels.l3.description") },
+    { value: 40,   label: "$40",   title: t("levels.l2.title"), description: t("levels.l2.description") },
+    { value: 80,   label: "$80",   title: t("levels.l3.title"), description: t("levels.l3.description") },
     { value: null, label: "$100+", title: t("levels.l4.title"), description: t("levels.l4.description") },
   ]
 
