@@ -24,8 +24,8 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
 
       {/* Descripción General */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-8 max-w-4xl">
-          <div className="bg-white rounded-2xl p-8 border-l-4 border-[#00c49a]">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 border-l-4 border-[#00c49a]">
             <h2 className="text-3xl font-black text-[#140b3f] mb-6">{t("methodologyTitle")}</h2>
             <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
               <p>{t("methodologyP1")}</p>
@@ -37,7 +37,7 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
 
       {/* Club Niña */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-4 mb-8">
               <Users size={40} className="text-[#4526c9]" />
@@ -80,7 +80,7 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
 
       {/* Club Cole */}
       <section className="py-20 bg-gradient-to-br from-[#fe35fe]/5 to-transparent">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-4 mb-8">
               <BookOpen size={40} className="text-[#fe35fe]" />
@@ -123,7 +123,7 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
 
       {/* Club Familias */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-4 mb-8">
               <Home size={40} className="text-[#00c49a]" />
@@ -151,7 +151,7 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
 
       {/* Tutorías Académicas */}
       <section className="py-20 bg-gradient-to-br from-[#e0ff4f]/5 to-transparent">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-4 mb-8">
               <Zap size={40} className="text-[#e0ff4f]" />
@@ -190,7 +190,7 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-[#4526c9] to-[#fe35fe] text-white">
-        <div className="container mx-auto px-8 text-center">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl text-center">
           <h2 className="text-4xl font-black mb-6">{t("ctaTitle")}</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">{t("ctaDescription")}</p>
           <Link href="/contacto" className="inline-block bg-white text-[#4526c9] px-8 py-4 rounded-full font-bold hover:bg-[#e0ff4f] transition">

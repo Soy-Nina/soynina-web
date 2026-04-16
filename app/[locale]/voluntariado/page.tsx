@@ -81,8 +81,8 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
 
       {/* Intro */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-8 max-w-4xl">
-          <div className="bg-white rounded-2xl p-8 border-l-4 border-[#4526c9]">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 border-l-4 border-[#4526c9] shadow-sm">
             <h2 className="text-3xl font-black text-[#140b3f] mb-6">{t("whyTitle")}</h2>
             <p className="text-gray-700 text-lg leading-relaxed">
               {t("whyDescription")}
@@ -93,7 +93,7 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
 
       {/* Voluntariado Nacional */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
           <h2 className="text-4xl font-black text-[#140b3f] mb-12 text-center">{t("nationalTitle")}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {nationalTeams.map((team, idx) => (
@@ -120,7 +120,7 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
 
       {/* Testimonios */}
       <section className="py-20 bg-gradient-to-br from-[#4526c9]/5 to-[#fe35fe]/5">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
           <h2 className="text-4xl font-black text-[#140b3f] mb-12 text-center">{t("testimoniesTitle")}</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {testimonials.map((testimony, idx) => (
@@ -137,8 +137,9 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
       </section>
 
       {/* Voluntariado Corporativo */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-8 max-w-4xl">
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+          <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
             <Heart size={40} className="text-[#fe35fe]" />
             <h2 className="text-4xl font-black text-[#140b3f]">{t("corporateTitle")}</h2>
@@ -157,8 +158,9 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
       </section>
 
       {/* Voluntariado Internacional */}
-      <section className="py-20 bg-gradient-to-br from-[#00c49a]/5 to-transparent">
-        <div className="container mx-auto px-8 max-w-4xl">
+      <section className="py-20 bg-gradient-to-br from-[#00c49a]/5 to-transparent border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+          <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
             <Globe size={40} className="text-[#00c49a]" />
             <h2 className="text-4xl font-black text-[#140b3f]">{t("internationalTitle")}</h2>
@@ -177,8 +179,9 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
       </section>
 
       {/* Prácticas Profesionales */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-8 max-w-4xl">
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+          <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-4 mb-8">
             <BookOpen size={40} className="text-[#e0ff4f]" />
             <h2 className="text-4xl font-black text-[#140b3f]">{t("internshipsTitle")}</h2>
@@ -229,8 +232,9 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
       </section>
 
       {/* Requisitos */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-8 max-w-4xl">
+      <section className="py-20 bg-gray-50 border-t border-gray-100">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+          <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-black text-[#140b3f] mb-8 text-center">{t("requirementsTitle")}</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white rounded-lg p-6 border-2 border-[#4526c9]">
@@ -256,7 +260,7 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-[#4526c9] to-[#fe35fe] text-white">
-        <div className="container mx-auto px-8 text-center">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl text-center">
           <h2 className="text-4xl font-black mb-6">{t("ctaTitle")}</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">{t("ctaDescription")}</p>
           <Link href="/contacto" className="inline-block bg-white text-[#4526c9] px-8 py-4 rounded-full font-bold hover:bg-[#e0ff4f] transition">

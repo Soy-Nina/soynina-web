@@ -27,7 +27,7 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
 
         {/* Blog Posts Grid */}
         <section className="py-20 bg-white">
-          <div className="container mx-auto px-8">
+          <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`}>
@@ -80,7 +80,8 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
 
         {/* Newsletter Section */}
         <section className="py-20 bg-gradient-to-b from-purple-50 to-white">
-          <div className="container mx-auto px-8 max-w-2xl text-center">
+          <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+            <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-black text-[#140b3f] mb-4">
               {t("subscribeBlog")}
             </h2>
@@ -102,7 +103,8 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
               </button>
             </form>
           </div>
-        </section>
+        </div>
+      </section>
       </main>
     </div>
   )

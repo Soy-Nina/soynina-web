@@ -24,8 +24,8 @@ export default async function EventosPage({ params }: { params: Promise<{ locale
 
             {/* Intro */}
             <section className="py-16 bg-gray-50">
-                <div className="container mx-auto px-8 max-w-4xl">
-                    <div className="bg-white rounded-2xl p-8 border-l-4 border-[#4526c9]">
+                <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+                    <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 border-l-4 border-[#4526c9] shadow-sm">
                         <h2 className="text-3xl font-black text-[#140b3f] mb-4">{t("calendarTitle")}</h2>
                         <p className="text-gray-700 text-lg leading-relaxed">
                             {t("calendarDescription")}
@@ -38,7 +38,7 @@ export default async function EventosPage({ params }: { params: Promise<{ locale
 
             {/* CTA */}
             <section className="py-20 bg-gradient-to-br from-[#4526c9] to-[#6b3fdb] text-white">
-                <div className="container mx-auto px-8 text-center">
+                <div className="container mx-auto px-6 lg:px-12 max-w-7xl text-center">
                     <h2 className="text-4xl font-black mb-6">{t("ctaTitle")}</h2>
                     <p className="text-xl mb-8 max-w-2xl mx-auto text-white/80">
                         {t("ctaDescription")}
