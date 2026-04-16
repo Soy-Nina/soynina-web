@@ -606,18 +606,3 @@ collections:
         label: "English (en.json)"
         file: "messages/en.json"
         fields: *translation-fields
-
-  - name: "blog"
-    label: "Blog"
-    label_singular: "Post"
-    folder: "content/blog"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Fecha", name: "date", widget: "string", hint: "Ej: 15 de abril, 2026" }
-      - { label: "Autor", name: "author", widget: "string" }
-      - { label: "Categoría", name: "category", widget: "string" }
-      - { label: "Resumen (Excerpt)", name: "excerpt", widget: "text" }
-      - { label: "Gradiente (Estilo)", name: "gradient", widget: "string", hint: "Ej: from-[#4526c9] to-[#fe35fe]" }
-      - { label: "Cuerpo", name: "body", widget: "markdown" }

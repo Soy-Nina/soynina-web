@@ -1,11 +1,72 @@
 import Link from "next/link"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 import PageHero from "@/components/soy-nina/page-hero"
-import { getBlogPosts } from "@/lib/blog"
 
-export default async function BlogPage() {
-  const t = await getTranslations("BlogPage")
-  const blogPosts = getBlogPosts()
+const blogPosts = [
+  {
+    id: 1,
+    slug: "empoderamiento-ninas-costa-rica",
+    title: "Empoderamiento de Niñas: El Cambio que Costa Rica Necesita",
+    excerpt: "Descubre cómo el empoderamiento de niñas y adolescentes es la clave para construir un Costa Rica más equitativo, justo y próspero.",
+    date: "4 de enero, 2026",
+    author: "Equipo Soy Niña",
+    category: "Educación",
+    gradient: "from-[#4526c9] to-[#fe35fe]",
+  },
+  {
+    id: 2,
+    slug: "historias-de-exito-nuestras-ninas",
+    title: "Historias de Éxito: Transformando Vidas en Costa Rica",
+    excerpt: "Conoce cómo nuestros programas han impactado la vida de cientos de niñas y adolescentes en Costa Rica. Historias reales de transformación y esperanza.",
+    date: "15 de diciembre, 2025",
+    author: "Equipo Soy Niña",
+    category: "Historias",
+    gradient: "from-[#fe35fe] to-[#e0ff4f]",
+  },
+  {
+    id: 3,
+    slug: "educacion-sexual-integral-importancia",
+    title: "¿Por Qué la Educación Sexual Integral es Esencial?",
+    excerpt: "Descubre por qué la educación sexual integral es fundamental para el bienestar y desarrollo de nuestras adolescentes. Datos, beneficios y perspectivas de expertos.",
+    date: "8 de diciembre, 2025",
+    author: "Dra. María González",
+    category: "Educación",
+    gradient: "from-[#e0ff4f] to-[#00c49a]",
+  },
+  {
+    id: 4,
+    slug: "voluntariado-oportunidad-cambio",
+    title: "Voluntariado: Tu Oportunidad de Generar Cambio",
+    excerpt: "¿Quieres hacer la diferencia? Descubre cómo puedes ser parte de nuestro equipo de voluntarias y contribuir al empoderamiento de niñas en Costa Rica.",
+    date: "1 de diciembre, 2025",
+    author: "Coordinadora de Voluntariado",
+    category: "Voluntariado",
+    gradient: "from-[#00c49a] to-[#4526c9]",
+  },
+  {
+    id: 5,
+    slug: "violencia-genero-prevencion",
+    title: "Previniendo la Violencia de Género desde la Infancia",
+    excerpt: "La prevención temprana es clave. Aprende cómo nuestros programas educativos enseñan a niñas y adolescentes a identificar y prevenir la violencia de género.",
+    date: "24 de noviembre, 2025",
+    author: "Equipo de Programas",
+    category: "Prevención",
+    gradient: "from-[#4526c9] to-[#00c49a]",
+  },
+  {
+    id: 6,
+    slug: "autoestima-adolescentes-identidad",
+    title: "Construyendo Autoestima: Claves para la Identidad Positiva",
+    excerpt: "La autoestima es fundamental en la adolescencia. Explora las estrategias que utilizamos en Club Niña para fortalecer la identidad y confianza de nuestras participantes.",
+    date: "17 de noviembre, 2025",
+    author: "Psicóloga Educativa",
+    category: "Desarrollo",
+    gradient: "from-[#fe35fe] to-[#4526c9]",
+  },
+]
+
+export default function BlogPage() {
+  const t = useTranslations("BlogPage")
 
   return (
     <div className="min-h-screen">
@@ -21,7 +82,7 @@ export default async function BlogPage() {
           <div className="container mx-auto px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post) => (
-                <Link key={post.slug} href={`/blog/${post.slug}`}>
+                <Link key={post.id} href={`/blog/${post.slug}`}>
                   <article className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer h-full flex flex-col">
                     {/* Featured Image Gradient */}
                     <div className={`relative h-48 bg-gradient-to-br ${post.gradient} overflow-hidden`} />
@@ -83,11 +144,6 @@ export default async function BlogPage() {
             </form>
           </div>
         </section>
-      </main>
-    </div>
-  )
-}
-
       </main>
     </div>
   )
