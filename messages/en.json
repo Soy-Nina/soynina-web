@@ -23,10 +23,22 @@
     "ctaDonate": "Donate now",
     "ctaVolunteer": "Become a volunteer",
     "stats": {
-      "livesImpacted": { "value": "600+", "label": "Lives impacted" },
-      "activeGirls": { "value": "200+", "label": "Active girls" },
-      "volunteerHours": { "value": "28,000", "label": "Volunteer hours" },
-      "communities": { "value": "4", "label": "Communities" }
+      "livesImpacted": {
+        "value": "600+",
+        "label": "Lives impacted"
+      },
+      "activeGirls": {
+        "value": "200+",
+        "label": "Active girls"
+      },
+      "volunteerHours": {
+        "value": "28,000",
+        "label": "Volunteer hours"
+      },
+      "communities": {
+        "value": "4",
+        "label": "Communities"
+      }
     },
     "imageAlt": "Girls learning together in Costa Rica"
   },
@@ -40,25 +52,41 @@
       "title": "Club Niña",
       "age": "Ages 6–12",
       "description": "Develops socio-emotional skills, critical thinking, and self-care in elementary school girls.",
-      "activities": ["Self-esteem and leadership workshops", "Rights education", "Art and creative expression"]
+      "activities": [
+        "Self-esteem and leadership workshops",
+        "Rights education",
+        "Art and creative expression"
+      ]
     },
     "program2": {
       "title": "Club Cole",
       "age": "Ages 13–17",
       "description": "Empowers adolescents by strengthening their autonomy, decision-making, and life planning.",
-      "activities": ["Comprehensive sex education", "Violence prevention", "Career guidance"]
+      "activities": [
+        "Comprehensive sex education",
+        "Violence prevention",
+        "Career guidance"
+      ]
     },
     "program3": {
       "title": "Club Familias",
       "age": "Families",
       "description": "Holistic support to strengthen family bonds, parenting skills, and community development.",
-      "activities": ["Positive parenting workshops", "Family emotional management", "Community support networks"]
+      "activities": [
+        "Positive parenting workshops",
+        "Family emotional management",
+        "Community support networks"
+      ]
     },
     "program4": {
       "title": "Tutoring",
       "age": "Academic support",
       "description": "Personalized educational reinforcement to improve academic performance and prevent dropout.",
-      "activities": ["Math and Spanish support", "Study techniques", "Individualized mentoring"]
+      "activities": [
+        "Math and Spanish support",
+        "Study techniques",
+        "Individualized mentoring"
+      ]
     }
   },
   "Impact": {
@@ -68,22 +96,69 @@
     "title2": "who changed her future.",
     "description": "Since 2018 we have worked in the most vulnerable communities of Costa Rica's Greater Metropolitan Area. These numbers represent real lives, strengthened families, and a more just future.",
     "stats": {
-      "stat1": { "value": 600, "suffix": "+", "label": "Lives transformed", "detail": "Since 2018, more than 600 girls, adolescents, and their families have participated in our programs across 5 communities in the Greater Metropolitan Area." },
-      "stat2": { "value": 200, "suffix": "+", "label": "Active girls today", "detail": "Currently more than 200 girls and adolescents actively participate in our 4 weekly programs: Club Niña, Club Cole, Club Familias, and Tutoring." },
-      "stat3": { "value": 28000, "suffix": "", "label": "Volunteer hours", "detail": "Our network of more than 200 professional volunteers has contributed 28,000 hours of support in social work, psychology, education, and mentoring." },
-      "stat4": { "value": 95, "suffix": "%", "label": "School retention", "detail": "95% of program participants stay in the education system, compared to significantly lower national averages in at-risk areas." }
+      "stat1": {
+        "value": 600,
+        "suffix": "+",
+        "label": "Lives transformed",
+        "detail": "Since 2018, more than 600 girls, adolescents, and their families have participated in our programs across 5 communities in the Greater Metropolitan Area."
+      },
+      "stat2": {
+        "value": 200,
+        "suffix": "+",
+        "label": "Active girls today",
+        "detail": "Currently more than 200 girls and adolescents actively participate in our 4 weekly programs: Club Niña, Club Cole, Club Familias, and Tutoring."
+      },
+      "stat3": {
+        "value": 28000,
+        "suffix": "",
+        "label": "Volunteer hours",
+        "detail": "Our network of more than 200 professional volunteers has contributed 28,000 hours of support in social work, psychology, education, and mentoring."
+      },
+      "stat4": {
+        "value": 95,
+        "suffix": "%",
+        "label": "School retention",
+        "detail": "95% of program participants stay in the education system, compared to significantly lower national averages in at-risk areas."
+      }
     },
     "areasEyebrow": "Areas of transformation",
     "areasTitle": "Impact that multiplies.",
-    "area1": { "title": "Self-esteem and leadership", "description": "Girls develop self-confidence, learn to use their voice, and become agents of change in their communities.", "metric": "92%", "metricLabel": "report greater confidence" },
-    "area2": { "title": "Violence prevention", "description": "Education in rights, healthy boundaries, and support networks that protect girls and adolescents from risky situations.", "metric": "5", "metricLabel": "protected communities" },
-    "area3": { "title": "Academic success", "description": "Personalized tutoring and mentoring that transform girls' relationship with education and open opportunities.", "metric": "3×", "metricLabel": "more likely to graduate" },
+    "area1": {
+      "title": "Self-esteem and leadership",
+      "description": "Girls develop self-confidence, learn to use their voice, and become agents of change in their communities.",
+      "metric": "92%",
+      "metricLabel": "report greater confidence"
+    },
+    "area2": {
+      "title": "Violence prevention",
+      "description": "Education in rights, healthy boundaries, and support networks that protect girls and adolescents from risky situations.",
+      "metric": "5",
+      "metricLabel": "protected communities"
+    },
+    "area3": {
+      "title": "Academic success",
+      "description": "Personalized tutoring and mentoring that transform girls' relationship with education and open opportunities.",
+      "metric": "3×",
+      "metricLabel": "more likely to graduate"
+    },
     "presenceEyebrow": "Presence",
     "presenceTitle": "5 communities, one commitment.",
     "testimonials": {
-      "t1": { "quote": "I used to not like going to school. Now I know I can be whatever I want.", "author": "María, age 11", "role": "Club Niña participant" },
-      "t2": { "quote": "It changed the way I see education. Watching the girls progress is transformative.", "author": "Eugenia", "role": "Tutoring Volunteer" },
-      "t3": { "quote": "My daughter now stands up for her rights. That's priceless.", "author": "Carolina", "role": "Club Familias parent participant" }
+      "t1": {
+        "quote": "I used to not like going to school. Now I know I can be whatever I want.",
+        "author": "María, age 11",
+        "role": "Club Niña participant"
+      },
+      "t2": {
+        "quote": "It changed the way I see education. Watching the girls progress is transformative.",
+        "author": "Eugenia",
+        "role": "Tutoring Volunteer"
+      },
+      "t3": {
+        "quote": "My daughter now stands up for her rights. That's priceless.",
+        "author": "Carolina",
+        "role": "Club Familias parent participant"
+      }
     },
     "ctaTitle": "Want to be part of the change?",
     "ctaDescription": "Join as a volunteer or donate so more girls can access our programs.",
@@ -104,10 +179,22 @@
     "title2": "lives.",
     "description": "Every contribution, no matter the size, makes a difference. 85% of our funds go directly to programs — we publish annual financial reports.",
     "levels": {
-      "l1": { "title": "Friend", "description": "Materials for one girl for a month" },
-      "l2": { "title": "Ally", "description": "Snacks for 10 girls for a week" },
-      "l3": { "title": "Protector", "description": "A complete workshop for 15 girls" },
-      "l4": { "title": "Sponsor", "description": "Full program support for one month" }
+      "l1": {
+        "title": "Friend",
+        "description": "Materials for one girl for a month"
+      },
+      "l2": {
+        "title": "Ally",
+        "description": "Snacks for 10 girls for a week"
+      },
+      "l3": {
+        "title": "Protector",
+        "description": "A complete workshop for 15 girls"
+      },
+      "l4": {
+        "title": "Sponsor",
+        "description": "Full program support for one month"
+      }
     },
     "taxDeductible": "Tax-deductible donations · Costa Rica",
     "howToDonate": "How to donate",
@@ -138,12 +225,30 @@
     "title2": "of the change.",
     "description": "Volunteers are the heart of Soy Niña. If you believe in the power of education to transform lives, we have a place for you — from facilitating clubs to creating digital content.",
     "roles": {
-      "r1": { "title": "Weekly Clubs", "desc": "Facilitate educational and empowerment workshops" },
-      "r2": { "title": "Academic Tutoring", "desc": "Teach various subjects online" },
-      "r3": { "title": "Club Familias", "desc": "Facilitate virtual sessions with families" },
-      "r4": { "title": "Communications", "desc": "Create social media content" },
-      "r5": { "title": "Food Bank", "desc": "Manage and distribute food monthly" },
-      "r6": { "title": "Donors", "desc": "Recruit donors and follow up on campaigns" }
+      "r1": {
+        "title": "Weekly Clubs",
+        "desc": "Facilitate educational and empowerment workshops"
+      },
+      "r2": {
+        "title": "Academic Tutoring",
+        "desc": "Teach various subjects online"
+      },
+      "r3": {
+        "title": "Club Familias",
+        "desc": "Facilitate virtual sessions with families"
+      },
+      "r4": {
+        "title": "Communications",
+        "desc": "Create social media content"
+      },
+      "r5": {
+        "title": "Food Bank",
+        "desc": "Manage and distribute food monthly"
+      },
+      "r6": {
+        "title": "Donors",
+        "desc": "Recruit donors and follow up on campaigns"
+      }
     },
     "requirementsTitle": "Basic requirements:",
     "requirement1": "18+ years old · min. 2–4 hrs/week",
@@ -160,7 +265,11 @@
     "title1": "Stay informed about our",
     "titleHighlight": "impact.",
     "description": "Subscribe to receive impact stories, program updates, and exclusive opportunities to support the girls of Costa Rica.",
-    "benefits": ["Direct impact reports", "Empowerment stories", "Events and volunteering"],
+    "benefits": [
+      "Direct impact reports",
+      "Empowerment stories",
+      "Events and volunteering"
+    ],
     "firstName": "First name",
     "lastName": "Last name",
     "email": "Email address",
@@ -364,7 +473,20 @@
     "noReports": "No reports available for {year}.",
     "viewPdf": "View PDF",
     "download": "Download",
-    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
   },
   "FAQPage": {
     "heroTitle": "Frequently Asked Questions",
@@ -480,5 +602,16 @@
     "emailPlaceholder": "Your email address",
     "subscribeButton": "Subscribe",
     "by": "By"
+  },
+  "BlogPost": {
+    "backToBlog": "Back to blog",
+    "by": "By",
+    "ctaTitle": "Want to Support This Mission?",
+    "ctaDescription": "Every story we share is possible thanks to the support of people like you. Whether as a donor, volunteer, or ally, your contribution makes a difference.",
+    "ctaDonate": "Donate Now",
+    "ctaVolunteer": "Become a Volunteer",
+    "relatedTitle": "More Articles",
+    "notFound": "Article not found",
+    "notFoundBack": "Back to blog"
   }
 }

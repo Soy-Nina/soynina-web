@@ -127,8 +127,8 @@ export default function FAQPage() {
 
       {/* FAQs */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-8 max-w-4xl">
-          <div className="space-y-8">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+          <div className="max-w-4xl mx-auto space-y-8">
             {faqs.map((section, sectionIdx) => (
               <div key={sectionIdx}>
                 <h2 className="text-3xl font-black text-[#140b3f] mb-6 flex items-center gap-3">
@@ -172,7 +172,7 @@ export default function FAQPage() {
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-[#4526c9] to-[#fe35fe] text-white">
-        <div className="container mx-auto px-8 text-center">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl text-center">
           <h2 className="text-4xl font-black mb-6">{t("ctaTitle")}</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">{t("ctaDescription")}</p>
           <Link href="/contacto" className="inline-block bg-white text-[#4526c9] px-8 py-4 rounded-full font-bold hover:bg-[#e0ff4f] transition">

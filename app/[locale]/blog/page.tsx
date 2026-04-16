@@ -1,72 +1,20 @@
 import Link from "next/link"
-import { useTranslations } from "next-intl"
+import Image from "next/image"
+import { setRequestLocale, getTranslations } from "next-intl/server"
 import PageHero from "@/components/soy-nina/page-hero"
+import { getBlogPosts } from "@/lib/blog"
 
-const blogPosts = [
-  {
-    id: 1,
-    slug: "empoderamiento-ninas-costa-rica",
-    title: "Empoderamiento de Niñas: El Cambio que Costa Rica Necesita",
-    excerpt: "Descubre cómo el empoderamiento de niñas y adolescentes es la clave para construir un Costa Rica más equitativo, justo y próspero.",
-    date: "4 de enero, 2026",
-    author: "Equipo Soy Niña",
-    category: "Educación",
-    gradient: "from-[#4526c9] to-[#fe35fe]",
-  },
-  {
-    id: 2,
-    slug: "historias-de-exito-nuestras-ninas",
-    title: "Historias de Éxito: Transformando Vidas en Costa Rica",
-    excerpt: "Conoce cómo nuestros programas han impactado la vida de cientos de niñas y adolescentes en Costa Rica. Historias reales de transformación y esperanza.",
-    date: "15 de diciembre, 2025",
-    author: "Equipo Soy Niña",
-    category: "Historias",
-    gradient: "from-[#fe35fe] to-[#e0ff4f]",
-  },
-  {
-    id: 3,
-    slug: "educacion-sexual-integral-importancia",
-    title: "¿Por Qué la Educación Sexual Integral es Esencial?",
-    excerpt: "Descubre por qué la educación sexual integral es fundamental para el bienestar y desarrollo de nuestras adolescentes. Datos, beneficios y perspectivas de expertos.",
-    date: "8 de diciembre, 2025",
-    author: "Dra. María González",
-    category: "Educación",
-    gradient: "from-[#e0ff4f] to-[#00c49a]",
-  },
-  {
-    id: 4,
-    slug: "voluntariado-oportunidad-cambio",
-    title: "Voluntariado: Tu Oportunidad de Generar Cambio",
-    excerpt: "¿Quieres hacer la diferencia? Descubre cómo puedes ser parte de nuestro equipo de voluntarias y contribuir al empoderamiento de niñas en Costa Rica.",
-    date: "1 de diciembre, 2025",
-    author: "Coordinadora de Voluntariado",
-    category: "Voluntariado",
-    gradient: "from-[#00c49a] to-[#4526c9]",
-  },
-  {
-    id: 5,
-    slug: "violencia-genero-prevencion",
-    title: "Previniendo la Violencia de Género desde la Infancia",
-    excerpt: "La prevención temprana es clave. Aprende cómo nuestros programas educativos enseñan a niñas y adolescentes a identificar y prevenir la violencia de género.",
-    date: "24 de noviembre, 2025",
-    author: "Equipo de Programas",
-    category: "Prevención",
-    gradient: "from-[#4526c9] to-[#00c49a]",
-  },
-  {
-    id: 6,
-    slug: "autoestima-adolescentes-identidad",
-    title: "Construyendo Autoestima: Claves para la Identidad Positiva",
-    excerpt: "La autoestima es fundamental en la adolescencia. Explora las estrategias que utilizamos en Club Niña para fortalecer la identidad y confianza de nuestras participantes.",
-    date: "17 de noviembre, 2025",
-    author: "Psicóloga Educativa",
-    category: "Desarrollo",
-    gradient: "from-[#fe35fe] to-[#4526c9]",
-  },
-]
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "BlogPage" })
+  return { title: t("heroTitle") }
+}
 
-export default function BlogPage() {
-  const t = useTranslations("BlogPage")
+export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  setRequestLocale(locale)
+  const t = await getTranslations({ locale, namespace: "BlogPage" })
+  const blogPosts = getBlogPosts(locale)
 
   return (
     <div className="min-h-screen">
@@ -79,13 +27,24 @@ export default function BlogPage() {
 
         {/* Blog Posts Grid */}
         <section className="py-20 bg-white">
-          <div className="container mx-auto px-8">
+          <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post) => (
-                <Link key={post.id} href={`/blog/${post.slug}`}>
+                <Link key={post.slug} href={`/blog/${post.slug}`}>
                   <article className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer h-full flex flex-col">
-                    {/* Featured Image Gradient */}
-                    <div className={`relative h-48 bg-gradient-to-br ${post.gradient} overflow-hidden`} />
+                    {/* Cover image or gradient */}
+                    <div className="relative h-48 overflow-hidden">
+                      {post.coverImage ? (
+                        <Image
+                          src={post.coverImage}
+                          alt={post.title}
+                          fill
+                          className="object-cover"
+                        />
+                      ) : (
+                        <div className={`h-full w-full bg-gradient-to-br ${post.gradient}`} />
+                      )}
+                    </div>
 
                     {/* Content */}
                     <div className="p-6 flex flex-col flex-grow">
@@ -121,7 +80,8 @@ export default function BlogPage() {
 
         {/* Newsletter Section */}
         <section className="py-20 bg-gradient-to-b from-purple-50 to-white">
-          <div className="container mx-auto px-8 max-w-2xl text-center">
+          <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+            <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-black text-[#140b3f] mb-4">
               {t("subscribeBlog")}
             </h2>
@@ -143,7 +103,8 @@ export default function BlogPage() {
               </button>
             </form>
           </div>
-        </section>
+        </div>
+      </section>
       </main>
     </div>
   )
