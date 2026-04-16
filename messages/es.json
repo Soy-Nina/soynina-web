@@ -479,6 +479,13 @@
     "subscribeDescription": "Recibe historias, noticias y actualizaciones sobre nuestros programas directamente en tu correo.",
     "emailPlaceholder": "Tu correo electrónico",
     "subscribeButton": "Suscribirse",
-    "by": "Por"
+    "by": "Por",
+    "backToBlog": "Volver al blog",
+    "postNotFound": "Artículo no encontrado",
+    "othersTitle": "Otros Artículos",
+    "ctaTitle": "¿Quieres Apoyar Esta Misión?",
+    "ctaDescription": "Cada historia que compartimos es posible gracias al apoyo de personas como tú. Ya sea como donante, voluntaria o aliada, tu contribución hace la diferencia.",
+    "ctaDonate": "Donar Ahora",
+    "ctaVolunteer": "Ser Voluntaria"
   }
 }

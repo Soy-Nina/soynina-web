@@ -479,6 +479,13 @@
     "subscribeDescription": "Receive stories, news, and updates about our programs directly in your inbox.",
     "emailPlaceholder": "Your email address",
     "subscribeButton": "Subscribe",
-    "by": "By"
+    "by": "By",
+    "backToBlog": "Back to blog",
+    "postNotFound": "Post not found",
+    "othersTitle": "Other Articles",
+    "ctaTitle": "Want to Support This Mission?",
+    "ctaDescription": "Every story we share is possible thanks to the support of people like you. Whether as a donor, volunteer, or ally, your contribution makes a difference.",
+    "ctaDonate": "Donate Now",
+    "ctaVolunteer": "Become a Volunteer"
   }
 }
