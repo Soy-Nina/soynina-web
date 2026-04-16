@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: Soy-Nina/soynina-web
-  branch: main
+  branch: feat/editable-metrics
 
 publish_mode: editorial_workflow
 
