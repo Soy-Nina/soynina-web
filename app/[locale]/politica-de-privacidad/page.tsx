@@ -1,9 +1,15 @@
 import { setRequestLocale } from "next-intl/server"
+import { getAlternates } from "@/lib/metadata"
 
-export const metadata = {
-  title: "Política de Privacidad - Soy Niña",
-  description: "Política de privacidad de Fundación Soy Niña",
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  return {
+    title: "Política de Privacidad - Soy Niña",
+    description: "Política de privacidad de Fundación Soy Niña",
+    alternates: getAlternates(locale, "/politica-de-privacidad"),
+  }
 }
+
 
 export default async function PoliticaPrivacidad({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params

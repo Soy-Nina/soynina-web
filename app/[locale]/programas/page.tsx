@@ -1,4 +1,5 @@
 import { setRequestLocale, getTranslations } from "next-intl/server"
+import { getAlternates } from "@/lib/metadata"
 import { Users, BookOpen, Home, Zap } from "lucide-react"
 import PageHero from "@/components/soy-nina/page-hero"
 import { Link } from "@/src/i18n/navigation"
@@ -6,7 +7,7 @@ import { Link } from "@/src/i18n/navigation"
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "ProgramasPage" })
-  return { title: t("metaTitle"), description: t("metaDescription") }
+  return { title: t("metaTitle"), description: t("metaDescription"), alternates: getAlternates(locale, "/programas") }
 }
 
 export default async function ProgramasPage({ params }: { params: Promise<{ locale: string }> }) {

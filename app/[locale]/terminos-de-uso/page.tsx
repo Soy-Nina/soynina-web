@@ -1,9 +1,15 @@
 import { setRequestLocale } from "next-intl/server"
+import { getAlternates } from "@/lib/metadata"
 
-export const metadata = {
-  title: "Términos de Uso - Soy Niña",
-  description: "Términos y condiciones de uso del sitio web de Fundación Soy Niña",
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  return {
+    title: "Términos de Uso - Soy Niña",
+    description: "Términos y condiciones de uso del sitio web de Fundación Soy Niña",
+    alternates: getAlternates(locale, "/terminos-de-uso"),
+  }
 }
+
 
 export default async function TerminosUso({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params

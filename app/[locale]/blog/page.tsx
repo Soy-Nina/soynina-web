@@ -3,11 +3,12 @@ import Image from "next/image"
 import { setRequestLocale, getTranslations } from "next-intl/server"
 import PageHero from "@/components/soy-nina/page-hero"
 import { getBlogPosts } from "@/lib/blog"
+import { getAlternates } from "@/lib/metadata"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "BlogPage" })
-  return { title: t("heroTitle") }
+  return { title: t("heroTitle"), alternates: getAlternates(locale, "/blog") }
 }
 
 export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {
