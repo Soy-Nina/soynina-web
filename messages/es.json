@@ -155,7 +155,7 @@
     "title2": "que cambió su futuro.",
     "ctaVolunteer": "Voluntariado",
     "titleHighlight": "es una niña",
-    "description": "Desde 2018 trabajamos en las comunidades vulnerables del Gran Área Metropolitana de Costa Rica. Estos números representan vidas reales, familias fortalecidas y un futuro más justo.",
+    "description": "Desde 2018 trabajamos en comunidades vulnerables del Gran Área Metropolitana de Costa Rica. Estos números representan vidas reales, familias fortalecidas y un futuro más justo.",
     "presenceTitle": "5 comunidades, un mismo compromiso.",
     "stats": {
       "stat1": {
@@ -177,10 +177,10 @@
         "detail": "Nuestra red de voluntarias ha aportado más de 28,000 horas de apoyo en clubes, tutorías, recaudación de fondos y acompañamiento en Club Familias, gracias al compromiso de estudiantes y profesionales que aportan su tiempo y habilidades."
       },
       "stat4": {
-        "value": 95,
+        "value": 98,
         "suffix": "%",
-        "label": "Retención escolar",
-        "detail": "El 95% de las participantes del programa se mantienen en el sistema educativo, frente a un promedio nacional significativamente menor en zonas de riesgo."
+        "label": "Factores de Riesgo",
+        "detail": "El 98% de las participantes crecen en contextos con factores de riesgo, y en Soy Niña nos comprometemos a ofrecerles un espacio seguro para desarrollarse."
       }
     },
     "ctaDonate": "Dona ahora"
@@ -202,7 +202,7 @@
     "roles": {
       "r1": {
         "title": "Clubes Semanales",
-        "desc": "Acompaña en clubes semanales."
+        "desc": "Acompaña a las niñas y adolescentes en los clubes semanales."
       },
       "r2": {
         "title": "Tutorías Académicas",
@@ -342,7 +342,7 @@
     "program1": {
       "title": "Club Niña",
       "age": "6–12 años",
-      "description": "Desarrolla habilidades socioemocionales, pensamiento crítico y autocuidado en niñas de primaria.",
+      "description": "Sesiones semanales de 2 horas que desarrollan habilidades socioemocionales, pensamiento crítico y autocuidado en niñas de primaria.",
       "activities": [
         "Prevención de violencia",
         "Educación en derechos",
@@ -352,7 +352,7 @@
     "program2": {
       "title": "Club Cole",
       "age": "13–17 años",
-      "description": "Fortalece la autonomía de adolescentes, su toma de decisiones y la construcción de su proyecto de vida.",
+      "description": "Programa semanal, que fortalece la autonomía de adolescentes, su toma de decisiones y la construcción de su proyecto de vida.",
       "activities": [
         "Educación sexual integral",
         "Desarrollo de habilidades técnicas como inglés.",
@@ -362,7 +362,7 @@
     "program3": {
       "title": "Club Familias",
       "age": "Familias",
-      "description": "Acompañamiento integral para fortalecer vínculos, habilidades parentales y desarrollo comunitario.",
+      "description": "Acompañamiento integral para fortalecer vínculos, habilidades de crianza y desarrollo comunitario a traves de sesiones mensuales virtuales.",
       "activities": [
         "Talleres de crianza positiva",
         "Gestión emocional familiar",
@@ -372,7 +372,7 @@
     "program4": {
       "title": "Tutorías",
       "age": "Apoyo académico",
-      "description": "Refuerzo educativo personalizado para mejorar el rendimiento académico y prevenir la deserción.",
+      "description": "Programa complemtario que refuerza el area educativa de forma personalizado para mejorar el rendimiento académico y prevenir la deserción.",
       "activities": [
         "Apoyo en todas las materias",
         "Técnicas de estudio",
@@ -389,9 +389,9 @@
     "successMessage": "Tu donación de ${amount} fue recibida con éxito. Recibirás una confirmación por correo de PayPal.",
     "contactCorporate": "Contactar área corporativa →",
     "donateWithCard": "Donar con tarjeta",
-    "iban": "CR12345678901234567890",
+    "iban": "CR8901020000935331259950",
     "bankTransfer": "Transferencia bancaria",
-    "bankName": "Banco Nacional de Costa Rica",
+    "bankName": "Cuenta en Colones",
     "creditCard": "Tarjeta de crédito / débito",
     "eyebrow": "Apóyanos",
     "customAmountPlaceholder": "Monto en USD (mín. $1)",
@@ -413,8 +413,8 @@
         "description": "La participación completa de una niña o adolescente en clubs, tutorías, paseos y actividades especiales."
       },
       "l4": {
-        "title": "Un Club",
-        "description": "Apoyo integral a un programa por un mes."
+        "title": "Una Donación Libre",
+        "description": "Elige el monto que deseas donar para apoyar a las niñas y adolescentes de nuestros programas."
       }
     },
     "sinpeMobile": "SINPE Móvil",
@@ -486,7 +486,7 @@
     "eyebrow": "Eventos",
     "title1": "Próximas",
     "title2": "Actividades.",
-    "description": "Talleres, congresos y jornadas de voluntariado donde nuestras niñas, familias y voluntarias se encuentran para crecer juntas.",
+    "description": "Espacios para conocer el impacto de Soy Niña, conectar con nuestra comunidad y sumarse a transformar la vida de más niñas y adolescentes.",
     "viewAll": "Ver todos los eventos"
   },
   "QuienesSomos": {
@@ -531,7 +531,7 @@
         "label": "Horas de voluntariado"
       },
       "communities": {
-        "value": "4",
+        "value": "5",
         "label": "Comunidades"
       }
     },
