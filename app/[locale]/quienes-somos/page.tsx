@@ -14,41 +14,10 @@ export default async function QuienesSomosPage({ params }: { params: Promise<{ l
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: "QuienesSomos" })
 
-  const team = [
-    { name: "Stefany Araya", role: locale === "en" ? "Program Director" : "Directora de Programa" },
-    { name: "Hilda Rivera", role: locale === "en" ? "Administrative Assistant" : "Asistente Administrativa" },
-    { name: "Estefanía Rodríguez", role: locale === "en" ? "Coordination Assistant" : "Asistente de Coordinación" },
-    { name: "Paola Arce", role: "Media Manager" },
-    { name: "Andrea Marín", role: locale === "en" ? "Volunteer Coordinator" : "Coordinadora de Voluntariado" },
-    { name: "Kelly Pacheco", role: locale === "en" ? "Programs Coordinator" : "Coordinadora de Programas" },
-    { name: "Melissa Lobo", role: locale === "en" ? "Programs Facilitator" : "Facilitadora de Programas" },
-    { name: "Kiara Corea", role: locale === "en" ? "Programs Facilitator" : "Facilitadora de Programas" },
-    { name: "Reychelle Mena", role: locale === "en" ? "Programs Facilitator" : "Facilitadora de Programas" }
-  ]
-
-  const board = [
-    { name: "Ana Laura Araya", role: locale === "en" ? "President" : "Presidenta" },
-    { name: "Alejandro Ejea", role: locale === "en" ? "Secretary" : "Secretario" },
-    { name: "Arturo Pardo", role: locale === "en" ? "First Member" : "Vocal Uno" },
-    { name: "Glenda Umaña", role: locale === "en" ? "Comptroller" : "Fiscal" },
-    { name: "Karla Prendas", role: locale === "en" ? "Member" : "Vocal" },
-    { name: "Alejandra Meza", role: locale === "en" ? "Member" : "Vocal" },
-    { name: "Krizia Aguilar", role: locale === "en" ? "Member" : "Vocal" }
-  ]
-
-  const corporateAllies = [
-    "UNFPA", "UNICEF", "Cummins", "World Hug Group",
-    "Ministerio de Cultura y Juventud", "KMA", "OTSÍ", "P&G",
-    "Nutri Snacks", "Blackbaud", "BAC Credomatic", "Coopeservidores",
-    "FIFCO", "Voces Vitales Costa Rica", "Novohogar", "VMware"
-  ]
-
-  const universityPartners = [
-    "Universidad de Costa Rica (UCR)",
-    "Universidad Latinoamericana de Ciencia y Tecnología (ULACIT)",
-    "Tecnológico de Costa Rica (TEC)",
-    "Universidad de la Habra (UH)"
-  ]
+  const team = t.raw("team") as { name: string; role: string }[]
+  const board = t.raw("board") as { name: string; role: string }[]
+  const corporateAllies = t.raw("corporateAllies") as string[]
+  const universityPartners = t.raw("universityPartners") as string[]
 
   return (
     <div className="min-h-screen bg-white">

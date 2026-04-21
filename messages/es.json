@@ -453,7 +453,9 @@
     "informes": "Informes",
     "quienesSomos": "¿Quiénes Somos?",
     "voluntariado": "Voluntariado",
-    "eventos": "Eventos"
+    "eventos": "Eventos",
+    "sostenibilidad": "Sostenibilidad",
+    "faq": "FAQ"
   },
   "Newsletter": {
     "lastName": "Apellido",
@@ -490,24 +492,56 @@
     "viewAll": "Ver todos los eventos"
   },
   "QuienesSomos": {
-    "historyTitle": "Nuestra Historia",
-    "universitySubtitle": "Universidades que apoyan nuestra formación y prácticas",
-    "ctaTitle": "¿Quieres ser parte del equipo?",
-    "ctaVolunteering": "Volunteering",
-    "universityTitle": "Partners Universitarios",
-    "ctaDescription": "Únete a nuestro equipo de voluntarios o aliados corporativos.",
-    "ctaContact": "Contáctanos",
-    "heroSubtitle": "Conoce el equipo que impulsa el cambio en Soy Niña",
-    "boardTitle": "Junta Directiva",
-    "corporateTitle": "Aliados Corporativos",
     "metaTitle": "¿Quiénes Somos? | Soy Niña",
+    "metaDescription": "Conoce nuestro equipo, junta directiva, aliados corporativos y partners universitarios de Soy Niña.",
+    "heroTitle": "¿Quiénes Somos?",
+    "heroSubtitle": "Conoce el equipo que impulsa el cambio en Soy Niña",
+    "historyTitle": "Nuestra Historia",
     "historyP1": "En febrero de 2018, nace la convicción de acompañar a niñas y adolescentes en contextos de vulnerabilidad psicosocial. Comenzamos en Los Guido, Desamparados, trabajando desde la perspectiva de la educación respetuosa y los derechos humanos.",
     "historyP2": "Expandimos a Río Azul en 2019, y en 2021 llegamos a Pavas. En cada comunidad, trabajamos en contextos marcados por violencia urbana, embarazos tempranos, tráfico de drogas y desigualdad. Nuestro propósito es proporcionar espacios seguros donde las niñas puedan ser acompañadas en su desarrollo integral.",
-    "metaDescription": "Conoce nuestro equipo, junta directiva, aliados corporativos y partners universitarios de Soy Niña.",
     "historyP3": "Hoy, seguimos creciendo. En 2025 expandiremos a nuevas comunidades, siempre fieles a nuestra misión de educar con excelencia, equidad y sororidad.",
     "teamTitle": "Nuestro Equipo Profesional",
+    "team": [
+      { "name": "Stefany Araya", "role": "Directora de Programa" },
+      { "name": "Hilda Rivera", "role": "Asistente Administrativa" },
+      { "name": "Estefanía Rodríguez", "role": "Asistente de Coordinación" },
+      { "name": "Paola Arce", "role": "Media Manager" },
+      { "name": "Andrea Marín", "role": "Coordinadora de Voluntariado" },
+      { "name": "Kelly Pacheco", "role": "Coordinadora de Programas" },
+      { "name": "Melissa Lobo", "role": "Facilitadora de Programas" },
+      { "name": "Kiara Corea", "role": "Facilitadora de Programas" },
+      { "name": "Reychelle Mena", "role": "Facilitadora de Programas" }
+    ],
+    "boardTitle": "Junta Directiva",
+    "board": [
+      { "name": "Ana Laura Araya", "role": "Presidenta" },
+      { "name": "Alejandro Ejea", "role": "Secretario" },
+      { "name": "Arturo Pardo", "role": "Vocal Uno" },
+      { "name": "Glenda Umaña", "role": "Fiscal" },
+      { "name": "Karla Prendas", "role": "Vocal" },
+      { "name": "Alejandra Meza", "role": "Vocal" },
+      { "name": "Krizia Aguilar", "role": "Vocal" }
+    ],
+    "corporateTitle": "Aliados Corporativos",
     "corporateSubtitle": "Empresas comprometidas con nuestra misión",
-    "heroTitle": "¿Quiénes Somos?"
+    "corporateAllies": [
+      "UNFPA", "UNICEF", "Cummins", "World Hug Group",
+      "Ministerio de Cultura y Juventud", "KMA", "OTSÍ", "P&G",
+      "Nutri Snacks", "Blackbaud", "BAC Credomatic", "Coopeservidores",
+      "FIFCO", "Voces Vitales Costa Rica", "Novohogar", "VMware"
+    ],
+    "universityTitle": "Partners Universitarios",
+    "universitySubtitle": "Universidades que apoyan nuestra formación y prácticas",
+    "universityPartners": [
+      "Universidad de Costa Rica (UCR)",
+      "Universidad Latinoamericana de Ciencia y Tecnología (ULACIT)",
+      "Tecnológico de Costa Rica (TEC)",
+      "Universidad de la Habra (UH)"
+    ],
+    "ctaTitle": "¿Quieres ser parte del equipo?",
+    "ctaDescription": "Únete a nuestro equipo de voluntarios o aliados corporativos.",
+    "ctaVolunteering": "Voluntariado",
+    "ctaContact": "Contáctanos"
   },
   "Hero": {
     "headlineHighlight": "rompen ciclos de pobreza",

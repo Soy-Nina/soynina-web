@@ -453,7 +453,9 @@
     "informes": "Reports",
     "quienesSomos": "About Us",
     "voluntariado": "Volunteer",
-    "eventos": "Events"
+    "eventos": "Events",
+    "sostenibilidad": "Sustainability",
+    "faq": "FAQ"
   },
   "Newsletter": {
     "lastName": "Last name",
@@ -490,24 +492,56 @@
     "viewAll": "View all events"
   },
   "QuienesSomos": {
-    "historyTitle": "Our History",
-    "universitySubtitle": "Universities supporting our training and internships",
-    "ctaTitle": "Want to join the team?",
-    "ctaVolunteering": "Volunteering",
-    "universityTitle": "University Partners",
-    "ctaDescription": "Join our volunteer team or become a corporate ally.",
-    "ctaContact": "Contact Us",
-    "heroSubtitle": "Meet the team driving change at Soy Niña",
-    "boardTitle": "Board of Directors",
-    "corporateTitle": "Corporate Allies",
     "metaTitle": "About Us | Soy Niña",
+    "metaDescription": "Meet our team, board of directors, corporate allies, and university partners at Soy Niña.",
+    "heroTitle": "About Us",
+    "heroSubtitle": "Meet the team driving change at Soy Niña",
+    "historyTitle": "Our History",
     "historyP1": "In February 2018, the conviction was born to accompany girls and adolescents in contexts of psychosocial vulnerability. We started in Los Guido, Desamparados, working from the perspective of respectful education and human rights.",
     "historyP2": "We expanded to Río Azul in 2019 and reached Pavas in 2021. In each community, we work in contexts marked by urban violence, early pregnancies, drug trafficking, and inequality. Our purpose is to provide safe spaces where girls can be supported in their holistic development.",
-    "metaDescription": "Meet our team, board of directors, corporate allies, and university partners at Soy Niña.",
     "historyP3": "Today, we continue growing. In 2025, we will expand to new communities, always faithful to our mission of educating with excellence, equity, and sisterhood.",
     "teamTitle": "Our Professional Team",
+    "team": [
+      { "name": "Stefany Araya", "role": "Program Director" },
+      { "name": "Hilda Rivera", "role": "Administrative Assistant" },
+      { "name": "Estefanía Rodríguez", "role": "Coordination Assistant" },
+      { "name": "Paola Arce", "role": "Media Manager" },
+      { "name": "Andrea Marín", "role": "Volunteer Coordinator" },
+      { "name": "Kelly Pacheco", "role": "Programs Coordinator" },
+      { "name": "Melissa Lobo", "role": "Programs Facilitator" },
+      { "name": "Kiara Corea", "role": "Programs Facilitator" },
+      { "name": "Reychelle Mena", "role": "Programs Facilitator" }
+    ],
+    "boardTitle": "Board of Directors",
+    "board": [
+      { "name": "Ana Laura Araya", "role": "President" },
+      { "name": "Alejandro Ejea", "role": "Secretary" },
+      { "name": "Arturo Pardo", "role": "First Member" },
+      { "name": "Glenda Umaña", "role": "Comptroller" },
+      { "name": "Karla Prendas", "role": "Member" },
+      { "name": "Alejandra Meza", "role": "Member" },
+      { "name": "Krizia Aguilar", "role": "Member" }
+    ],
+    "corporateTitle": "Corporate Allies",
     "corporateSubtitle": "Companies committed to our mission",
-    "heroTitle": "About Us"
+    "corporateAllies": [
+      "UNFPA", "UNICEF", "Cummins", "World Hug Group",
+      "Ministerio de Cultura y Juventud", "KMA", "OTSÍ", "P&G",
+      "Nutri Snacks", "Blackbaud", "BAC Credomatic", "Coopeservidores",
+      "FIFCO", "Voces Vitales Costa Rica", "Novohogar", "VMware"
+    ],
+    "universityTitle": "University Partners",
+    "universitySubtitle": "Universities supporting our training and internships",
+    "universityPartners": [
+      "Universidad de Costa Rica (UCR)",
+      "Universidad Latinoamericana de Ciencia y Tecnología (ULACIT)",
+      "Tecnológico de Costa Rica (TEC)",
+      "Universidad de la Habra (UH)"
+    ],
+    "ctaTitle": "Want to join the team?",
+    "ctaDescription": "Join our volunteer team or become a corporate ally.",
+    "ctaVolunteering": "Volunteering",
+    "ctaContact": "Contact Us"
   },
   "Hero": {
     "headlineHighlight": "care for each other",
