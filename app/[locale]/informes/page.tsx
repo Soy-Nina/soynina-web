@@ -1,4 +1,5 @@
 import { setRequestLocale, getTranslations } from "next-intl/server"
+import { getAlternates } from "@/lib/metadata"
 import PageHero from "@/components/soy-nina/page-hero"
 import { getReports } from "@/lib/reports"
 import Reports from "@/components/soy-nina/reports"
@@ -6,7 +7,7 @@ import Reports from "@/components/soy-nina/reports"
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params
     const t = await getTranslations({ locale, namespace: "InformesPage" })
-    return { title: t("metaTitle"), description: t("metaDescription") }
+    return { title: t("metaTitle"), description: t("metaDescription"), alternates: getAlternates(locale, "/informes") }
 }
 
 export default async function InformesPage({ params }: { params: Promise<{ locale: string }> }) {

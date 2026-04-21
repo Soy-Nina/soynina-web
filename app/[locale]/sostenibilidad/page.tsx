@@ -1,4 +1,5 @@
 import { setRequestLocale, getTranslations } from "next-intl/server"
+import { getAlternates } from "@/lib/metadata"
 import { Mic, BookOpen, Users, Briefcase } from "lucide-react"
 import PageHero from "@/components/soy-nina/page-hero"
 import { Link } from "@/src/i18n/navigation"
@@ -6,7 +7,7 @@ import { Link } from "@/src/i18n/navigation"
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "SostenibilidadPage" })
-  return { title: t("metaTitle"), description: t("metaDescription") }
+  return { title: t("metaTitle"), description: t("metaDescription"), alternates: getAlternates(locale, "/sostenibilidad") }
 }
 
 export default async function SostenibilidadPage({ params }: { params: Promise<{ locale: string }> }) {

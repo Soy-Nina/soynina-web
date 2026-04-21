@@ -20,6 +20,7 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.soynina.org"),
   title: "Soy Niña - Empoderando niñas y adolescentes en Costa Rica",
   description:
     "ONG costarricense dedicada al desarrollo integral de niñas, adolescentes y familias en situación de vulnerabilidad social mediante programas socioeducativos.",

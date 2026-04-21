@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react"
 import { setRequestLocale, getTranslations } from "next-intl/server"
 import { getBlogPost, getBlogSlugs } from "@/lib/blog"
 import { routing } from "@/src/i18n/routing"
+import { getAlternates } from "@/lib/metadata"
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = []
@@ -14,6 +15,16 @@ export async function generateStaticParams() {
     }
   }
   return params
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale, slug } = await params
+  const post = getBlogPost(locale, slug)
+  return {
+    title: post ? `${post.title} - Soy Niña` : "Blog - Soy Niña",
+    description: post?.excerpt ?? "",
+    alternates: getAlternates(locale, `/blog/${slug}`),
+  }
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ locale: string; slug: string }> }) {

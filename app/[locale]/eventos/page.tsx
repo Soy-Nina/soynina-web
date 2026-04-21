@@ -1,4 +1,5 @@
 import { setRequestLocale, getTranslations } from "next-intl/server"
+import { getAlternates } from "@/lib/metadata"
 import PageHero from "@/components/soy-nina/page-hero"
 import EventsCalendar from "@/components/soy-nina/events-calendar"
 import { Link } from "@/src/i18n/navigation"
@@ -6,7 +7,7 @@ import { Link } from "@/src/i18n/navigation"
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params
     const t = await getTranslations({ locale, namespace: "EventosPage" })
-    return { title: t("metaTitle"), description: t("metaDescription") }
+    return { title: t("metaTitle"), description: t("metaDescription"), alternates: getAlternates(locale, "/eventos") }
 }
 
 export default async function EventosPage({ params }: { params: Promise<{ locale: string }> }) {
