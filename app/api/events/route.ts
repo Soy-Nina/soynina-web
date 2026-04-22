@@ -12,19 +12,50 @@ function formatTime(date: Date): string {
     }).toUpperCase()
 }
 
-function categorizeEvent(summary: string): string {
+// ---------------------------------------------------------------------------
+// Category detection
+// ---------------------------------------------------------------------------
+// Standard: add one of these hashtags anywhere in the event's description field
+// in Microsoft 365 Calendar to set the category explicitly:
+//   #Taller  #Festival  #Jornada  #Reunión  #Charla  #Evento
+//
+// If no hashtag is found, the function falls back to keyword detection in the
+// event title (SUMMARY field).
+// ---------------------------------------------------------------------------
+const VALID_CATEGORIES = ["Taller", "Festival", "Jornada", "Reunión", "Charla", "Evento"] as const
+type Category = typeof VALID_CATEGORIES[number]
+
+function extractCategory(rawDescription: string, summary: string): Category {
+    // 1. Check for explicit hashtag in raw description (before Teams boilerplate
+    //    is stripped, so the tag can appear anywhere in the body).
+    //    Matches: #Taller  #taller  #TALLER  #reunion  #Reunión  etc.
+    const tagMatch = rawDescription.match(
+        /#(taller|festival|jornada|reuni[oó]n|charla|evento)/i
+    )
+    if (tagMatch) {
+        const tag = tagMatch[1].toLowerCase()
+        if (tag === "taller")   return "Taller"
+        if (tag === "festival") return "Festival"
+        if (tag === "jornada")  return "Jornada"
+        if (tag === "reunion" || tag === "reunión") return "Reunión"
+        if (tag === "charla")   return "Charla"
+        if (tag === "evento")   return "Evento"
+    }
+
+    // 2. Fallback: keyword match in the event title
     const lower = summary.toLowerCase()
-    if (lower.includes("taller")) return "Taller"
+    if (lower.includes("taller"))  return "Taller"
     if (lower.includes("festival")) return "Festival"
     if (lower.includes("jornada")) return "Jornada"
     if (lower.includes("reunión") || lower.includes("reunion")) return "Reunión"
-    if (lower.includes("charla")) return "Charla"
+    if (lower.includes("charla"))  return "Charla"
     return "Evento"
 }
 
 function unfoldICS(text: string): string {
-    // ICS uses line folding: a CRLF followed by a space or tab means continuation
-    return text.replace(/\r?\n[ \t]/g, "")
+    // ICS uses line folding: a CRLF followed by a space or tab means continuation.
+    // Exchange Server emits \r\r\n instead of spec-compliant \r\n — handle both.
+    return text.replace(/\r\r?\n[ \t]/g, "")
 }
 
 function parseICSDate(value: string): Date | null {
@@ -65,9 +96,35 @@ function getPropertyValue(line: string): string {
     return line.substring(colonIndex + 1).trim()
 }
 
+// Strip Teams/Outlook auto-generated meeting boilerplate from descriptions.
+// Teams appends long separator lines (underscores) and meeting join links
+// that are not meaningful to display on the website.
+function stripTeamsBoilerplate(text: string): string {
+    // Common patterns that signal the start of Teams auto-generated content.
+    // These are matched after ICS escape sequences have been decoded to real chars.
+    const cutPatterns = [
+        /_{5,}/,                           // 5+ underscores separator line
+        /Microsoft Teams meeting/i,        // any form of Teams meeting header
+        /Join Microsoft Teams/i,
+        /Teams Meeting ID:/i,
+        /Meeting ID:/i,
+        /Need help\?/i,
+    ]
+    for (const pattern of cutPatterns) {
+        const match = text.search(pattern)
+        if (match !== -1) {
+            text = text.substring(0, match).trim()
+        }
+    }
+    // Collapse multiple newlines left over after stripping
+    return text.replace(/\n{3,}/g, "\n\n").trim()
+}
+
 function parseICSText(icsText: string): EventItem[] {
+
     const unfolded = unfoldICS(icsText)
-    const lines = unfolded.split(/\r?\n/)
+    // Split on \r\r\n (Exchange) or \r\n or \n
+    const lines = unfolded.split(/\r\r?\n|\n/)
     const events: EventItem[] = []
 
     let inEvent = false
@@ -97,12 +154,20 @@ function parseICSText(icsText: string): EventItem[] {
                     time = `${formatTime(dtstart)} – ${formatTime(dtend)}`
                 }
 
-                // Unescape ICS text
-                const cleanDesc = description
-                    .replace(/\\n/g, " ")
+                // Unescape ICS text, then strip Teams/Outlook auto-generated boilerplate.
+                // Also remove the category hashtag from the displayed description.
+                const unescapedDesc = description
+                    .replace(/\\n/g, "\n")
                     .replace(/\\,/g, ",")
                     .replace(/\\\\/g, "\\")
                     .replace(/\\;/g, ";")
+                    .trim()
+
+                const category = extractCategory(unescapedDesc, summary)
+
+                const cleanDesc = stripTeamsBoilerplate(unescapedDesc)
+                    // Remove the hashtag tag itself so it doesn't appear in the card
+                    .replace(/#(taller|festival|jornada|reuni[oó]n|charla|evento)/gi, "")
                     .trim()
 
                 const cleanLocation = location
@@ -116,7 +181,7 @@ function parseICSText(icsText: string): EventItem[] {
                     description: cleanDesc,
                     location: cleanLocation,
                     time,
-                    category: categorizeEvent(summary),
+                    category,
                 })
             }
             inEvent = false

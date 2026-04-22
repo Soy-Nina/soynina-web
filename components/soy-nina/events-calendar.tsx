@@ -114,7 +114,7 @@ export default function EventsCalendar() {
     return (
         <section className="w-full py-20 bg-white">
             <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
-                <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-start">
+                <div className="grid lg:grid-cols-[3fr_2fr] gap-12 items-start">
                     {/* Calendar Grid */}
                     <div className="bg-white rounded-2xl border border-gray-100 shadow-lg overflow-hidden">
                         {/* Month Header */}
