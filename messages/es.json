@@ -651,6 +651,129 @@
       "Octubre",
       "Noviembre",
       "Diciembre"
+    ],
+    "months": [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
     ]
+  },
+  "TerminosPage": {
+    "metaTitle": "Términos de Uso - Soy Niña",
+    "metaDescription": "Términos y condiciones de uso del sitio web de Fundación Soy Niña",
+    "title": "Términos de Uso",
+    "lastUpdated": "Última actualización: 3 de enero de 2026",
+    "sections": [
+      {
+        "title": "1. Aceptación de los Términos",
+        "content": "Al acceder y utilizar el sitio web de Fundación Soy Niña (www.soynina.org), usted acepta estar sujeto a estos términos de uso, todas las leyes y regulaciones aplicables, y acepta que es responsable del cumplimiento de las leyes locales aplicables. Si no está de acuerdo con alguno de estos términos, tiene prohibido usar o acceder a este sitio."
+      },
+      {
+        "title": "2. Uso del Sitio Web",
+        "content": "Este sitio web está destinado a proporcionar información sobre los programas, actividades y misión de Fundación Soy Niña. Usted acepta utilizar el sitio únicamente para:\n\n* Obtener información sobre nuestros programas y servicios\n* Realizar donaciones a la organización\n* Registrarse como voluntaria\n* Contactar a la organización\n* Cualquier otro propósito legítimo relacionado con nuestra misión"
+      },
+      {
+        "title": "3. Conducta Prohibida",
+        "content": "Al utilizar este sitio, usted acepta NO:\n\n* Usar el sitio de manera que dañe, deshabilite, sobrecargue o deteriore el sitio\n* Intentar obtener acceso no autorizado a cualquier parte del sitio\n* Usar el sitio para transmitir virus, malware o código malicioso\n* Recopilar información de otros usuarios sin su consentimiento\n* Usar el sitio para actividades ilegales o fraudulentas\n* Violar los derechos de propiedad intelectual de Fundación Soy Niña\n* Hacerse pasar por otra persona u organización"
+      },
+      {
+        "title": "4. Propiedad Intelectual",
+        "content": "Todo el contenido de este sitio web, incluyendo textos, gráficos, logos, imágenes, videos, software y compilaciones de datos, es propiedad de Fundación Soy Niña o de sus proveedores de contenido y está protegido por las leyes de derechos de autor de Costa Rica e internacionales.\n\nPuede ver y descargar material del sitio solo para uso personal y no comercial, siempre que mantenga intactos todos los avisos de derechos de autor y otros avisos de propiedad."
+      },
+      {
+        "title": "5. Donaciones",
+        "content": "Las donaciones realizadas a través de este sitio web son procesadas de forma segura por proveedores de pago de terceros. Al realizar una donación, usted acepta:\n\n* Proporcionar información de pago precisa y completa\n* Que todas las donaciones son voluntarias y no reembolsables, excepto en casos de error de procesamiento\n* Que Fundación Soy Niña utilizará las donaciones según su misión y objetivos organizacionales\n* Recibir un recibo fiscal para fines de deducción de impuestos según la ley costarricense"
+      },
+      {
+        "title": "6. Enlaces a Sitios de Terceros",
+        "content": "Este sitio puede contener enlaces a sitios web de terceros. Fundación Soy Niña no controla ni respalda el contenido de estos sitios externos y no asume responsabilidad por ellos. El acceso a sitios de terceros se realiza bajo su propio riesgo."
+      },
+      {
+        "title": "7. Descargo de Responsabilidad",
+        "content": "El contenido de este sitio se proporciona \"tal cual\" sin garantías de ningún tipo, expresas o implícitas. Fundación Soy Niña no garantiza que:\n\n* El sitio estará disponible de forma ininterrumpida o libre de errores\n* Los defectos serán corregidos\n* El sitio o el servidor que lo aloja están libres de virus u otros componentes dañinos\n* Los resultados obtenidos del uso del sitio serán precisos o confiables"
+      },
+      {
+        "title": "8. Limitación de Responsabilidad",
+        "content": "En ningún caso Fundación Soy Niña será responsable por daños directos, indirectos, incidentales, especiales, consecuentes o ejemplares, incluyendo pérdida de beneficios, datos o uso, que resulten del uso o la imposibilidad de usar este sitio web."
+      },
+      {
+        "title": "9. Modificaciones",
+        "content": "Fundación Soy Niña se reserva el derecho de modificar estos términos de uso en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación en el sitio. Su uso continuado del sitio después de dichos cambios constituye su aceptación de los nuevos términos."
+      },
+      {
+        "title": "10. Ley Aplicable",
+        "content": "Estos términos se rigen por las leyes de la República de Costa Rica. Cualquier disputa relacionada con estos términos se resolverá en los tribunales competentes de San José, Costa Rica."
+      },
+      {
+        "title": "11. Terminación",
+        "content": "Fundación Soy Niña se reserva el derecho de terminar o suspender el acceso al sitio inmediatamente, sin previo aviso, por cualquier motivo, incluyendo la violación de estos términos de uso."
+      },
+      {
+        "title": "12. Contacto",
+        "content": "Si tiene preguntas sobre estos términos de uso, contáctenos en:"
+      }
+    ],
+    "contactInfo": {
+      "organization": "Fundación Soy Niña",
+      "email": "info@soynina.onmicrosoft.com",
+      "phone": "+506 2222-3333",
+      "address": "San José, Costa Rica",
+      "legalId": "Cédula Jurídica: 3-101-123456"
+    },
+    "footerNote": "Al utilizar este sitio web, usted reconoce que ha leído, comprendido y acepta estar sujeto a estos términos de uso."
+  },
+  "PrivacidadPage": {
+    "metaTitle": "Política de Privacidad - Soy Niña",
+    "metaDescription": "Política de privacidad de Fundación Soy Niña",
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización: 3 de enero de 2026",
+    "sections": [
+      {
+        "title": "1. Información que Recopilamos",
+        "content": "En Fundación Soy Niña, nos comprometemos a proteger la privacidad de nuestros usuarios, donantes y voluntarias. Recopilamos información personal que usted nos proporciona voluntariamente cuando:\n\n* Se registra como voluntaria\n* Realiza una donación\n* Se suscribe a nuestro boletín de noticias\n* Completa formularios de contacto\n* Participa en eventos o programas\n\nLa información puede incluir: nombre, dirección de correo electrónico, número de teléfono, dirección postal, información de pago (procesada de forma segura por terceros) y cualquier otra información que elija proporcionar."
+      },
+      {
+        "title": "2. Cómo Utilizamos su Información",
+        "content": "Utilizamos la información recopilada para:\n\n* Procesar donaciones y emitir recibos fiscales\n* Comunicarnos sobre nuestros programas y eventos\n* Gestionar el proceso de voluntariado\n* Enviar actualizaciones sobre nuestro impacto y actividades\n* Responder a consultas y solicitudes\n* Cumplir con obligaciones legales y regulatorias"
+      },
+      {
+        "title": "3. Protección de Datos",
+        "content": "Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger su información personal contra acceso no autorizado, alteración, divulgación o destrucción. Esto incluye cifrado SSL, firewalls y acceso restringido a datos personales solo para personal autorizado."
+      },
+      {
+        "title": "4. Compartir Información",
+        "content": "No vendemos, alquilamos ni intercambiamos su información personal con terceros para fines de marketing. Podemos compartir información con:\n\n* Proveedores de servicios que nos ayudan a operar (procesadores de pagos, servicios de correo electrónico)\n* Autoridades legales cuando sea requerido por ley\n* Socios colaboradores solo con su consentimiento explícito"
+      },
+      {
+        "title": "5. Sus Derechos",
+        "content": "Usted tiene derecho a:\n\n* Acceder a su información personal\n* Corregir información inexacta\n* Solicitar la eliminación de sus datos\n* Oponerse al procesamiento de sus datos\n* Retirar su consentimiento en cualquier momento\n* Cancelar la suscripción a comunicaciones de marketing"
+      },
+      {
+        "title": "6. Cookies",
+        "content": "Nuestro sitio web utiliza cookies para mejorar la experiencia del usuario y analizar el tráfico del sitio. Puede configurar su navegador para rechazar cookies, aunque esto puede afectar algunas funcionalidades del sitio."
+      },
+      {
+        "title": "7. Menores de Edad",
+        "content": "No recopilamos intencionalmente información personal de menores de 13 años sin el consentimiento de los padres. Si descubrimos que hemos recopilado información de un menor sin consentimiento, tomaremos medidas para eliminarla."
+      },
+      {
+        "title": "8. Cambios a esta Política",
+        "content": "Podemos actualizar esta política de privacidad ocasionalmente. Le notificaremos sobre cambios significativos publicando la nueva política en esta página y actualizando la fecha de \"Última actualización\"."
+      },
+      {
+        "title": "9. Contacto",
+        "content": "Si tiene preguntas sobre esta política de privacidad o desea ejercer sus derechos, contáctenos en:"
+      }
+    ],
+    "footerNote": "Esta política de privacidad está conforme con la Ley de Protección de Datos Personales de Costa Rica (Ley N° 8968)."
   }
 }

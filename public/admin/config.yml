@@ -585,8 +585,48 @@ x-translation-fields: &translation-fields
       - { label: "Hero título", name: "heroTitle", widget: "string" }
       - { label: "Hero subtítulo", name: "heroSubtitle", widget: "string" }
       - { label: "CTA título", name: "ctaTitle", widget: "string" }
-      - { label: "CTA descripción", name: "ctaDescription", widget: "text" }
       - { label: "CTA botón", name: "ctaButton", widget: "string" }
+
+  - label: "Términos de Uso (página)"
+    name: "TerminosPage"
+    widget: "object"
+    fields:
+      - { label: "Meta título", name: "metaTitle", widget: "string" }
+      - { label: "Meta descripción", name: "metaDescription", widget: "text" }
+      - { label: "Título página", name: "title", widget: "string" }
+      - { label: "Fecha actualización", name: "lastUpdated", widget: "string" }
+      - label: "Secciones"
+        name: "sections"
+        widget: "list"
+        fields:
+          - { label: "Título sección", name: "title", widget: "string" }
+          - { label: "Contenido", name: "content", widget: "text" }
+      - label: "Información de contacto"
+        name: "contactInfo"
+        widget: "object"
+        fields:
+          - { label: "Organización", name: "organization", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Teléfono", name: "phone", widget: "string" }
+          - { label: "Dirección", name: "address", widget: "string" }
+          - { label: "Cédula", name: "legalId", widget: "string" }
+      - { label: "Nota pie", name: "footerNote", widget: "text" }
+
+  - label: "Política de Privacidad (página)"
+    name: "PrivacidadPage"
+    widget: "object"
+    fields:
+      - { label: "Meta título", name: "metaTitle", widget: "string" }
+      - { label: "Meta descripción", name: "metaDescription", widget: "text" }
+      - { label: "Título página", name: "title", widget: "string" }
+      - { label: "Fecha actualización", name: "lastUpdated", widget: "string" }
+      - label: "Secciones"
+        name: "sections"
+        widget: "list"
+        fields:
+          - { label: "Título sección", name: "title", widget: "string" }
+          - { label: "Contenido", name: "content", widget: "text" }
+      - { label: "Nota pie", name: "footerNote", widget: "text" }
 
   - label: "Blog (página)"
     name: "BlogPage"
