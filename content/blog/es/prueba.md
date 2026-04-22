@@ -6,4 +6,4 @@ author: Jose
 category: Prueba
 gradient: from-[#4526c9] to-[#fe35fe]
 ---
-Esto es una prueba
+Esto es una prueba 2

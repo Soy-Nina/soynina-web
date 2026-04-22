@@ -6,39 +6,59 @@
   <meta name="robots" content="noindex" />
   <title>Soy Niña — Admin</title>
   <style>
-    #deploy-fab {
-      position: fixed;
-      top: 16px;
-      right: 16px;
-      z-index: 99999;
+    #cms-action-group {
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 12px 20px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #4526c9, #fe35fe);
-      color: #fff;
+      margin-left: auto;
+      padding-right: 8px;
+      flex-shrink: 0;
+    }
+
+    .cms-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 6px;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: 14px;
-      font-weight: 700;
+      font-size: 13px;
+      font-weight: 600;
       text-decoration: none;
-      box-shadow: 0 4px 16px rgba(69, 38, 201, 0.40);
-      transition: opacity 0.15s, transform 0.15s, box-shadow 0.15s;
+      white-space: nowrap;
+      transition: opacity 0.15s, background 0.15s;
+      cursor: pointer;
     }
-    #deploy-fab:hover {
-      opacity: 0.92;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(69, 38, 201, 0.50);
+
+    .cms-nav-btn--ghost {
+      color: rgba(255, 255, 255, 0.80);
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.20);
     }
-    #deploy-fab:active {
-      transform: translateY(0);
+
+    .cms-nav-btn--ghost:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.10);
+      border-color: rgba(255, 255, 255, 0.35);
     }
-    #deploy-fab svg {
-      width: 16px;
-      height: 16px;
+
+    .cms-nav-btn--primary {
+      color: #fff;
+      background: linear-gradient(135deg, #4526c9, #fe35fe);
+      border: 1px solid transparent;
+      box-shadow: 0 2px 8px rgba(69, 38, 201, 0.35);
+    }
+
+    .cms-nav-btn--primary:hover {
+      opacity: 0.88;
+    }
+
+    .cms-nav-btn svg {
+      width: 13px;
+      height: 13px;
       fill: none;
-      stroke: #fff;
-      stroke-width: 2;
+      stroke: currentColor;
+      stroke-width: 2.2;
       stroke-linecap: round;
       stroke-linejoin: round;
       flex-shrink: 0;
@@ -46,10 +66,43 @@
   </style>
 </head>
 <body>
-  <a id="deploy-fab" href="/admin/deploy.html" title="Publicar todos los cambios al sitio en vivo">
-    <svg viewBox="0 0 24 24"><path d="M5 12l7-7 7 7M12 5v14"/></svg>
-    Publicar Sitio
-  </a>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // Update this to your actual Netlify staging branch URL
+    const STAGING_URL = 'https://staging--cute-snickerdoodle-bbb672.netlify.app';
+
+    function injectButtons() {
+      if (document.getElementById('cms-action-group')) return;
+
+      const nav = document.querySelector('nav');
+      if (!nav) return;
+
+      const group = document.createElement('div');
+      group.id = 'cms-action-group';
+      group.innerHTML = `
+        <a class="cms-nav-btn cms-nav-btn--ghost" href="${STAGING_URL}" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Ver staging
+        </a>
+        <a class="cms-nav-btn cms-nav-btn--primary" href="/admin/deploy.html">
+          <svg viewBox="0 0 24 24"><path d="M5 12l7-7 7 7M12 5v14"/></svg>
+          Publicar sitio
+        </a>
+      `;
+
+      // Insert before the last child (Decap's user/settings button)
+      // so our buttons sit just left of the account menu
+      const lastChild = nav.lastElementChild;
+      if (lastChild) {
+        nav.insertBefore(group, lastChild);
+      } else {
+        nav.appendChild(group);
+      }
+    }
+
+    // Re-inject whenever React re-renders the nav and removes our buttons
+    const observer = new MutationObserver(injectButtons);
+    observer.observe(document.body, { childList: true, subtree: true });
+  </script>
 </body>
 </html>
