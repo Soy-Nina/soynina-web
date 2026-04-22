@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publicar Sitio — Soy Nina</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f4f5f7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      padding: 48px 40px 40px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #4526c9, #fe35fe);
+      margin-bottom: 24px;
+    }
+
+    .logo svg {
+      width: 32px; height: 32px;
+      fill: none; stroke: #fff; stroke-width: 2;
+      stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    h1 { font-size: 22px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
+
+    .subtitle { font-size: 14px; color: #6b7280; line-height: 1.5; margin-bottom: 28px; }
+
+    /* User pill */
+    .user-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #f0f4ff;
+      border: 1px solid #d0d9ff;
+      border-radius: 999px;
+      padding: 6px 14px 6px 6px;
+      margin-bottom: 28px;
+    }
+
+    .user-pill img {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .user-pill span { font-size: 13px; font-weight: 600; color: #3730a3; }
+
+    /* Info box */
+    .info-box {
+      background: #f0f4ff;
+      border: 1px solid #d0d9ff;
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 13px;
+      color: #3730a3;
+      text-align: left;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .info-box strong {
+      display: block; margin-bottom: 4px;
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em;
+    }
+
+    /* Not-logged-in state */
+    .not-logged-in {
+      display: none;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 14px;
+      color: #92400e;
+      text-align: left;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .not-logged-in a { color: #4526c9; font-weight: 600; text-decoration: none; }
+    .not-logged-in a:hover { text-decoration: underline; }
+
+    /* Deploy button */
+    .btn-deploy {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      background: linear-gradient(135deg, #4526c9, #fe35fe);
+      color: #fff;
+      transition: opacity 0.15s, transform 0.1s;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-deploy:hover:not(:disabled) { opacity: 0.92; transform: translateY(-1px); }
+    .btn-deploy:active:not(:disabled) { transform: translateY(0); }
+    .btn-deploy:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    /* Status messages */
+    .status {
+      margin-top: 20px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      display: none;
+      align-items: flex-start;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .status.show { display: flex; }
+    .status.loading { background: #f0f4ff; color: #3730a3; border: 1px solid #d0d9ff; }
+    .status.success { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+    .status.up-to-date { background: #fffbeb; color: #92400e; border: 1px solid #fde68a; }
+    .status.error { background: #fff1f2; color: #9f1239; border: 1px solid #fecdd3; }
+    .status-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+    .spinner {
+      width: 18px; height: 18px;
+      border: 2px solid #c7d2fe;
+      border-top-color: #4526c9;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .back-link { margin-top: 28px; font-size: 13px; color: #9ca3af; }
+    .back-link a { color: #4526c9; text-decoration: none; font-weight: 500; }
+    .back-link a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <svg viewBox="0 0 24 24"><path d="M5 12l7-7 7 7M12 5v14"/></svg>
+    </div>
+
+    <h1>Publicar en Producción</h1>
+    <p class="subtitle">Publica todos los cambios guardados en el CMS al sitio en vivo.</p>
+
+    <!-- Shown when logged in -->
+    <div class="user-pill" id="user-pill" style="display:none;">
+      <img id="user-avatar" src="" alt="" />
+      <span id="user-name"></span>
+    </div>
+
+    <!-- Shown when NOT logged in -->
+    <div class="not-logged-in" id="not-logged-in">
+      ⚠️ No estás autenticada. <a href="/admin/">Inicia sesión en el CMS</a> y vuelve aquí para publicar.
+    </div>
+
+    <div class="info-box">
+      <strong>¿Qué ocurre?</strong>
+      Los cambios guardados en el CMS están en <em>staging</em>. Al publicar, se fusionan con <em>main</em> y Netlify actualiza el sitio en ~2 minutos.
+    </div>
+
+    <button class="btn-deploy" id="deploy-btn" onclick="deploy()" disabled>
+      Publicar Sitio
+    </button>
+
+    <div class="status loading" id="status-loading">
+      <div class="spinner"></div>
+      <span>Publicando… esto tarda unos segundos.</span>
+    </div>
+    <div class="status success" id="status-success">
+      <span class="status-icon">✅</span>
+      <span id="success-msg"></span>
+    </div>
+    <div class="status up-to-date" id="status-up-to-date">
+      <span class="status-icon">ℹ️</span>
+      <span id="up-to-date-msg"></span>
+    </div>
+    <div class="status error" id="status-error">
+      <span class="status-icon">❌</span>
+      <span id="error-msg"></span>
+    </div>
+
+    <p class="back-link"><a href="/admin/">← Volver al CMS</a></p>
+  </div>
+
+  <script>
+    let userToken = null;
+
+    function getCMSSession() {
+      try {
+        const raw = localStorage.getItem('netlify-cms-user');
+        if (!raw) return null;
+        return JSON.parse(raw);
+      } catch {
+        return null;
+      }
+    }
+
+    function setStatus(type, message) {
+      ['loading', 'success', 'up-to-date', 'error'].forEach(t => {
+        document.getElementById('status-' + t).classList.remove('show');
+      });
+      const el = document.getElementById('status-' + type);
+      if (!el) return;
+      if (message) {
+        const msgEl = el.querySelector('span:last-child');
+        if (msgEl) msgEl.textContent = message;
+      }
+      el.classList.add('show');
+    }
+
+    function init() {
+      const session = getCMSSession();
+      const btn = document.getElementById('deploy-btn');
+
+      if (session?.token) {
+        userToken = session.token;
+        btn.disabled = false;
+
+        // Show user pill
+        const pill = document.getElementById('user-pill');
+        pill.style.display = 'inline-flex';
+        if (session.avatar_url) {
+          document.getElementById('user-avatar').src = session.avatar_url;
+        }
+        document.getElementById('user-name').textContent = session.name || session.login || 'Usuario';
+      } else {
+        document.getElementById('not-logged-in').style.display = 'block';
+      }
+    }
+
+    async function deploy() {
+      if (!userToken) return;
+
+      const btn = document.getElementById('deploy-btn');
+      btn.disabled = true;
+      setStatus('loading');
+
+      try {
+        const res = await fetch('/.netlify/functions/deploy-to-main', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${userToken}`,
+          },
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          setStatus('error', data.error || 'Error al publicar. Intenta de nuevo.');
+        } else if (data.status === 'up_to_date') {
+          setStatus('up-to-date', data.message);
+        } else {
+          setStatus('success', data.message);
+        }
+      } catch {
+        setStatus('error', 'No se pudo conectar. Verifica tu conexión e intenta de nuevo.');
+      } finally {
+        btn.disabled = false;
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>

@@ -32,6 +32,8 @@ export default function Navigation() {
     { href: "/blog" as const, label: t("blog") },
     { href: "/eventos" as const, label: t("eventos") },
     { href: "/informes" as const, label: t("informes") },
+    { href: "/sostenibilidad" as const, label: t("sostenibilidad") },
+    { href: "/faq" as const, label: t("faq") },
     { href: "/contacto" as const, label: t("contacto") },
   ]
 

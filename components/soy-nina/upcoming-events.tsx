@@ -71,7 +71,7 @@ export default function UpcomingEvents() {
                                 </div>
                                 <div className="px-6 pb-6 pt-2 flex flex-col flex-1">
                                     <h3 className="text-xl font-bold text-[#140b3f] mb-2 group-hover:text-[#4526c9] transition-colors">{event.title}</h3>
-                                    <p className="text-sm text-gray-600 leading-relaxed mb-4 flex-1">{event.description}</p>
+                                    <p className="text-sm text-gray-600 leading-relaxed mb-4 flex-1 line-clamp-3">{event.description}</p>
                                     <div className="flex flex-col gap-2 text-xs text-gray-500">
                                         <span className="flex items-center gap-1.5"><Clock size={13} className="text-gray-400" />{event.time}</span>
                                         <span className="flex items-center gap-1.5"><MapPin size={13} className="text-gray-400" />{event.location}</span>

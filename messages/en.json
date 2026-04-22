@@ -389,9 +389,14 @@
     "successMessage": "Your donation of ${amount} was received successfully. You'll get a confirmation email from PayPal.",
     "contactCorporate": "Contact corporate area →",
     "donateWithCard": "Donate by card",
-    "iban": "CR12345678901234567890",
+    "ibanDolares": "CR93010200009353125878",
+    "cuentaDolares": "935312587",
+    "ibanColones": "CR89010200009353125950",
+    "cuentaColones": "935312595",
+    "labelDolares": "Dollars",
+    "labelColones": "Colones",
     "bankTransfer": "Bank transfer",
-    "bankName": "Banco Nacional de Costa Rica",
+    "bankName": "BAC",
     "creditCard": "Credit / debit card",
     "eyebrow": "Support Us",
     "customAmountPlaceholder": "Amount in USD (min. $1)",
@@ -453,7 +458,9 @@
     "informes": "Reports",
     "quienesSomos": "About Us",
     "voluntariado": "Volunteer",
-    "eventos": "Events"
+    "eventos": "Events",
+    "sostenibilidad": "Sustainability",
+    "faq": "FAQ"
   },
   "Newsletter": {
     "lastName": "Last name",
@@ -490,24 +497,56 @@
     "viewAll": "View all events"
   },
   "QuienesSomos": {
-    "historyTitle": "Our History",
-    "universitySubtitle": "Universities supporting our training and internships",
-    "ctaTitle": "Want to join the team?",
-    "ctaVolunteering": "Volunteering",
-    "universityTitle": "University Partners",
-    "ctaDescription": "Join our volunteer team or become a corporate ally.",
-    "ctaContact": "Contact Us",
-    "heroSubtitle": "Meet the team driving change at Soy Niña",
-    "boardTitle": "Board of Directors",
-    "corporateTitle": "Corporate Allies",
     "metaTitle": "About Us | Soy Niña",
-    "historyP1": "In February 2018, the conviction was born to accompany girls and adolescents in contexts of psychosocial vulnerability. We started in Los Guido, Desamparados, working from the perspective of respectful education and human rights.",
-    "historyP2": "We expanded to Río Azul in 2019 and reached Pavas in 2021. In each community, we work in contexts marked by urban violence, early pregnancies, drug trafficking, and inequality. Our purpose is to provide safe spaces where girls can be supported in their holistic development.",
     "metaDescription": "Meet our team, board of directors, corporate allies, and university partners at Soy Niña.",
-    "historyP3": "Today, we continue growing. In 2025, we will expand to new communities, always faithful to our mission of educating with excellence, equity, and sisterhood.",
+    "heroTitle": "About Us",
+    "heroSubtitle": "Meet the team driving change at Soy Niña",
+    "historyTitle": "Our History",
+    "historyP1": "In February 2018, the conviction was born to accompany girls and adolescents in contexts of psychosocial vulnerability. We started in Los Guido, Desamparados, working from the perspective of respectful education and human rights.",
+    "historyP2": "We expanded to Río Azul in 2019, and since then we have expanded to Desamparados, Pavas, and Guararí. In each community, we work in contexts marked by urban violence, early pregnancies, drug trafficking, and inequality. Our purpose is to provide safe spaces where girls can be supported in their holistic development.",
+    "historyP3": "Today, we continue growing. We currently have 17 Clubs across 5 communities, always faithful to our mission of educating with excellence, equity, and sisterhood.",
     "teamTitle": "Our Professional Team",
+    "team": [
+      { "name": "Stefany Araya", "role": "Program Director" },
+      { "name": "Hilda Rivera", "role": "Administrative Assistant" },
+      { "name": "Estefanía Rodríguez", "role": "Coordination Assistant" },
+      { "name": "Paola Arce", "role": "Media Manager" },
+      { "name": "Andrea Marín", "role": "Volunteer Coordinator" },
+      { "name": "Kelly Pacheco", "role": "Programs Coordinator" },
+      { "name": "Melissa Lobo", "role": "Programs Facilitator" },
+      { "name": "Kiara Corea", "role": "Programs Facilitator" },
+      { "name": "Reychelle Mena", "role": "Programs Facilitator" }
+    ],
+    "boardTitle": "Board of Directors",
+    "board": [
+      { "name": "Ana Laura Araya", "role": "President" },
+      { "name": "Alejandro Ejea", "role": "Secretary" },
+      { "name": "Arturo Pardo", "role": "First Member" },
+      { "name": "Glenda Umaña", "role": "Comptroller" },
+      { "name": "Karla Prendas", "role": "Member" },
+      { "name": "Alejandra Meza", "role": "Member" },
+      { "name": "Krizia Aguilar", "role": "Member" }
+    ],
+    "corporateTitle": "Corporate Allies",
     "corporateSubtitle": "Companies committed to our mission",
-    "heroTitle": "About Us"
+    "corporateAllies": [
+      "UNFPA", "UNICEF", "Cummins", "World Hug Group",
+      "Ministerio de Cultura y Juventud", "KMA", "OTSÍ", "P&G",
+      "Nutri Snacks", "Blackbaud", "BAC Credomatic", "Coopeservidores",
+      "FIFCO", "Voces Vitales Costa Rica", "Novohogar", "VMware"
+    ],
+    "universityTitle": "University Partners",
+    "universitySubtitle": "Universities supporting our training and internships",
+    "universityPartners": [
+      "Universidad de Costa Rica (UCR)",
+      "Universidad Latinoamericana de Ciencia y Tecnología (ULACIT)",
+      "Tecnológico de Costa Rica (TEC)",
+      "Universidad de la Habra (UH)"
+    ],
+    "ctaTitle": "Want to join the team?",
+    "ctaDescription": "Join our volunteer team or become a corporate ally.",
+    "ctaVolunteering": "Volunteering",
+    "ctaContact": "Contact Us"
   },
   "Hero": {
     "headlineHighlight": "care for each other",
@@ -612,6 +651,129 @@
       "October",
       "November",
       "December"
+    ],
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
     ]
+  },
+  "TerminosPage": {
+    "metaTitle": "Terms of Use - Soy Niña",
+    "metaDescription": "Terms and conditions of use for Fundación Soy Niña's website",
+    "title": "Terms of Use",
+    "lastUpdated": "Last updated: January 3, 2026",
+    "sections": [
+      {
+        "title": "1. Acceptance of Terms",
+        "content": "By accessing and using the Fundación Soy Niña website (www.soynina.org), you agree to be bound by these terms of use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site."
+      },
+      {
+        "title": "2. Use of the Website",
+        "content": "This website is intended to provide information about the programs, activities, and mission of Fundación Soy Niña. You agree to use the site solely for:\n\n* Obtaining information about our programs and services\n* Making donations to the organization\n* Registering as a volunteer\n* Contacting the organization\n* Any other legitimate purpose related to our mission"
+      },
+      {
+        "title": "3. Prohibited Conduct",
+        "content": "By using this site, you agree NOT to:\n\n* Use the site in any way that could damage, disable, overburden, or impair the site\n* Attempt to gain unauthorized access to any part of the site\n* Use the site to transmit viruses, malware, or malicious code\n* Collect information from other users without their consent\n* Use the site for illegal or fraudulent activities\n* Violate the intellectual property rights of Fundación Soy Niña\n* Impersonate any person or organization"
+      },
+      {
+        "title": "4. Intellectual Property",
+        "content": "All content on this website, including text, graphics, logos, images, videos, software, and data compilations, is the property of Fundación Soy Niña or its content providers and is protected by Costa Rican and international copyright laws.\n\nYou may view and download material from the site for personal, non-commercial use only, provided you keep intact all copyright and other proprietary notices."
+      },
+      {
+        "title": "5. Donations",
+        "content": "Donations made through this website are processed securely by third-party payment providers. By making a donation, you agree:\n\n* To provide accurate and complete payment information\n* That all donations are voluntary and non-refundable, except in cases of processing error\n* That Fundación Soy Niña will use donations according to its mission and organizational goals\n* To receive a tax receipt for tax deduction purposes according to Costa Rican law"
+      },
+      {
+        "title": "6. Links to Third-Party Sites",
+        "content": "This site may contain links to third-party websites. Fundación Soy Niña does not control or endorse the content of these external sites and assumes no responsibility for them. Access to third-party sites is at your own risk."
+      },
+      {
+        "title": "7. Disclaimer",
+        "content": "The content on this site is provided \"as is\" without warranties of any kind, either express or implied. Fundación Soy Niña does not warrant that:\n\n* The site will be available uninterrupted or error-free\n* Defects will be corrected\n* The site or the server that makes it available are free of viruses or other harmful components\n* The results obtained from the use of the site will be accurate or reliable"
+      },
+      {
+        "title": "8. Limitation of Liability",
+        "content": "In no event shall Fundación Soy Niña be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including loss of profits, data, or use, resulting from the use or inability to use this website."
+      },
+      {
+        "title": "9. Modifications",
+        "content": "Fundación Soy Niña reserves the right to modify these terms of use at any time. Changes will take effect immediately upon publication on the site. Your continued use of the site after such changes constitutes your acceptance of the new terms."
+      },
+      {
+        "title": "10. Governing Law",
+        "content": "These terms are governed by the laws of the Republic of Costa Rica. Any dispute related to these terms shall be resolved in the competent courts of San José, Costa Rica."
+      },
+      {
+        "title": "11. Termination",
+        "content": "Fundación Soy Niña reserves the right to terminate or suspend access to the site immediately, without prior notice, for any reason, including violation of these terms of use."
+      },
+      {
+        "title": "12. Contact",
+        "content": "If you have questions about these terms of use, contact us at:"
+      }
+    ],
+    "contactInfo": {
+      "organization": "Fundación Soy Niña",
+      "email": "info@soynina.onmicrosoft.com",
+      "phone": "+506 2222-3333",
+      "address": "San José, Costa Rica",
+      "legalId": "Legal ID: 3-101-123456"
+    },
+    "footerNote": "By using this website, you acknowledge that you have read, understood, and agree to be bound by these terms of use."
+  },
+  "PrivacidadPage": {
+    "metaTitle": "Privacy Policy - Soy Niña",
+    "metaDescription": "Privacy policy of Fundación Soy Niña",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: January 3, 2026",
+    "sections": [
+      {
+        "title": "1. Information We Collect",
+        "content": "At Fundación Soy Niña, we are committed to protecting the privacy of our users, donors, and volunteers. We collect personal information that you voluntarily provide to us when you:\n\n* Register as a volunteer\n* Make a donation\n* Subscribe to our newsletter\n* Complete contact forms\n* Participate in events or programs\n\nInformation may include: name, email address, phone number, mailing address, payment information (processed securely by third parties), and any other information you choose to provide."
+      },
+      {
+        "title": "2. How We Use Your Information",
+        "content": "We use the information collected to:\n\n* Process donations and issue tax receipts\n* Communicate about our programs and events\n* Manage the volunteering process\n* Send updates on our impact and activities\n* Respond to inquiries and requests\n* Comply with legal and regulatory obligations"
+      },
+      {
+        "title": "3. Data Protection",
+        "content": "We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. This includes SSL encryption, firewalls, and restricted access to personal data only for authorized personnel."
+      },
+      {
+        "title": "4. Information Sharing",
+        "content": "We do not sell, rent, or trade your personal information with third parties for marketing purposes. We may share information with:\n\n* Service providers who help us operate (payment processors, email services)\n* Legal authorities when required by law\n* Collaborative partners only with your explicit consent"
+      },
+      {
+        "title": "5. Your Rights",
+        "content": "You have the right to:\n\n* Access your personal information\n* Correct inaccurate information\n* Request the deletion of your data\n* Object to the processing of your data\n* Withdraw your consent at any time\n* Unsubscribe from marketing communications"
+      },
+      {
+        "title": "6. Cookies",
+        "content": "Our website uses cookies to improve user experience and analyze site traffic. You can set your browser to refuse cookies, although this may affect some site functionality."
+      },
+      {
+        "title": "7. Minors",
+        "content": "We do not knowingly collect personal information from children under 13 without parental consent. If we discover that we have collected information from a minor without consent, we will take steps to delete it."
+      },
+      {
+        "title": "8. Changes to this Policy",
+        "content": "We may update this privacy policy from time to time. We will notify you of any significant changes by posting the new policy on this page and updating the \"Last updated\" date."
+      },
+      {
+        "title": "9. Contact",
+        "content": "If you have questions about this privacy policy or wish to exercise your rights, contact us at:"
+      }
+    ],
+    "footerNote": "This privacy policy is in compliance with the Law on Protection of Persons against the Processing of their Personal Data of Costa Rica (Law No. 8968)."
   }
 }

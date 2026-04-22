@@ -19,7 +19,7 @@ const FIELD_NAMES = {
   honeypot:  "field_9_verification",         // Must remain empty (bot trap)
 }
 
-const CONTACT_EMAIL = "separte@soynina.org"
+const CONTACT_EMAIL = "info@soynina.onmicrosoft.com"
 
 export default function ContactoPage() {
   const t = useTranslations("ContactoPage")

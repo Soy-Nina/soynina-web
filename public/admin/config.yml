@@ -1,9 +1,7 @@
 backend:
   name: github
   repo: Soy-Nina/soynina-web
-  branch: main
-
-publish_mode: editorial_workflow
+  branch: staging
 
 media_folder: "public/reports"
 public_folder: "/reports"
@@ -429,11 +427,31 @@ x-translation-fields: &translation-fields
       - { label: "Historia párrafo 2", name: "historyP2", widget: "text" }
       - { label: "Historia párrafo 3", name: "historyP3", widget: "text" }
       - { label: "Equipo título", name: "teamTitle", widget: "string" }
+      - label: "Equipo Profesional"
+        name: "team"
+        widget: "list"
+        fields:
+          - { label: "Nombre", name: "name", widget: "string" }
+          - { label: "Cargo / Role", name: "role", widget: "string" }
       - { label: "Junta directiva título", name: "boardTitle", widget: "string" }
+      - label: "Junta Directiva"
+        name: "board"
+        widget: "list"
+        fields:
+          - { label: "Nombre", name: "name", widget: "string" }
+          - { label: "Cargo / Role", name: "role", widget: "string" }
       - { label: "Aliados corporativos título", name: "corporateTitle", widget: "string" }
       - { label: "Aliados corporativos subtítulo", name: "corporateSubtitle", widget: "string" }
+      - label: "Aliados Corporativos"
+        name: "corporateAllies"
+        widget: "list"
+        field: { label: "Organización", name: "ally", widget: "string" }
       - { label: "Partners universitarios título", name: "universityTitle", widget: "string" }
       - { label: "Partners universitarios subtítulo", name: "universitySubtitle", widget: "string" }
+      - label: "Partners Universitarios"
+        name: "universityPartners"
+        widget: "list"
+        field: { label: "Universidad", name: "university", widget: "string" }
       - { label: "CTA título", name: "ctaTitle", widget: "string" }
       - { label: "CTA descripción", name: "ctaDescription", widget: "text" }
       - { label: "CTA voluntariado", name: "ctaVolunteering", widget: "string" }
@@ -565,8 +583,48 @@ x-translation-fields: &translation-fields
       - { label: "Hero título", name: "heroTitle", widget: "string" }
       - { label: "Hero subtítulo", name: "heroSubtitle", widget: "string" }
       - { label: "CTA título", name: "ctaTitle", widget: "string" }
-      - { label: "CTA descripción", name: "ctaDescription", widget: "text" }
       - { label: "CTA botón", name: "ctaButton", widget: "string" }
+
+  - label: "Términos de Uso (página)"
+    name: "TerminosPage"
+    widget: "object"
+    fields:
+      - { label: "Meta título", name: "metaTitle", widget: "string" }
+      - { label: "Meta descripción", name: "metaDescription", widget: "text" }
+      - { label: "Título página", name: "title", widget: "string" }
+      - { label: "Fecha actualización", name: "lastUpdated", widget: "string" }
+      - label: "Secciones"
+        name: "sections"
+        widget: "list"
+        fields:
+          - { label: "Título sección", name: "title", widget: "string" }
+          - { label: "Contenido", name: "content", widget: "text" }
+      - label: "Información de contacto"
+        name: "contactInfo"
+        widget: "object"
+        fields:
+          - { label: "Organización", name: "organization", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Teléfono", name: "phone", widget: "string" }
+          - { label: "Dirección", name: "address", widget: "string" }
+          - { label: "Cédula", name: "legalId", widget: "string" }
+      - { label: "Nota pie", name: "footerNote", widget: "text" }
+
+  - label: "Política de Privacidad (página)"
+    name: "PrivacidadPage"
+    widget: "object"
+    fields:
+      - { label: "Meta título", name: "metaTitle", widget: "string" }
+      - { label: "Meta descripción", name: "metaDescription", widget: "text" }
+      - { label: "Título página", name: "title", widget: "string" }
+      - { label: "Fecha actualización", name: "lastUpdated", widget: "string" }
+      - label: "Secciones"
+        name: "sections"
+        widget: "list"
+        fields:
+          - { label: "Título sección", name: "title", widget: "string" }
+          - { label: "Contenido", name: "content", widget: "text" }
+      - { label: "Nota pie", name: "footerNote", widget: "text" }
 
   - label: "Blog (página)"
     name: "BlogPage"
