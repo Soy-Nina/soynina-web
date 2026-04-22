@@ -30,8 +30,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#140b3f] mb-1">Correo electrónico</h3>
-                    <a href="mailto:info@soynina.org" className="text-gray-600 hover:text-[#4526c9]">
-                      info@soynina.org
+                    <a href="mailto:info@soynina.onmicrosoft.com" className="text-gray-600 hover:text-[#4526c9]">
+                      info@soynina.onmicrosoft.com
                     </a>
                   </div>
                 </div>

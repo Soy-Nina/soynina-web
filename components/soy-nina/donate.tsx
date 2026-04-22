@@ -170,11 +170,24 @@ export default function Donate() {
                 {/* Bank transfer */}
                 <div>
                   <p className="text-xs font-bold tracking-[0.15em] uppercase text-white/50 mb-3">{t("bankTransfer")}</p>
-                  <div className="space-y-2 text-sm">
-                    <p><span className="text-white/50">{t("bankName")}:</span> <span className="text-white">Banco Nacional de Costa Rica</span></p>
-                    <p><span className="text-white/50">IBAN:</span> <span className="text-white font-mono">{t("iban")}</span></p>
-                    <p><span className="text-white/50">{t("holder")}:</span> <span className="text-white">Fundación Soy Niña</span></p>
-                    <p><span className="text-white/50">{t("legalId")}:</span> <span className="text-white">3-101-123456</span></p>
+                  <div className="space-y-5 text-sm">
+                    
+                    <div className="space-y-1.5">
+                      <p className="text-[#e0ff4f] font-bold text-xs uppercase tracking-wider">{t("labelDolares")}</p>
+                      <p><span className="text-white/50">IBAN:</span> <span className="text-white font-mono">{t("ibanDolares")}</span></p>
+                      <p><span className="text-white/50">Cuenta BAC:</span> <span className="text-white font-mono">{t("cuentaDolares")}</span></p>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <p className="text-[#e0ff4f] font-bold text-xs uppercase tracking-wider">{t("labelColones")}</p>
+                      <p><span className="text-white/50">IBAN:</span> <span className="text-white font-mono">{t("ibanColones")}</span></p>
+                      <p><span className="text-white/50">Cuenta BAC:</span> <span className="text-white font-mono">{t("cuentaColones")}</span></p>
+                    </div>
+
+                    <div className="pt-2 border-t border-white/5 space-y-1">
+                      <p><span className="text-white/50">{t("holder")}:</span> <span className="text-white">Fundación Soy Niña</span></p>
+                      <p><span className="text-white/50">{t("legalId")}:</span> <span className="text-white">3-101-123456</span></p>
+                    </div>
                   </div>
                 </div>
 

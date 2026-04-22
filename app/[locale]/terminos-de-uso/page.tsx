@@ -161,7 +161,7 @@ export default async function TerminosUso({ params }: { params: Promise<{ locale
               </p>
               <div className="bg-purple-50 p-6 rounded-lg mt-4">
                 <p className="text-gray-700 font-semibold">Fundación Soy Niña</p>
-                <p className="text-gray-700">Email: info@soynina.org</p>
+                <p className="text-gray-700">Email: info@soynina.onmicrosoft.com</p>
                 <p className="text-gray-700">Teléfono: +506 2222-3333</p>
                 <p className="text-gray-700">Dirección: San José, Costa Rica</p>
                 <p className="text-gray-700">Cédula Jurídica: 3-101-123456</p>

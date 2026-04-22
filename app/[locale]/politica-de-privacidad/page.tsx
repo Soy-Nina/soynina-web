@@ -131,7 +131,7 @@ export default async function PoliticaPrivacidad({ params }: { params: Promise<{
               </p>
               <div className="bg-purple-50 p-6 rounded-lg mt-4">
                 <p className="text-gray-700 font-semibold">Fundación Soy Niña</p>
-                <p className="text-gray-700">Email: privacidad@soynina.org</p>
+                <p className="text-gray-700">Email: info@soynina.onmicrosoft.com</p>
                 <p className="text-gray-700">Teléfono: +506 2222-3333</p>
                 <p className="text-gray-700">Dirección: San José, Costa Rica</p>
               </div>
