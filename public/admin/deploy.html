@@ -212,13 +212,39 @@
     let userToken = null;
 
     function getCMSSession() {
-      try {
-        const raw = localStorage.getItem('netlify-cms-user');
-        if (!raw) return null;
-        return JSON.parse(raw);
-      } catch {
-        return null;
+      // Try known Decap / Netlify Identity keys first
+      const knownKeys = ['netlify-cms-user', 'decap-cms-user', 'gotrue-session'];
+      for (const key of knownKeys) {
+        try {
+          const raw = localStorage.getItem(key);
+          if (!raw) continue;
+          const data = JSON.parse(raw);
+          // GitHub OAuth token format
+          if (data?.token) return { token: data.token, name: data.name || data.login, avatar_url: data.avatar_url };
+          // Netlify Identity / gotrue format
+          if (data?.access_token) return { token: data.access_token, name: data.user?.user_metadata?.full_name, avatar_url: data.user?.user_metadata?.avatar_url };
+        } catch {}
       }
+
+      // Fallback: scan every localStorage entry for anything token-shaped
+      const allKeys = Object.keys(localStorage);
+      console.info('[deploy] localStorage keys found:', allKeys);
+      for (const key of allKeys) {
+        try {
+          const data = JSON.parse(localStorage.getItem(key));
+          if (data?.token && typeof data.token === 'string' && data.token.length > 10) {
+            console.info('[deploy] Found token-like entry under key:', key);
+            return { token: data.token, name: data.name || data.login || data.email, avatar_url: data.avatar_url };
+          }
+          if (data?.access_token && typeof data.access_token === 'string') {
+            console.info('[deploy] Found access_token-like entry under key:', key);
+            return { token: data.access_token, name: data.user?.user_metadata?.full_name, avatar_url: null };
+          }
+        } catch {}
+      }
+
+      console.warn('[deploy] No CMS session found. All localStorage keys:', allKeys);
+      return null;
     }
 
     function setStatus(type, message) {
@@ -242,13 +268,12 @@
         userToken = session.token;
         btn.disabled = false;
 
-        // Show user pill
         const pill = document.getElementById('user-pill');
         pill.style.display = 'inline-flex';
         if (session.avatar_url) {
           document.getElementById('user-avatar').src = session.avatar_url;
         }
-        document.getElementById('user-name').textContent = session.name || session.login || 'Usuario';
+        document.getElementById('user-name').textContent = session.name || 'Usuario';
       } else {
         document.getElementById('not-logged-in').style.display = 'block';
       }
