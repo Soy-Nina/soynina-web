@@ -1,0 +1,7 @@
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# staging branch gets its own deploy preview URL
+[context.staging]
+  command = "npm run build"

@@ -1,9 +1,7 @@
 backend:
   name: github
   repo: Soy-Nina/soynina-web
-  branch: main
-
-publish_mode: editorial_workflow
+  branch: staging
 
 media_folder: "public/reports"
 public_folder: "/reports"
