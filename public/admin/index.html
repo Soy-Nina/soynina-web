@@ -9,7 +9,7 @@
     #cms-action-group {
       position: fixed;
       top: 0;
-      right: 200px; /* sits left of Decap's "Añadir rápido" + user icon */
+      right: 9999px; /* JS will set this once Decap renders */
       height: 51px;
       display: flex;
       align-items: center;
@@ -69,9 +69,7 @@
 </head>
 <body>
   <div id="cms-action-group">
-    <a class="cms-nav-btn cms-nav-btn--ghost"
-       href="https://staging--cute-snickerdoodle-bbb672.netlify.app"
-       target="_blank" rel="noopener">
+    <a id="cms-staging-link" class="cms-nav-btn cms-nav-btn--ghost" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
       Ver staging
     </a>
@@ -81,5 +79,40 @@
     </a>
   </div>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    const STAGING_URL = 'https://staging--cute-snickerdoodle-bbb672.netlify.app';
+    document.getElementById('cms-staging-link').href = STAGING_URL;
+
+    function positionGroup() {
+      const group = document.getElementById('cms-action-group');
+      const nav = document.querySelector('nav');
+      if (!group || !nav) return;
+
+      // Find all interactive nav elements that aren't ours
+      const candidates = [...nav.querySelectorAll('button, a, [role="button"]')]
+        .filter(el => !group.contains(el));
+
+      if (!candidates.length) return;
+
+      // Among elements in the right half of the screen, find the leftmost one
+      const mid = window.innerWidth / 2;
+      const rightSide = candidates
+        .map(el => el.getBoundingClientRect())
+        .filter(r => r.width > 10 && r.left > mid);
+
+      if (!rightSide.length) return;
+
+      const leftEdge = Math.min(...rightSide.map(r => r.left));
+      group.style.right = (window.innerWidth - leftEdge + 12) + 'px';
+    }
+
+    // Run whenever Decap mutates the DOM, then stop trying once positioned
+    const observer = new MutationObserver(() => {
+      positionGroup();
+      // Keep re-running in case Decap re-renders the nav
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    window.addEventListener('resize', positionGroup);
+  </script>
 </body>
 </html>
