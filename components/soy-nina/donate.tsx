@@ -6,6 +6,8 @@ import { Link } from "@/src/i18n/navigation"
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"
 import { CheckCircle2 } from "lucide-react"
 
+const PAYPAL_ENABLED = false
+
 type DonationState = "idle" | "success" | "error"
 
 export default function Donate() {
@@ -171,7 +173,7 @@ export default function Donate() {
                 <div>
                   <p className="text-xs font-bold tracking-[0.15em] uppercase text-white/50 mb-3">{t("bankTransfer")}</p>
                   <div className="space-y-5 text-sm">
-                    
+
                     <div className="space-y-1.5">
                       <p className="text-[#e0ff4f] font-bold text-xs uppercase tracking-wider">{t("labelDolares")}</p>
                       <p><span className="text-white/50">IBAN:</span> <span className="text-white font-mono">{t("ibanDolares")}</span></p>
@@ -195,35 +197,42 @@ export default function Donate() {
                 <div className="border-t border-white/10" />
 
                 {/* PayPal donation */}
-                <div>
-                  <p className="text-xs font-bold tracking-[0.15em] uppercase text-white/50 mb-4">{t("orPayWith")}</p>
+                {PAYPAL_ENABLED ? (
+                  <div>
+                    <p className="text-xs font-bold tracking-[0.15em] uppercase text-white/50 mb-4">{t("orPayWith")}</p>
 
-                  {isValidAmount ? (
-                    <PayPalScriptProvider
-                      options={{
-                        clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID!,
-                        currency: "USD",
-                        intent: "capture",
-                      }}
-                    >
-                      <PayPalButtons
-                        key={effectiveAmount}
-                        style={{ layout: "vertical", color: "gold", shape: "rect", label: "donate", height: 48 }}
-                        createOrder={createOrder}
-                        onApprove={onApprove}
-                        onError={() => setDonationState("error")}
-                      />
-                    </PayPalScriptProvider>
-                  ) : (
-                    <p className="text-white/40 text-sm text-center py-3">
-                      {t("selectAmountPrompt")}
-                    </p>
-                  )}
+                    {isValidAmount ? (
+                      <PayPalScriptProvider
+                        options={{
+                          clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID!,
+                          currency: "USD",
+                          intent: "capture",
+                        }}
+                      >
+                        <PayPalButtons
+                          key={effectiveAmount}
+                          style={{ layout: "vertical", color: "gold", shape: "rect", label: "donate", height: 48 }}
+                          createOrder={createOrder}
+                          onApprove={onApprove}
+                          onError={() => setDonationState("error")}
+                        />
+                      </PayPalScriptProvider>
+                    ) : (
+                      <p className="text-white/40 text-sm text-center py-3">
+                        {t("selectAmountPrompt")}
+                      </p>
+                    )}
 
-                  {donationState === "error" && (
-                    <p className="text-red-400 text-sm text-center mt-3">{t("errorPayment")}</p>
-                  )}
-                </div>
+                    {donationState === "error" && (
+                      <p className="text-red-400 text-sm text-center mt-3">{t("errorPayment")}</p>
+                    )}
+                  </div>
+                ) : (
+                  <div>
+                    <p className="text-xs font-bold tracking-[0.15em] uppercase text-white/50 mb-4">{t("orPayWith")}</p>
+                    <p className="text-white/40 text-sm text-center py-3">{t("paypalComingSoon")}</p>
+                  </div>
+                )}
 
                 {/* Corporate option */}
                 <div className="border-t border-white/10 pt-6">
