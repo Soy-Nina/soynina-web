@@ -9,7 +9,7 @@
     #cms-action-group {
       position: fixed;
       top: 0;
-      right: 9999px; /* JS will set this once Decap renders */
+      right: 260px; /* JS will refine this once Decap renders */
       height: 51px;
       display: flex;
       align-items: center;
@@ -88,29 +88,22 @@
       const nav = document.querySelector('nav');
       if (!group || !nav) return;
 
-      // Find all interactive nav elements that aren't ours
-      const candidates = [...nav.querySelectorAll('button, a, [role="button"]')]
-        .filter(el => !group.contains(el));
+      // Defer until after the browser paints so getBoundingClientRect is accurate
+      requestAnimationFrame(() => {
+        const mid = window.innerWidth / 2;
+        const rects = [...nav.querySelectorAll('button, a, [role="button"]')]
+          .filter(el => !group.contains(el))
+          .map(el => el.getBoundingClientRect())
+          .filter(r => r.width > 10 && r.height > 10 && r.left > mid);
 
-      if (!candidates.length) return;
+        if (!rects.length) return;
 
-      // Among elements in the right half of the screen, find the leftmost one
-      const mid = window.innerWidth / 2;
-      const rightSide = candidates
-        .map(el => el.getBoundingClientRect())
-        .filter(r => r.width > 10 && r.left > mid);
-
-      if (!rightSide.length) return;
-
-      const leftEdge = Math.min(...rightSide.map(r => r.left));
-      group.style.right = (window.innerWidth - leftEdge + 12) + 'px';
+        const leftEdge = Math.min(...rects.map(r => r.left));
+        group.style.right = (window.innerWidth - leftEdge + 12) + 'px';
+      });
     }
 
-    // Run whenever Decap mutates the DOM, then stop trying once positioned
-    const observer = new MutationObserver(() => {
-      positionGroup();
-      // Keep re-running in case Decap re-renders the nav
-    });
+    const observer = new MutationObserver(positionGroup);
     observer.observe(document.body, { childList: true, subtree: true });
     window.addEventListener('resize', positionGroup);
   </script>
