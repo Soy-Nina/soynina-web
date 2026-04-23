@@ -434,7 +434,8 @@
     "howToDonate": "How to donate",
     "titleHighlight": "transforms",
     "description": "Every contribution, no matter the size, makes a difference. 85% of our funds go directly to programs — we publish annual financial reports.",
-    "errorPayment": "Something went wrong processing your payment. Please try again."
+    "errorPayment": "Something went wrong processing your payment. Please try again.",
+    "paypalComingSoon": "Donation through PayPal coming soon"
   },
   "Metadata": {
     "title": "Soy Niña - Empowering Girls and Adolescents in Costa Rica",

@@ -434,7 +434,8 @@
     "howToDonate": "Cómo donar",
     "titleHighlight": "rompe ciclos",
     "description": "Cada aporte, sin importar su tamaño, hace la diferencia. El 85% de nuestros fondos va directamente a programas — publicamos informes financieros anuales.",
-    "errorPayment": "Hubo un problema al procesar el pago. Por favor intentá de nuevo."
+    "errorPayment": "Hubo un problema al procesar el pago. Por favor intentá de nuevo.",
+    "paypalComingSoon": "Donaciones por PayPal próximamente"
   },
   "Metadata": {
     "title": "Soy Niña - Empoderando niñas y adolescentes en Costa Rica",
