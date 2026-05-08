@@ -165,7 +165,7 @@ export default function Newsletter() {
                                 </form>
                             )}
                         </div>
-                        <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#e0ff4f] rounded-full -z-10 animate-pulse transition-all duration-1000" />
+                        <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#e0ff4f] rounded-full -z-10 opacity-80" />
                     </div>
                 </div>
             </div>

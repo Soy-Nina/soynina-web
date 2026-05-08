@@ -137,7 +137,7 @@ export default function Donate() {
           </div>
 
           {/* Right: Payment methods */}
-          <div className="lg:pt-16">
+          <div className="lg:pt-8">
             {donationState === "success" && confirmedAmount !== null ? (
               <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col items-center text-center gap-6">
                 <div className="w-16 h-16 bg-[#00c49a]/10 rounded-full flex items-center justify-center">
