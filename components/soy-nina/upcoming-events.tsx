@@ -33,7 +33,7 @@ export default function UpcomingEvents() {
     if (upcoming.length === 0) return null
 
     return (
-        <section className="w-full py-24 bg-[#fafafa]">
+        <section id="eventos" className="w-full py-24 bg-[#fafafa]">
             <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
                 <div className="grid lg:grid-cols-[1fr_2fr] gap-16 mb-16 items-end">
                     <div>

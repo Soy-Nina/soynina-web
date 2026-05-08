@@ -57,7 +57,7 @@ export default function Newsletter() {
     const benefits = t.raw("benefits") as string[]
 
     return (
-        <section className="w-full py-24 bg-[#f8f4ff] relative overflow-hidden">
+        <section id="boletin" className="w-full py-24 bg-[#f8f4ff] relative overflow-hidden">
             <div className="absolute top-0 right-0 w-1/3 h-full bg-[#e0ff4f]/5 rounded-l-full blur-3xl -z-0" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#4526c9]/5 rounded-full blur-2xl -z-0 -translate-x-1/2 translate-y-1/2" />
 
