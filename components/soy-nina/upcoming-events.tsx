@@ -69,7 +69,7 @@ export default function UpcomingEvents() {
                                         <span className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white uppercase tracking-wider" style={{ backgroundColor: color }}>{event.category}</span>
                                     </div>
                                 </div>
-                                <div className="px-6 pb-6 pt-2 flex flex-col flex-1">
+                                <div className="px-6 pb-6 pt-4 flex flex-col flex-1">
                                     <h3 className="text-xl font-bold text-[#140b3f] mb-2 group-hover:text-[#4526c9] transition-colors">{event.title}</h3>
                                     <p className="text-sm text-gray-600 leading-relaxed mb-4 flex-1 line-clamp-3">{event.description}</p>
                                     <div className="flex flex-col gap-2 text-xs text-gray-500">

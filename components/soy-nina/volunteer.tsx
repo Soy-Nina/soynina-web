@@ -65,7 +65,7 @@ export default function Volunteer() {
             </div>
 
             {/* Requirements summary */}
-            <div className="bg-white border border-gray-100 rounded-xl p-5 mb-8 text-sm text-gray-600 space-y-1">
+            <div className="bg-white border border-gray-100 rounded-xl p-5 mb-8 text-sm text-gray-600 space-y-2">
               <p className="font-bold text-[#140b3f] mb-2">{t("requirementsTitle")}</p>
               <p>✓ {t("requirement1")}</p>
               <p>✓ {t("requirement2")}</p>

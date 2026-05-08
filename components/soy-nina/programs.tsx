@@ -79,7 +79,7 @@ export default function Programs() {
               />
               
               {/* Gradient Overlay for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#140b3f] via-[#140b3f]/70 to-transparent opacity-90 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#140b3f] via-[#140b3f]/70 to-transparent opacity-80 transition-opacity duration-500" />
               
               {/* Content */}
               <div className="relative p-8 flex flex-col h-full justify-end z-10">

@@ -197,7 +197,7 @@ export default function Impact() {
                 <div className="absolute top-0 right-0 w-40 h-40 bg-[#4526c9] rounded-full opacity-20 -translate-y-1/2 translate-x-1/2" />
                 <div className="relative z-10">
                   <div className="text-[#e0ff4f] text-5xl font-serif mb-6">"</div>
-                  <div className="min-h-[180px] flex flex-col justify-between">
+                  <div className="relative min-h-[180px] flex flex-col justify-between">
                     {testimonials.map((testimonial, i) => (
                       <div key={i} className="absolute transition-all duration-500" style={{ opacity: activeTestimonial === i ? 1 : 0, transform: activeTestimonial === i ? "translateY(0)" : "translateY(20px)" }}>
                         <blockquote className="text-xl md:text-2xl font-bold text-white leading-snug mb-8">{testimonial.quote}</blockquote>
