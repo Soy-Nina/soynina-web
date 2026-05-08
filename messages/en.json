@@ -224,7 +224,8 @@
         "title": "Donors",
         "desc": "Recruit donors and follow up on campaigns"
       }
-    }
+    },
+    "formCta": "Fill out application form"
   },
   "VoluntariadoPage": {
     "team2Name": "Academic Tutoring",
@@ -314,7 +315,8 @@
     "requirementsGeneral3": "Minimum 2-3 hours per week (varies by role)",
     "internshipsExperienceIntro": "Maximum 2 weeks for university students. Includes:",
     "heroTitle": "Volunteering",
-    "team1Name": "Weekly Clubs"
+    "team1Name": "Weekly Clubs",
+    "formCta": "Fill out application form"
   },
   "EventosPage": {
     "ctaTitle": "Want to participate?",
@@ -508,33 +510,93 @@
     "historyP3": "Today, we continue growing. We currently have 17 Clubs across 5 communities, always faithful to our mission of educating with excellence, equity, and sisterhood.",
     "teamTitle": "Our Professional Team",
     "team": [
-      { "name": "Stefany Araya", "role": "Program Director" },
-      { "name": "Hilda Rivera", "role": "Administrative Assistant" },
-      { "name": "Estefanía Rodríguez", "role": "Coordination Assistant" },
-      { "name": "Paola Arce", "role": "Media Manager" },
-      { "name": "Andrea Marín", "role": "Volunteer Coordinator" },
-      { "name": "Kelly Pacheco", "role": "Programs Coordinator" },
-      { "name": "Melissa Lobo", "role": "Programs Facilitator" },
-      { "name": "Kiara Corea", "role": "Programs Facilitator" },
-      { "name": "Reychelle Mena", "role": "Programs Facilitator" }
+      {
+        "name": "Stefany Araya",
+        "role": "Program Director"
+      },
+      {
+        "name": "Hilda Rivera",
+        "role": "Administrative Assistant"
+      },
+      {
+        "name": "Estefanía Rodríguez",
+        "role": "Coordination Assistant"
+      },
+      {
+        "name": "Paola Arce",
+        "role": "Media Manager"
+      },
+      {
+        "name": "Andrea Marín",
+        "role": "Volunteer Coordinator"
+      },
+      {
+        "name": "Kelly Pacheco",
+        "role": "Programs Coordinator"
+      },
+      {
+        "name": "Melissa Lobo",
+        "role": "Programs Facilitator"
+      },
+      {
+        "name": "Kiara Corea",
+        "role": "Programs Facilitator"
+      },
+      {
+        "name": "Reychelle Mena",
+        "role": "Programs Facilitator"
+      }
     ],
     "boardTitle": "Board of Directors",
     "board": [
-      { "name": "Ana Laura Araya", "role": "President" },
-      { "name": "Alejandro Ejea", "role": "Secretary" },
-      { "name": "Arturo Pardo", "role": "First Member" },
-      { "name": "Glenda Umaña", "role": "Comptroller" },
-      { "name": "Karla Prendas", "role": "Member" },
-      { "name": "Alejandra Meza", "role": "Member" },
-      { "name": "Krizia Aguilar", "role": "Member" }
+      {
+        "name": "Ana Laura Araya",
+        "role": "President"
+      },
+      {
+        "name": "Alejandro Ejea",
+        "role": "Secretary"
+      },
+      {
+        "name": "Arturo Pardo",
+        "role": "First Member"
+      },
+      {
+        "name": "Glenda Umaña",
+        "role": "Comptroller"
+      },
+      {
+        "name": "Karla Prendas",
+        "role": "Member"
+      },
+      {
+        "name": "Alejandra Meza",
+        "role": "Member"
+      },
+      {
+        "name": "Krizia Aguilar",
+        "role": "Member"
+      }
     ],
     "corporateTitle": "Corporate Allies",
     "corporateSubtitle": "Companies committed to our mission",
     "corporateAllies": [
-      "UNFPA", "UNICEF", "Cummins", "World Hug Group",
-      "Ministerio de Cultura y Juventud", "KMA", "OTSÍ", "P&G",
-      "Nutri Snacks", "Blackbaud", "BAC Credomatic", "Coopeservidores",
-      "FIFCO", "Voces Vitales Costa Rica", "Novohogar", "VMware"
+      "UNFPA",
+      "UNICEF",
+      "Cummins",
+      "World Hug Group",
+      "Ministerio de Cultura y Juventud",
+      "KMA",
+      "OTSÍ",
+      "P&G",
+      "Nutri Snacks",
+      "Blackbaud",
+      "BAC Credomatic",
+      "Coopeservidores",
+      "FIFCO",
+      "Voces Vitales Costa Rica",
+      "Novohogar",
+      "VMware"
     ],
     "universityTitle": "University Partners",
     "universitySubtitle": "Universities supporting our training and internships",
@@ -639,20 +701,6 @@
     "noReports": "No reports available for {year}.",
     "viewPdf": "View PDF",
     "download": "Download",
-    "months": [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
-    ],
     "months": [
       "January",
       "February",

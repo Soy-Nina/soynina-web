@@ -72,12 +72,22 @@ export default function Volunteer() {
               <p>✓ {t("requirement3")}</p>
             </div>
 
-            <Link
-              href="/voluntariado"
-              className="inline-flex items-center justify-center bg-[#4526c9] hover:bg-[#3619b8] text-white font-bold px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
-            >
-              {t("cta")}
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/voluntariado"
+                className="inline-flex items-center justify-center bg-[#4526c9] hover:bg-[#3619b8] text-white font-bold px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
+              >
+                {t("cta")}
+              </Link>
+              <a
+                href="https://forms.cloud.microsoft/r/ymuNFkj72b"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-white border-2 border-[#4526c9] text-[#4526c9] hover:bg-[#4526c9] hover:text-white font-bold px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
+              >
+                {t("formCta")}
+              </a>
+            </div>
           </div>
         </div>
       </div>

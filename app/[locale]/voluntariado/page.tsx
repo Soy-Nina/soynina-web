@@ -268,9 +268,14 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
         <div className="container mx-auto px-6 lg:px-12 max-w-7xl text-center">
           <h2 className="text-4xl font-black mb-6">{t("ctaTitle")}</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">{t("ctaDescription")}</p>
-          <Link href="/contacto" className="inline-block bg-white text-[#4526c9] px-8 py-4 rounded-full font-bold hover:bg-[#e0ff4f] transition">
-            {t("ctaButton")}
-          </Link>
+          <a
+            href="https://forms.cloud.microsoft/r/ymuNFkj72b"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#e0ff4f] text-[#140b3f] px-12 py-5 rounded-full font-black text-lg hover:bg-white hover:scale-105 transition-all shadow-2xl"
+          >
+            {t("formCta")}
+          </a>
         </div>
       </section>
     </div>
