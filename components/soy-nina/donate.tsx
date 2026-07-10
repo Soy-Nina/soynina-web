@@ -129,6 +129,23 @@ export default function Donate() {
               )}
             </div>
 
+            {/* Monthly sponsor CTA */}
+            <a
+              href="https://secure.lglforms.com/form_engine/s/sZc24kMHHICgnpCv31x3Lg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between gap-4 border border-[#00c49a]/40 bg-[#00c49a]/5 hover:bg-[#00c49a]/10 hover:border-[#00c49a]/70 rounded-xl px-6 py-4 transition-all mb-6"
+            >
+              <div>
+                <div className="text-xs font-bold tracking-[0.15em] uppercase text-[#00c49a] mb-1">
+                  {t("monthlySponsorEyebrow")}
+                </div>
+                <div className="font-bold text-white text-sm">{t("monthlySponsorTitle")}</div>
+                <div className="text-xs text-white/50 mt-0.5">{t("monthlySponsorSubtitle")}</div>
+              </div>
+              <span className="text-[#00c49a] text-xl group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+
             {/* Transparency note */}
             <div className="flex items-center gap-3 text-sm text-white/50">
               <span className="text-[#00c49a] text-base">✓</span>
