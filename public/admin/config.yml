@@ -29,6 +29,8 @@ x-translation-fields: &translation-fields
       - { label: "Eventos", name: "eventos", widget: "string" }
       - { label: "Informes", name: "informes", widget: "string" }
       - { label: "Contacto", name: "contacto", widget: "string" }
+      - { label: "Sostenibilidad", name: "sostenibilidad", widget: "string" }
+      - { label: "FAQ", name: "faq", widget: "string" }
       - { label: "Donar Ahora", name: "donarAhora", widget: "string" }
       - { label: "Cambiar idioma", name: "changeLanguage", widget: "string" }
 
@@ -277,17 +279,35 @@ x-translation-fields: &translation-fields
             fields:
               - { label: "Título", name: "title", widget: "string" }
               - { label: "Descripción", name: "description", widget: "string" }
+      - { label: "Etiqueta monto personalizado", name: "customAmountLabel", widget: "string" }
+      - { label: "Placeholder monto personalizado", name: "customAmountPlaceholder", widget: "string" }
+      - { label: "Mensaje seleccionar monto (PayPal)", name: "selectAmountPrompt", widget: "string" }
+      - { label: "Sponsor mensual - Eyebrow", name: "monthlySponsorEyebrow", widget: "string" }
+      - { label: "Sponsor mensual - Título", name: "monthlySponsorTitle", widget: "string" }
+      - { label: "Sponsor mensual - Subtítulo", name: "monthlySponsorSubtitle", widget: "string" }
       - { label: "Deducible de impuestos", name: "taxDeductible", widget: "string" }
+      - { label: "Título éxito", name: "successTitle", widget: "string" }
+      - { label: "Mensaje éxito", name: "successMessage", widget: "text", hint: "Usa ${amount} como placeholder dinámico del monto donado." }
+      - { label: "Donar de nuevo", name: "donateAgain", widget: "string" }
       - { label: "Cómo donar", name: "howToDonate", widget: "string" }
       - { label: "SINPE Móvil (título)", name: "sinpeMobile", widget: "string" }
       - { label: "Número SINPE", name: "sinpeNumber", widget: "string" }
       - { label: "Transferencia bancaria (título)", name: "bankTransfer", widget: "string" }
+      - { label: "Etiqueta cuenta dólares", name: "labelDolares", widget: "string" }
+      - { label: "IBAN dólares", name: "ibanDolares", widget: "string" }
+      - { label: "Cuenta BAC dólares", name: "cuentaDolares", widget: "string" }
+      - { label: "Etiqueta cuenta colones", name: "labelColones", widget: "string" }
+      - { label: "IBAN colones", name: "ibanColones", widget: "string" }
+      - { label: "Cuenta BAC colones", name: "cuentaColones", widget: "string" }
       - { label: "Nombre Banco", name: "bankName", widget: "string" }
-      - { label: "IBAN", name: "iban", widget: "string" }
       - { label: "Titular", name: "holder", widget: "string" }
       - { label: "Cédula", name: "legalId", widget: "string" }
+      - { label: "Separador \"o paga con\"", name: "orPayWith", widget: "string" }
+      - { label: "Mensaje PayPal próximamente", name: "paypalComingSoon", widget: "string" }
+      - { label: "Error de pago (PayPal)", name: "errorPayment", widget: "string" }
       - { label: "Tarjeta crédito/débito", name: "creditCard", widget: "string" }
       - { label: "Donar con tarjeta", name: "donateWithCard", widget: "string" }
+      - { label: "Procesando", name: "processing", widget: "string" }
       - { label: "Pregunta corporativa", name: "corporateQuestion", widget: "text" }
       - { label: "Contactar corporativo", name: "contactCorporate", widget: "string" }
 
@@ -344,6 +364,7 @@ x-translation-fields: &translation-fields
       - { label: "Requisito 2", name: "requirement2", widget: "string" }
       - { label: "Requisito 3", name: "requirement3", widget: "string" }
       - { label: "CTA", name: "cta", widget: "string" }
+      - { label: "CTA - Botón formulario de postulación", name: "formCta", widget: "string" }
       - { label: "Etiqueta testimonio", name: "testimonialLabel", widget: "string" }
       - { label: "Cita testimonio", name: "testimonialQuote", widget: "text" }
       - { label: "Autor testimonio", name: "testimonialAuthor", widget: "string" }
@@ -364,6 +385,9 @@ x-translation-fields: &translation-fields
       - { label: "Nombre", name: "firstName", widget: "string" }
       - { label: "Apellido", name: "lastName", widget: "string" }
       - { label: "Correo", name: "email", widget: "string" }
+      - { label: "Preferencia de idioma (label)", name: "languagePreference", widget: "string" }
+      - { label: "Español", name: "spanish", widget: "string" }
+      - { label: "Inglés", name: "english", widget: "string" }
       - { label: "Placeholder nombre", name: "firstNamePlaceholder", widget: "string" }
       - { label: "Placeholder apellido", name: "lastNamePlaceholder", widget: "string" }
       - { label: "Placeholder correo", name: "emailPlaceholder", widget: "string" }
@@ -468,6 +492,80 @@ x-translation-fields: &translation-fields
       - { label: "Metodología título", name: "methodologyTitle", widget: "string" }
       - { label: "Metodología párrafo 1", name: "methodologyP1", widget: "text" }
       - { label: "Metodología párrafo 2", name: "methodologyP2", widget: "text" }
+      - { label: "Club Niña - Rango de edad", name: "clubNinaAge", widget: "string" }
+      - { label: "Club Niña - Primer ciclo - Título", name: "clubNinaFirstCycleTitle", widget: "string" }
+      - { label: "Club Niña - Primer ciclo - Edad", name: "clubNinaFirstCycleAge", widget: "string" }
+      - { label: "Club Niña - Primer ciclo - Ítem 1 (etiqueta)", name: "clubNinaFirstCycle1Label", widget: "string" }
+      - { label: "Club Niña - Primer ciclo - Ítem 1 (valor)", name: "clubNinaFirstCycle1Value", widget: "string" }
+      - { label: "Club Niña - Primer ciclo - Ítem 2 (etiqueta)", name: "clubNinaFirstCycle2Label", widget: "string" }
+      - { label: "Club Niña - Primer ciclo - Ítem 2 (valor)", name: "clubNinaFirstCycle2Value", widget: "string" }
+      - { label: "Club Niña - Primer ciclo - Ítem 3 (etiqueta)", name: "clubNinaFirstCycle3Label", widget: "string" }
+      - { label: "Club Niña - Primer ciclo - Ítem 3 (valor)", name: "clubNinaFirstCycle3Value", widget: "string" }
+      - { label: "Club Niña - Primer ciclo - Ítem 4 (etiqueta)", name: "clubNinaFirstCycle4Label", widget: "string" }
+      - { label: "Club Niña - Primer ciclo - Ítem 4 (valor)", name: "clubNinaFirstCycle4Value", widget: "string" }
+      - { label: "Club Niña - Primer ciclo - Ítem 5 (etiqueta)", name: "clubNinaFirstCycle5Label", widget: "string" }
+      - { label: "Club Niña - Primer ciclo - Ítem 5 (valor)", name: "clubNinaFirstCycle5Value", widget: "string" }
+      - { label: "Club Niña - Segundo ciclo - Título", name: "clubNinaSecondCycleTitle", widget: "string" }
+      - { label: "Club Niña - Segundo ciclo - Edad", name: "clubNinaSecondCycleAge", widget: "string" }
+      - { label: "Club Niña - Segundo ciclo - Ítem 1 (etiqueta)", name: "clubNinaSecondCycle1Label", widget: "string" }
+      - { label: "Club Niña - Segundo ciclo - Ítem 1 (valor)", name: "clubNinaSecondCycle1Value", widget: "string" }
+      - { label: "Club Niña - Segundo ciclo - Ítem 2 (etiqueta)", name: "clubNinaSecondCycle2Label", widget: "string" }
+      - { label: "Club Niña - Segundo ciclo - Ítem 2 (valor)", name: "clubNinaSecondCycle2Value", widget: "string" }
+      - { label: "Club Niña - Segundo ciclo - Ítem 3 (etiqueta)", name: "clubNinaSecondCycle3Label", widget: "string" }
+      - { label: "Club Niña - Segundo ciclo - Ítem 3 (valor)", name: "clubNinaSecondCycle3Value", widget: "string" }
+      - { label: "Club Niña - Segundo ciclo - Ítem 4 (etiqueta)", name: "clubNinaSecondCycle4Label", widget: "string" }
+      - { label: "Club Niña - Segundo ciclo - Ítem 4 (valor)", name: "clubNinaSecondCycle4Value", widget: "string" }
+      - { label: "Club Niña - Segundo ciclo - Ítem 5 (etiqueta)", name: "clubNinaSecondCycle5Label", widget: "string" }
+      - { label: "Club Niña - Segundo ciclo - Ítem 5 (valor)", name: "clubNinaSecondCycle5Value", widget: "string" }
+      - { label: "Club Niña - Frecuencia (etiqueta)", name: "clubNinaFrequencyLabel", widget: "string" }
+      - { label: "Club Niña - Frecuencia (valor)", name: "clubNinaFrequencyValue", widget: "string" }
+      - { label: "Club Niña - Metodología (etiqueta)", name: "clubNinaMethodologyLabel", widget: "string" }
+      - { label: "Club Niña - Metodología (valor)", name: "clubNinaMethodologyValue", widget: "string" }
+      - { label: "Club Cole - Rango de edad", name: "clubColeAge", widget: "string" }
+      - { label: "Club Cole - III Ciclo - Título", name: "clubColeCycle3Title", widget: "string" }
+      - { label: "Club Cole - III Ciclo - Edad", name: "clubColeCycle3Age", widget: "string" }
+      - { label: "Club Cole - III Ciclo - Ítem 1", name: "clubColeCycle3Item1", widget: "string" }
+      - { label: "Club Cole - III Ciclo - Ítem 2", name: "clubColeCycle3Item2", widget: "string" }
+      - { label: "Club Cole - III Ciclo - Ítem 3", name: "clubColeCycle3Item3", widget: "string" }
+      - { label: "Club Cole - III Ciclo - Ítem 4", name: "clubColeCycle3Item4", widget: "string" }
+      - { label: "Club Cole - III Ciclo - Ítem 5", name: "clubColeCycle3Item5", widget: "string" }
+      - { label: "Club Cole - IV Ciclo - Título", name: "clubColeCycle4Title", widget: "string" }
+      - { label: "Club Cole - IV Ciclo - Edad", name: "clubColeCycle4Age", widget: "string" }
+      - { label: "Club Cole - IV Ciclo - Ítem 1", name: "clubColeCycle4Item1", widget: "string" }
+      - { label: "Club Cole - IV Ciclo - Ítem 2", name: "clubColeCycle4Item2", widget: "string" }
+      - { label: "Club Cole - IV Ciclo - Ítem 3", name: "clubColeCycle4Item3", widget: "string" }
+      - { label: "Club Cole - IV Ciclo - Ítem 4", name: "clubColeCycle4Item4", widget: "string" }
+      - { label: "Club Cole - IV Ciclo - Ítem 5", name: "clubColeCycle4Item5", widget: "string" }
+      - { label: "Club Cole - Facilitadores (etiqueta)", name: "clubColeFacilitatorsLabel", widget: "string" }
+      - { label: "Club Cole - Facilitadores (valor)", name: "clubColeFacilitatorsValue", widget: "text" }
+      - { label: "Club Cole - Apoyo (etiqueta)", name: "clubColeSupportLabel", widget: "string" }
+      - { label: "Club Cole - Apoyo (valor)", name: "clubColeSupportValue", widget: "string" }
+      - { label: "Club Familias - Título formación", name: "clubFamiliasTrainingTitle", widget: "string" }
+      - { label: "Club Familias - Frecuencia (etiqueta)", name: "clubFamiliasFrequencyLabel", widget: "string" }
+      - { label: "Club Familias - Frecuencia (valor)", name: "clubFamiliasFrequencyValue", widget: "string" }
+      - { label: "Club Familias - Audiencia (etiqueta)", name: "clubFamiliasAudienceLabel", widget: "string" }
+      - { label: "Club Familias - Audiencia (valor)", name: "clubFamiliasAudienceValue", widget: "text" }
+      - { label: "Club Familias - Metodología (etiqueta)", name: "clubFamiliasMethodologyLabel", widget: "string" }
+      - { label: "Club Familias - Metodología (valor)", name: "clubFamiliasMethodologyValue", widget: "string" }
+      - { label: "Club Familias - Temas (etiqueta)", name: "clubFamiliasTopicsLabel", widget: "string" }
+      - { label: "Club Familias - Tema 1", name: "clubFamiliasTopic1", widget: "string" }
+      - { label: "Club Familias - Tema 2", name: "clubFamiliasTopic2", widget: "string" }
+      - { label: "Club Familias - Tema 3", name: "clubFamiliasTopic3", widget: "string" }
+      - { label: "Club Familias - Tema 4", name: "clubFamiliasTopic4", widget: "string" }
+      - { label: "Tutorías - Título sección", name: "tutoriasTitle", widget: "string" }
+      - { label: "Tutorías - Título programa", name: "tutoriasProgramTitle", widget: "string" }
+      - { label: "Tutorías - Descripción programa", name: "tutoriasProgramDescription", widget: "text" }
+      - { label: "Tutorías - Título modalidades", name: "tutoriasModalitiesTitle", widget: "string" }
+      - { label: "Tutorías - Ciclos (etiqueta)", name: "tutoriasCyclesLabel", widget: "string" }
+      - { label: "Tutorías - Ciclos (valor)", name: "tutoriasCyclesValue", widget: "string" }
+      - { label: "Tutorías - Permanente (etiqueta)", name: "tutoriasPermanentLabel", widget: "string" }
+      - { label: "Tutorías - Permanente (valor)", name: "tutoriasPermanentValue", widget: "string" }
+      - { label: "Tutorías - Virtual (etiqueta)", name: "tutoriasVirtualLabel", widget: "string" }
+      - { label: "Tutorías - Virtual (valor)", name: "tutoriasVirtualValue", widget: "string" }
+      - { label: "Tutorías - Título organización", name: "tutoriasOrganizationTitle", widget: "string" }
+      - { label: "Tutorías - Organización (valor)", name: "tutoriasOrganizationValue", widget: "text" }
+      - { label: "Tutorías - Nota (etiqueta)", name: "tutoriasNoteLabel", widget: "string" }
+      - { label: "Tutorías - Nota (valor)", name: "tutoriasNoteValue", widget: "text" }
       - { label: "CTA título", name: "ctaTitle", widget: "string" }
       - { label: "CTA descripción", name: "ctaDescription", widget: "text" }
       - { label: "CTA botón", name: "ctaButton", widget: "string" }
@@ -565,13 +663,87 @@ x-translation-fields: &translation-fields
       - { label: "¿Por qué? título", name: "whyTitle", widget: "string" }
       - { label: "¿Por qué? descripción", name: "whyDescription", widget: "text" }
       - { label: "Equipos nacionales título", name: "nationalTitle", widget: "string" }
+      - { label: "Equipo 1 (Clubes Semanales) - Nombre", name: "team1Name", widget: "string" }
+      - { label: "Equipo 1 (Clubes Semanales) - Descripción", name: "team1Description", widget: "string" }
+      - { label: "Equipo 1 (Clubes Semanales) - Detalle 1", name: "team1Detail1", widget: "string" }
+      - { label: "Equipo 1 (Clubes Semanales) - Detalle 2", name: "team1Detail2", widget: "string" }
+      - { label: "Equipo 1 (Clubes Semanales) - Detalle 3", name: "team1Detail3", widget: "string" }
+      - { label: "Equipo 1 (Clubes Semanales) - Detalle 4", name: "team1Detail4", widget: "string" }
+      - { label: "Equipo 2 (Tutorías Académicas) - Nombre", name: "team2Name", widget: "string" }
+      - { label: "Equipo 2 (Tutorías Académicas) - Descripción", name: "team2Description", widget: "string" }
+      - { label: "Equipo 2 (Tutorías Académicas) - Detalle 1", name: "team2Detail1", widget: "string" }
+      - { label: "Equipo 2 (Tutorías Académicas) - Detalle 2", name: "team2Detail2", widget: "string" }
+      - { label: "Equipo 2 (Tutorías Académicas) - Detalle 3", name: "team2Detail3", widget: "string" }
+      - { label: "Equipo 2 (Tutorías Académicas) - Detalle 4", name: "team2Detail4", widget: "string" }
+      - { label: "Equipo 3 (Club Familias) - Nombre", name: "team3Name", widget: "string" }
+      - { label: "Equipo 3 (Club Familias) - Descripción", name: "team3Description", widget: "string" }
+      - { label: "Equipo 3 (Club Familias) - Detalle 1", name: "team3Detail1", widget: "string" }
+      - { label: "Equipo 3 (Club Familias) - Detalle 2", name: "team3Detail2", widget: "string" }
+      - { label: "Equipo 3 (Club Familias) - Detalle 3", name: "team3Detail3", widget: "string" }
+      - { label: "Equipo 3 (Club Familias) - Detalle 4", name: "team3Detail4", widget: "string" }
+      - { label: "Equipo 4 (Comunicación) - Nombre", name: "team4Name", widget: "string" }
+      - { label: "Equipo 4 (Comunicación) - Descripción", name: "team4Description", widget: "string" }
+      - { label: "Equipo 4 (Comunicación) - Detalle 1", name: "team4Detail1", widget: "string" }
+      - { label: "Equipo 4 (Comunicación) - Detalle 2", name: "team4Detail2", widget: "string" }
+      - { label: "Equipo 4 (Comunicación) - Detalle 3", name: "team4Detail3", widget: "string" }
+      - { label: "Equipo 4 (Comunicación) - Detalle 4", name: "team4Detail4", widget: "string" }
+      - { label: "Equipo 5 (Banco de Alimentos) - Nombre", name: "team5Name", widget: "string" }
+      - { label: "Equipo 5 (Banco de Alimentos) - Descripción", name: "team5Description", widget: "string" }
+      - { label: "Equipo 5 (Banco de Alimentos) - Detalle 1", name: "team5Detail1", widget: "string" }
+      - { label: "Equipo 5 (Banco de Alimentos) - Detalle 2", name: "team5Detail2", widget: "string" }
+      - { label: "Equipo 5 (Banco de Alimentos) - Detalle 3", name: "team5Detail3", widget: "string" }
+      - { label: "Equipo 5 (Banco de Alimentos) - Detalle 4", name: "team5Detail4", widget: "string" }
+      - { label: "Equipo 6 (Donantes) - Nombre", name: "team6Name", widget: "string" }
+      - { label: "Equipo 6 (Donantes) - Descripción", name: "team6Description", widget: "string" }
+      - { label: "Equipo 6 (Donantes) - Detalle 1", name: "team6Detail1", widget: "string" }
+      - { label: "Equipo 6 (Donantes) - Detalle 2", name: "team6Detail2", widget: "string" }
+      - { label: "Equipo 6 (Donantes) - Detalle 3", name: "team6Detail3", widget: "string" }
+      - { label: "Equipo 6 (Donantes) - Detalle 4", name: "team6Detail4", widget: "string" }
       - { label: "Historias voluntarias título", name: "testimoniesTitle", widget: "string" }
+      - { label: "Testimonio 1 - Nombre", name: "testimony1Name", widget: "string" }
+      - { label: "Testimonio 1 - Rol", name: "testimony1Role", widget: "string" }
+      - { label: "Testimonio 1 - Cita", name: "testimony1Quote", widget: "text" }
+      - { label: "Testimonio 2 - Nombre", name: "testimony2Name", widget: "string" }
+      - { label: "Testimonio 2 - Rol", name: "testimony2Role", widget: "string" }
+      - { label: "Testimonio 2 - Cita", name: "testimony2Quote", widget: "text" }
+      - { label: "Testimonio 3 - Nombre", name: "testimony3Name", widget: "string" }
+      - { label: "Testimonio 3 - Rol", name: "testimony3Role", widget: "string" }
+      - { label: "Testimonio 3 - Cita", name: "testimony3Quote", widget: "text" }
       - { label: "Voluntariado corporativo título", name: "corporateTitle", widget: "string" }
+      - { label: "Corporativo - Descripción", name: "corporateDescription", widget: "text" }
+      - { label: "Corporativo - Etiqueta contacto", name: "corporateContactLabel", widget: "string" }
+      - { label: "Corporativo - Email", name: "corporateEmail", widget: "string" }
       - { label: "Voluntariado internacional título", name: "internationalTitle", widget: "string" }
+      - { label: "Internacional - Descripción", name: "internationalDescription", widget: "text" }
+      - { label: "Internacional - Etiqueta contacto", name: "internationalContactLabel", widget: "string" }
+      - { label: "Internacional - Email", name: "internationalEmail", widget: "string" }
       - { label: "Internships título", name: "internshipsTitle", widget: "string" }
+      - { label: "Prácticas - Descripción", name: "internshipsDescription", widget: "text" }
+      - { label: "Prácticas - Título modalidades", name: "internshipsModalitiesTitle", widget: "string" }
+      - { label: "Prácticas - Modalidad 1", name: "internshipsModality1", widget: "string" }
+      - { label: "Prácticas - Modalidad 2", name: "internshipsModality2", widget: "string" }
+      - { label: "Prácticas - Modalidad 3", name: "internshipsModality3", widget: "string" }
+      - { label: "Prácticas - Título experiencia", name: "internshipsExperienceTitle", widget: "string" }
+      - { label: "Prácticas - Intro experiencia", name: "internshipsExperienceIntro", widget: "string" }
+      - { label: "Prácticas - Experiencia 1", name: "internshipsExperience1", widget: "string" }
+      - { label: "Prácticas - Experiencia 2", name: "internshipsExperience2", widget: "string" }
+      - { label: "Prácticas - Experiencia 3", name: "internshipsExperience3", widget: "string" }
+      - { label: "Prácticas - Experiencia 4", name: "internshipsExperience4", widget: "string" }
+      - { label: "Prácticas - Etiqueta coordinador/a", name: "internshipsCoordinatorLabel", widget: "string" }
+      - { label: "Prácticas - Email coordinador/a", name: "internshipsCoordinatorEmail", widget: "string" }
       - { label: "Requisitos título", name: "requirementsTitle", widget: "string" }
+      - { label: "Requisitos - Título generales", name: "requirementsGeneralTitle", widget: "string" }
+      - { label: "Requisitos - General 1", name: "requirementsGeneral1", widget: "string" }
+      - { label: "Requisitos - General 2", name: "requirementsGeneral2", widget: "string" }
+      - { label: "Requisitos - General 3", name: "requirementsGeneral3", widget: "string" }
+      - { label: "Requisitos - Título proceso", name: "requirementsProcessTitle", widget: "string" }
+      - { label: "Requisitos - Paso 1", name: "requirementsProcess1", widget: "string" }
+      - { label: "Requisitos - Paso 2", name: "requirementsProcess2", widget: "string" }
+      - { label: "Requisitos - Paso 3", name: "requirementsProcess3", widget: "string" }
+      - { label: "Requisitos - Paso 4", name: "requirementsProcess4", widget: "string" }
       - { label: "CTA título", name: "ctaTitle", widget: "string" }
       - { label: "CTA descripción", name: "ctaDescription", widget: "text" }
+      - { label: "CTA - Botón formulario de postulación", name: "formCta", widget: "string" }
       - { label: "CTA botón", name: "ctaButton", widget: "string" }
 
   - label: "Sostenibilidad (página)"
@@ -583,6 +755,7 @@ x-translation-fields: &translation-fields
       - { label: "Hero título", name: "heroTitle", widget: "string" }
       - { label: "Hero subtítulo", name: "heroSubtitle", widget: "string" }
       - { label: "CTA título", name: "ctaTitle", widget: "string" }
+      - { label: "CTA descripción", name: "ctaDescription", widget: "text" }
       - { label: "CTA botón", name: "ctaButton", widget: "string" }
 
   - label: "Términos de Uso (página)"
@@ -637,6 +810,20 @@ x-translation-fields: &translation-fields
       - { label: "Placeholder correo", name: "emailPlaceholder", widget: "string" }
       - { label: "Botón suscribirse", name: "subscribeButton", widget: "string" }
       - { label: "Por (autoría)", name: "by", widget: "string" }
+
+  - label: "Artículo de blog (página)"
+    name: "BlogPost"
+    widget: "object"
+    fields:
+      - { label: "No encontrado (título)", name: "notFound", widget: "string" }
+      - { label: "No encontrado (volver)", name: "notFoundBack", widget: "string" }
+      - { label: "Volver al blog", name: "backToBlog", widget: "string" }
+      - { label: "Por (autoría)", name: "by", widget: "string" }
+      - { label: "CTA título", name: "ctaTitle", widget: "string" }
+      - { label: "CTA descripción", name: "ctaDescription", widget: "text" }
+      - { label: "CTA donar", name: "ctaDonate", widget: "string" }
+      - { label: "CTA voluntaria", name: "ctaVolunteer", widget: "string" }
+      - { label: "Artículos relacionados (título)", name: "relatedTitle", widget: "string" }
 
 collections:
   - name: "blog-es"
