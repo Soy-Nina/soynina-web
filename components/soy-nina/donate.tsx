@@ -182,7 +182,7 @@ export default function Donate() {
                   <p className="text-xs font-bold tracking-[0.15em] uppercase text-white/50 mb-3">{t("sinpeMobile")}</p>
                   <div className="flex items-baseline gap-4">
                     <span className="text-4xl font-black text-[#e0ff4f]">{t("sinpeNumber")}</span>
-                    <span className="text-white/60 text-sm">Fundación Soy Niña</span>
+                    <span className="text-white/60 text-sm">Asociación Soy Niña</span>
                   </div>
                 </div>
 
@@ -204,7 +204,7 @@ export default function Donate() {
                     </div>
 
                     <div className="pt-2 border-t border-white/5 space-y-1">
-                      <p><span className="text-white/50">{t("holder")}:</span> <span className="text-white">Fundación Soy Niña</span></p>
+                      <p><span className="text-white/50">{t("holder")}:</span> <span className="text-white">Asociación Soy Niña</span></p>
                       <p><span className="text-white/50">{t("legalId")}:</span> <span className="text-white">3-101-123456</span></p>
                     </div>
                   </div>
