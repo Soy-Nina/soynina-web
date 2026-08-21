@@ -25,11 +25,11 @@ export async function POST(req: NextRequest) {
               currency_code: "USD",
               value: amount.toFixed(2),
             },
-            description: "Donación — Fundación Soy Niña",
+            description: "Donación — Asociación Soy Niña",
           },
         ],
         application_context: {
-          brand_name: "Fundación Soy Niña",
+          brand_name: "Asociación Soy Niña",
           shipping_preference: "NO_SHIPPING",
         },
       }),

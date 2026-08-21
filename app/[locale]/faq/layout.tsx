@@ -7,8 +7,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: locale === "es" ? "Preguntas Frecuentes - Soy Niña" : "FAQ - Soy Niña",
     description:
       locale === "es"
-        ? "Respuestas a las preguntas más frecuentes sobre Fundación Soy Niña y sus programas"
-        : "Answers to frequently asked questions about Fundación Soy Niña and its programs",
+        ? "Respuestas a las preguntas más frecuentes sobre Asociación Soy Niña y sus programas"
+        : "Answers to frequently asked questions about Asociación Soy Niña and its programs",
     alternates: getAlternates(locale, "/faq"),
   }
 }
