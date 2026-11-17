@@ -73,7 +73,7 @@ Será un plus contar con experiencia en organizaciones sociales, voluntariado o 
 
 Para postularte, completá el formulario de aplicación:
 
-> **POSTULÁ AQUÍ**
+> **[POSTULÁ AQUÍ](https://forms.cloud.microsoft/r/7eYqP2bz5g)**
 
 **Fecha límite de postulación: 27 de noviembre.**
 
